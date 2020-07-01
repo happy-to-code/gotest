@@ -24,6 +24,7 @@ func main() {
 	fmt.Println("im.Bounds().Size().Y", height)
 
 	dc := gg.NewContext(width, height)
+	dc.DrawImage(im, 0, 0)
 	//dc.SetRGB(122, 255, 122)
 	//dc.Clear()
 	//dc.SetRGB(255, 255, 255)
@@ -34,17 +35,16 @@ func main() {
 	dc.SetColor(color.RGBA{A: 255})
 
 	dc.DrawRoundedRectangle(0, 0, float64(width), float64(height), 0)
-	dc.DrawImage(im, 0, 0)
-	fmt.Println("len0:", len("小明同学"))
-	fmt.Println("len1:", len("苏州市相城大道火车站1118号"))
-	fmt.Println("len2:", float64(130+len("小明同学")*2))
-	fmt.Println("len3:", float64(130+len("苏州市相城大道火车站号")*2))
+	//dc.DrawImage(im, 0, 0)
 
-	dc.DrawStringAnchored("小明同学", 121+4*9, 20, 0.5, 0.5)
+	//dc.DrawStringAnchored("小明同学", 121+4*9, 20, 0.5, 0.5)
+	dc.DrawStringAnchored("小明同学", 157, 20, 0.5, 0.5)
 	dc.DrawStringAnchored("18", 121+8, 50, 0.5, 0.5)
 	dc.DrawStringAnchored("男", 121+9, 90, 0.5, 0.5)
 	dc.DrawStringAnchored("苏州市相城大道火车站1118号", 121+11*9+8+8, 120, 0.5, 0.5)
 	dc.DrawStringAnchored("18932156666", 121+8*6, 150, 0.5, 0.5)
 	dc.Clip()
+
+	//dc.DrawImage(im, 0, 0)
 	dc.SavePNG("out1.png")
 }

@@ -69,7 +69,7 @@ func main() {
 	}
 
 	// 以PNG格式保存文件
-	err = png.Encode(imgfile, img)
+	err = png.Encode(m, img)
 	if err != nil {
 		log.Println("生成图片出错")
 		log.Fatal(err)
