@@ -14,6 +14,7 @@ import (
 	"log"
 	"os"
 	"path"
+	"unicode/utf8"
 )
 
 var (
@@ -23,24 +24,29 @@ var (
 	offset    image.Point
 )
 
-func main() {
+func main1() {
+	// 模板图片路径
 	var templatePicPath = "E:\\20.06.16Project\\GoTest\\src\\MyTest\\writeTextToPic\\picandqrcode\\testPic.png"
+	// 字体大小
 	var fontSize float64 = 18
+	// 二维码内容
+	var content = "hello,world 你好 ？"
+	// 二维码尺寸大小
+	var qrSize = 150
+
 	picPath := writeTextToPic(templatePicPath, fontSize)
 	fmt.Println("picPath:", picPath)
 
 	bgImg, _ := gg.LoadImage(picPath)
 
 	// 03: 生成二维码
-	var content = "hello,world 你好 ？"
-	var qrSize = 150
 	qrCodeImg, err = createAvatar(content, qrSize)
 	if err != nil {
 		fmt.Println("生成二维码失败:", err)
 		return
 	}
 
-	offset = image.Pt(426, 475)
+	offset = image.Pt(bgImg.Bounds().Size().X-10-qrSize, bgImg.Bounds().Size().Y-10-qrSize)
 	b := bgImg.Bounds()
 	m := image.NewRGBA(b)
 	// Draw(dst Image, r image.Rectangle, src image.Image, sp image.Point, op Op)
@@ -53,6 +59,15 @@ func main() {
 
 	defer i.Close()
 	defer os.Remove(picPath)
+}
+
+func main() {
+	// 模板图片路径
+	var templatePicPath = "E:\\20.06.16Project\\GoTest\\src\\MyTest\\writeTextToPic\\picandqrcode\\testPic.png"
+	// 字体大小
+	var fontSize float64 = 18
+
+	writeTextToPic(templatePicPath, fontSize)
 }
 
 /*
@@ -80,14 +95,12 @@ func writeTextToPic(templatePicPath string, fontSize float64) (picPath string) {
 	dc.SetColor(color.RGBA{A: 255})
 
 	dc.DrawRoundedRectangle(0, 0, float64(width), float64(height), 0)
-	// dc.DrawImage(im, 0, 0)
 
-	// dc.DrawStringAnchored("小明同学", 121+4*9, 20, 0.5, 0.5)
-	dc.DrawStringAnchored("小明同学", 157, 20, 0.5, 0.5)
-	dc.DrawStringAnchored("18", 121+8, 50, 0.5, 0.5)
-	dc.DrawStringAnchored("男", 121+9, 90, 0.5, 0.5)
-	dc.DrawStringAnchored("苏州市相城大道火车站1118号", 121+11*9+8+8, 120, 0.5, 0.5)
-	dc.DrawStringAnchored("18932156666", 121+8*6, 150, 0.5, 0.5)
+	dc.DrawStringAnchored("小明同学", float64(231-4+utf8.RuneCountInString("小明同学")*9), 350, 0.5, 0.5)
+	dc.DrawStringAnchored("18", 236, 370, 0.5, 0.5)
+	dc.DrawStringAnchored("男", 236, 390, 0.5, 0.5)
+	dc.DrawStringAnchored("苏州市相城大道火车站1118号", 344, 410, 0.5, 0.5)
+	dc.DrawStringAnchored("18932156666", 276.5, 430, 0.5, 0.5)
 	dc.Clip()
 
 	// 使用uuid生成随机字符串---》用于作为图片的名字
@@ -96,11 +109,12 @@ func writeTextToPic(templatePicPath string, fontSize float64) (picPath string) {
 		log.Println("uuid生成出错!")
 	}
 	picName := u.String() + ".png"
+	// picName := "123" + ".png"
 	dc.SavePNG(picName)
 
 	// 获取当前项目的路径
 	currentPath := GetCurrentPath()
-
+	// 项目路径+图片名称
 	picPath = currentPath + "\\" + picName
 	return picPath
 }
@@ -109,10 +123,16 @@ var err error
 
 // 创建二维码
 func createAvatar(content string, qrCodeSize int) (image.Image, error) {
+	if len(content) == 0 {
+		log.Fatal("要生成的二维码内容为空")
+		return nil, nil
+	}
+	if qrCodeSize <= 0 {
+		qrCodeSize = 150
+	}
 	var (
 		bgImg image.Image
 	)
-
 	bgImg, err = createQrCode(content, qrCodeSize)
 	return bgImg, err
 }
@@ -133,7 +153,7 @@ func ImageResize(src image.Image, w, h int) image.Image {
 	return resize.Resize(uint(w), uint(h), src, resize.Lanczos3)
 }
 
-// 获取当前项目路径，比如：E:/abc/data/test
+// 获取当前项目路径
 func GetCurrentPath() string {
 	dir, err := os.Getwd()
 	if err != nil {
