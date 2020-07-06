@@ -8,7 +8,6 @@ import (
 func main() {
 	// 2020-07-06 15:09:16:089
 	var timeStamp uint64 = 1594019356089
-
 	// 返回time对象
 	t := time.Unix(int64(timeStamp/1000), 0)
 

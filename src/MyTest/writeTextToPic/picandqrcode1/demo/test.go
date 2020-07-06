@@ -53,7 +53,7 @@ func main() {
 	}
 
 	dc.DrawImage(qrCodeImg, 2551-458-qrSize, 3437-597-qrSize)
-	dc.SaveJPG("123.jpg", 80)
+	dc.SavePNG("1234.jpg")
 	// i, _ := os.Create(path.Base("45111115.png"))
 	// context.EncodePNG(i)
 
