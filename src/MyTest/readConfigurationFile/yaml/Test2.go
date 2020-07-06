@@ -21,7 +21,7 @@ type conf struct {
 }
 
 func (c *conf) getConf() *conf {
-	yamlFile, err := ioutil.ReadFile("conf.yaml")
+	yamlFile, err := ioutil.ReadFile("E:\\20.06.16Project\\GoTest\\src\\MyTest\\readConfigurationFile\\yaml\\conf.yaml")
 	if err != nil {
 		fmt.Println(err.Error())
 	}
