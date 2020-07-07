@@ -90,7 +90,7 @@ type LeftSideText struct {
 }
 
 func main2() {
-	qrSize := 290
+	qrSize := 320
 	content := "file.QrCode.Address"
 	qrCodeImg, err = createAvatar(content, qrSize)
 	if err != nil {
