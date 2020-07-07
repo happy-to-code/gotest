@@ -1,4 +1,21 @@
-Host = "127.0.0.1"
+Host = "327.0.0.8"
 Username = "root"
-Password = "root"
+Password = "123"
 Port = "3306"
+
+[QrCode]
+    Size = 25
+    Address = "http://www.baidu.com"
+[Body]
+    LsftSideFontSize = 125
+    LsftSideFontColor = [125,25,120]
+    bodyTextStartPoint = []
+[[Text]]
+    key = "sender"
+    value = "发送人"
+[[Text]]
+    key = "idcard"
+    value = "身份证号"
+[[Text]]
+    key = "sendMethod"
+    value = "电子送达方式"

@@ -1,0 +1,66 @@
+ImageFilePath = "E:/20.06.16Project/GoTest/src/MyTest/writeTextToPic/picandqrcode1/demo/delivery88.jpg"      # 图片模板文件位置
+BodyFontFilePath = "E:/20.06.16Project/GoTest/src/MyTest/writeTextToPic/picandqrcode1/demo/simsun.ttc"
+TitleFontFilePath = "E:/20.06.16Project/GoTest/src/MyTest/writeTextToPic/picandqrcode1/demo/simhei.ttf"
+BodyDpi = 72
+
+[QrCode]
+    Size = 290
+    QrCodeStartPoint = [1270,610]
+
+[Blocks]
+    [[Block]]
+        Type = "text"
+        FontSize = 114
+        FontColor = [0,1,2]
+        Content = "电子送达区块链证书"
+        StartPoint = [1270,610]
+        StaticFile = true
+    [[Block]]
+        Type = "text"
+        FontSize = 69
+        FontColor = [201,44,46]
+        Content = "证书编号："
+        StartPoint = [970,780]
+        StaticFile = true
+
+[Body]
+    LeftSideFontSize = 90
+    LeftSideFontColor = [0,0,0]
+    bodyTextStartPoint = []
+[[LeftSideText]]
+    Field = "sender"
+    ShowValue = "发送人"
+    FontSize = 69
+    FontColor = [201,44,46]
+    StartPoint = [970,780]
+[[LeftSideText]]
+    Field = "idcard"
+    ShowValue = "身份证号"
+    FontSize = 69
+    FontColor = [201,44,46]
+    StartPoint = [970,780]
+[[LeftSideText]]
+    Field = "sendMethod"
+    ShowValue = "电子送达方式"
+    FontSize = 69
+    FontColor = [201,44,46]
+    StartPoint = [970,780]
+[[LeftSideText]]
+    Field = "signoffTime"
+    ShowValue = "电子送达时间"
+    FontSize = 69
+    FontColor = [201,44,46]
+    StartPoint = [970,780]
+[[LeftSideText]]
+    Field = "blockchainPlatform"
+    ShowValue = "区块链平台"
+    FontSize = 69
+    FontColor = [201,44,46]
+    StartPoint = [970,780]
+[[LeftSideText]]
+    Field = "onTheChainTime"
+    ShowValue = "上链时间"
+    FontSize = 69
+    FontColor = [201,44,46]
+    StartPoint = [970,780]
+

@@ -1,0 +1,74 @@
+{
+  "ImagePath": "E:/20.06.16Project/GoTest/src/MyTest/writeTextToPic/picandqrcode1/demo/delivery88.jpg",
+  "DefaultFontPath": "E:/20.06.16Project/GoTest/src/MyTest/writeTextToPic/picandqrcode1/demo/simsun.ttc",
+  "FontDPI": 114,
+  "Blocks": [
+    {
+      "Color": [
+        0,
+        1,
+        2,
+        255
+      ],
+      "FontFace": "E:/20.06.16Project/GoTest/src/MyTest/writeTextToPic/picandqrcode1/demo/simhei.ttf",
+      "FontSize": 61,
+      "Point": [
+        1270,
+        610
+      ],
+      "BlockType": "text",
+      "Content": "电子送达区块链证书"
+
+    },
+    {
+      "Color": [
+        201,
+        44,
+        46,
+        255
+      ],
+      "FontFace": "",
+      "FontSize": 60,
+      "Point": [
+        970,
+        780
+      ],
+      "BlockType": "text",
+      "Content": "证书编号："
+    },
+    {
+      "Color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "FontFace": "",
+      "FontSize": 60,
+      "Point": [
+        970,
+        780
+      ],
+      "BlockType": "dynamic",
+      "Content": "",
+      "ContentList": [
+        {
+          "Field": "sender",
+          "ShowValue": "发送人"
+        },
+        {
+          "Field": "idcard",
+          "ShowValue": "身份证号"
+        },
+        {
+          "Field": "sendMethod",
+          "ShowValue": "电子送达方式"
+        },
+        {
+          "Field": "signoffTime",
+          "ShowValue": "电子送达时间"
+        }
+      ]
+    }
+  ]
+}

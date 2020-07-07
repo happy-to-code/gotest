@@ -1,0 +1,32 @@
+ImageFilePath = ""      # 图片模板文件位置
+BodyFontFilePath = ""
+TitleFontFilePath = ""
+BodyDpi = ""
+
+[QrCode]
+    Size = ""
+    Address = ""
+
+[Text]
+    MainTitleFontSize = ""
+    MainTitleFontColor = ""
+    MainTitleContent = ""
+    MainTitleStartPoint = []
+
+    SubTitleFontSize = ""
+    SubTitleFontColor = ""
+    SubTitleContent = ""
+    SubTitleStartPoint = []
+
+[Body]
+    LsftSideFontSize = ""
+    LsftSideFontColor = ""
+[Body.Text]
+    bodyTextStartPoint = []
+    sender = "发送人"
+    idcard = "身份证号"
+    sendMethod = "电子送达方式"
+    signoffTime = "电子送达时间"
+    blockchainPlatform = "区块链平台"
+    onTheChainTime = "上链时间"
+
