@@ -143,11 +143,11 @@ func ReadJson(filePath string) (result string) {
 	return result
 }
 
-func GetPicTemplate(templateName string) (template CertTemplate) {
+func GetPicTemplate(templateName string) (template PicTemplate) {
 	// var filePath = GetCurrentPath() + "/" + templateName
-	var filePath = "E:/20.06.16Project/GoTest/src/MyTest/writeTextToPic/picandqrcode1/conf/" + templateName
+	var filePath = "D:/200707Go/gotest/src/MyTest/writeTextToPic/picandqrcode1/conf/" + templateName
 
-	var data CertTemplate
+	var data PicTemplate
 	result := ReadJson(filePath)
 	err := json.Unmarshal([]byte(result), &data)
 	if err != nil {
@@ -156,7 +156,8 @@ func GetPicTemplate(templateName string) (template CertTemplate) {
 	return data
 }
 
-func main() {
+func main1() {
 	template := GetPicTemplate("delivery.json")
 	fmt.Println("template::::", template)
+
 }
