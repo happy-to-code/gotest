@@ -1,6 +1,6 @@
 {
-  "ImagePath": "D:\\200707Go\\gotest\\src\\MyTest\\writeTextToPic\\picandqrcode1\\demo\\delivery88.jpg",
-  "DefaultFontPath": "D:\\200707Go\\gotest\\src\\MyTest\\writeTextToPic\\picandqrcode1\\demo\\simsun.ttc",
+  "ImagePath": "E:\\20.06.16Project\\GoTest\\src\\MyTest\\writeTextToPic\\picandqrcode1\\demo\\delivery88.jpg",
+  "DefaultFontPath": "E:\\20.06.16Project\\GoTest\\src\\MyTest\\writeTextToPic\\picandqrcode1\\demo\\simsun.ttc",
   "FontDPI": 114,
   "Blocks": [
     {
@@ -10,7 +10,7 @@
         2,
         255
       ],
-      "FontFace": "D:\\200707Go\\gotest\\src\\MyTest\\writeTextToPic\\picandqrcode1\\demo\\simhei.ttf",
+      "FontFace": "E:\\20.06.16Project\\GoTest\\src\\MyTest\\writeTextToPic\\picandqrcode1\\demo\\simhei.ttf",
       "FontSize": 61,
       "Point": [
         1270,

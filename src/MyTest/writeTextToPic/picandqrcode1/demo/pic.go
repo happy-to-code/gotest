@@ -10,7 +10,7 @@ import (
 	"github.com/skip2/go-qrcode"
 	"image"
 	"image/color"
-	//"image/jpeg"
+	// "image/jpeg"
 	"image/png"
 	"log"
 	"os"
@@ -100,7 +100,42 @@ func main2() {
 	i, _ := os.Create(path.Base("二维码1212.png"))
 	png.Encode(i, qrCodeImg)
 }
-func main() {
+func main9() {
+	newPic()
+}
+func newPic() {
+	var storeInfoStr = `{
+    "check": {
+        "digest": "64313237313338663739393632663038643965356663363639353965366562373133346436323432363030376432626230323866383830373265343731306339",
+        "hashAlgo": "sha256",
+        "sign": "3045022100dabee3a740d23f9ab4672d272bde2795894da1cd3c054856865b4add0d1f1ac10220391171c73e4a6b6872ce671fcbb3dcf4ed29bb87d774625ba1217717d86b1a05"
+    },
+    "data": {
+        "address": "13821324323",
+        "signoffTime": "2020-06-11 10:32:19",
+        "method": "短信",
+        "sender": "相城法院",
+        "idcard": "3456784567845678",
+        "people": "张三",
+        "sendTime": "2020-06-10 15:32:23"
+    },
+    "header": {
+        "bizSystemId": "通达海-电子送达系统",
+        "caseId": "XC1001-001",
+        "category": "电子送达",
+        "courtId": 123,
+        "courtName": "相城法院",
+        "subCategory": "送达签收",
+        "timestamp": 1593772650696
+    }
+}`
+	paramMap, _ := JsonToMap(storeInfoStr, 1594137931634)
+	// fmt.Printf("paramMap：：：：===》 %+v\n", paramMap)
+	// func GenerateCert(tmplFilePath string, params map[string]interface{}, w io.Writer) error {
+	var templatePath = "E:\\20.06.16Project\\GoTest\\src\\MyTest\\writeTextToPic\\picandqrcode1\\demo\\delivery88.jpg"
+	GenerateCert(templatePath, paramMap)
+}
+func main5() {
 	var storeInfoStr = `{
     "check": {
         "digest": "64313237313338663739393632663038643965356663363639353965366562373133346436323432363030376432626230323866383830373265343731306339",
@@ -129,13 +164,13 @@ func main() {
 	paramMap, _ := JsonToMap(storeInfoStr, 1594137931634)
 	fmt.Printf("paramMap：：：：===》 %+v\n", paramMap)
 
-	//file := readTemplateFile("delivery.toml")
+	// file := readTemplateFile("delivery.toml")
 
 	// 从json模板中读取数据
-	template := GetPicTemplate("delivery.json")
-
-	//dc := writeTextToPic(file, template, paramMap)
-	dc := writeTextToPic(template, paramMap)
+	// template := GetPicTemplate("delivery.json")
+	//
+	// // dc := writeTextToPic(file, template, paramMap)
+	// dc := writeTextToPic(template, paramMap)
 
 	// bgImg, _ := gg.LoadImage(picPath)
 
@@ -147,8 +182,8 @@ func main() {
 		fmt.Println("生成二维码失败:", err)
 		return
 	}
-	dc.DrawImage(qrCodeImg, 2551-458-qrSize, 3437-597-qrSize)
-	dc.SavePNG("123456789.png")
+	// dc.DrawImage(qrCodeImg, 2551-458-qrSize, 3437-597-qrSize)
+	// dc.SavePNG("123456789.png")
 
 }
 
@@ -160,7 +195,6 @@ func JsonToMap(jsonStr string, onchianTime int64) (f map[string]interface{}, err
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("storeInfoStruct::::", storeInfo)
 	var fieldMap = make(map[string]interface{})
 
 	fieldMap["digest"] = storeInfo.Check.Digest
@@ -203,7 +237,7 @@ func readTemplateFile(templateName string) (conf PicConfig) {
 */
 func writeTextToPic( /*conf PicConfig,*/ template PicTemplate, param map[string]interface{}) *gg.Context {
 	// 加载模板图片
-	//templatePicPath := conf.ImageFilePath
+	// templatePicPath := conf.ImageFilePath
 	templatePicPath := template.ImagePath
 	im, err := gg.LoadImage(templatePicPath)
 	if err != nil {
@@ -213,89 +247,86 @@ func writeTextToPic( /*conf PicConfig,*/ template PicTemplate, param map[string]
 	width := im.Bounds().Size().X
 	height := im.Bounds().Size().Y
 
-	//fmt.Println("width:", width)
-	//fmt.Println("height:", height)
-
 	dc := gg.NewContextForImage(im)
 
-	//dc.DrawImage(im, 0, 0)
+	// dc.DrawImage(im, 0, 0)
 	dc.DrawRoundedRectangle(0, 0, float64(width), float64(height), 0)
 	// 将字体写入文件
 	drawTextToPic(dc, template, param)
 
-	//// 1、写主标题
-	//titleFontFilePath := conf.TitleFontFilePath
-	//mainTitleFontSize := conf.Text.MainTitleFontSize
-	//mainTitleFontColor := conf.Text.MainTitleFontColor
-	//mainTitleContent := conf.Text.MainTitleContent
-	//titleStartPoint := conf.Text.MainTitleStartPoint
-	//if err := dc.LoadFontFace(titleFontFilePath, float64(mainTitleFontSize)); err != nil {
+	// // 1、写主标题
+	// titleFontFilePath := conf.TitleFontFilePath
+	// mainTitleFontSize := conf.Text.MainTitleFontSize
+	// mainTitleFontColor := conf.Text.MainTitleFontColor
+	// mainTitleContent := conf.Text.MainTitleContent
+	// titleStartPoint := conf.Text.MainTitleStartPoint
+	// if err := dc.LoadFontFace(titleFontFilePath, float64(mainTitleFontSize)); err != nil {
 	//	panic(err)
-	//}
-	//// 设置字体颜色
-	//dc.SetColor(color.RGBA{R: uint8(mainTitleFontColor[0]), G: uint8(mainTitleFontColor[1]), B: uint8(mainTitleFontColor[2]), A: 255})
+	// }
+	// // 设置字体颜色
+	// dc.SetColor(color.RGBA{R: uint8(mainTitleFontColor[0]), G: uint8(mainTitleFontColor[1]), B: uint8(mainTitleFontColor[2]), A: 255})
 	//
-	//dc.DrawRoundedRectangle(0, 0, float64(width), float64(height), 0)
+	// dc.DrawRoundedRectangle(0, 0, float64(width), float64(height), 0)
 	//
-	//titleCount := countNum(mainTitleContent)
-	//dc.DrawStringAnchored(mainTitleContent, float64(titleStartPoint[0])+titleCount.word*float64(mainTitleFontSize)/4+titleCount.num*float64(mainTitleFontSize)/4, float64(titleStartPoint[1]), 0.5, 0.5)
+	// titleCount := countNum(mainTitleContent)
+	// dc.DrawStringAnchored(mainTitleContent, float64(titleStartPoint[0])+titleCount.word*float64(mainTitleFontSize)/4+titleCount.num*float64(mainTitleFontSize)/4, float64(titleStartPoint[1]), 0.5, 0.5)
 	//
-	//// 2、写入副标题
-	//bodyFontFilePath := conf.BodyFontFilePath
-	//subTitleFontSize := conf.Text.SubTitleFontSize
-	//subTitleFontColor := conf.Text.SubTitleFontColor
-	//subTitleContent := conf.Text.SubTitleContent
-	//subTitleStartPoint := conf.Text.SubTitleStartPoint
-	//if err := dc.LoadFontFace(bodyFontFilePath, float64(subTitleFontSize)); err != nil {
+	// // 2、写入副标题
+	// bodyFontFilePath := conf.BodyFontFilePath
+	// subTitleFontSize := conf.Text.SubTitleFontSize
+	// subTitleFontColor := conf.Text.SubTitleFontColor
+	// subTitleContent := conf.Text.SubTitleContent
+	// subTitleStartPoint := conf.Text.SubTitleStartPoint
+	// if err := dc.LoadFontFace(bodyFontFilePath, float64(subTitleFontSize)); err != nil {
 	//	panic(err)
-	//}
-	//// 设置字体颜色
-	//dc.SetColor(color.RGBA{R: uint8(subTitleFontColor[0]), G: uint8(subTitleFontColor[1]), B: uint8(subTitleFontColor[2]), A: 255})
-	//subTitleCount := countNum(subTitleContent)
-	//dc.DrawStringAnchored(subTitleContent, float64(subTitleStartPoint[0])+subTitleCount.word*float64(subTitleFontSize)/4+subTitleCount.num*float64(subTitleFontSize)/4, float64(subTitleStartPoint[1]), 0.5, 0.5)
+	// }
+	// // 设置字体颜色
+	// dc.SetColor(color.RGBA{R: uint8(subTitleFontColor[0]), G: uint8(subTitleFontColor[1]), B: uint8(subTitleFontColor[2]), A: 255})
+	// subTitleCount := countNum(subTitleContent)
+	// dc.DrawStringAnchored(subTitleContent, float64(subTitleStartPoint[0])+subTitleCount.word*float64(subTitleFontSize)/4+subTitleCount.num*float64(subTitleFontSize)/4, float64(subTitleStartPoint[1]), 0.5, 0.5)
 	//
-	//// 发送人
-	//sender := "相城法院"
-	//// 当事人
-	//people := "张三"
-	//// 身份证号
-	//idcard := "345678199303264569"
-	//// 送达时间
-	//time := "2020年06月11日 10:32:19"
-	//// 上链时间
-	//signoffTime := "2020年06月11日 10:32:26"
-	////  送达方式
-	//category := "短信"
+	// // 发送人
+	// sender := "相城法院"
+	// // 当事人
+	// people := "张三"
+	// // 身份证号
+	// idcard := "345678199303264569"
+	// // 送达时间
+	// time := "2020年06月11日 10:32:19"
+	// // 上链时间
+	// signoffTime := "2020年06月11日 10:32:26"
+	// //  送达方式
+	// category := "短信"
 	//
-	//bh := "TJ-XSSDFD123"
+	// bh := "TJ-XSSDFD123"
 	//
-	//var fontSize float64 = 90
+	// var fontSize float64 = 90
 	//
-	//bhCount := countNum(bh)
-	//dc.DrawStringAnchored(bh, 1140+bhCount.word*fontSize/4+bhCount.num*fontSize/4, 780, 0.5, 0.5)
+	// bhCount := countNum(bh)
+	// dc.DrawStringAnchored(bh, 1140+bhCount.word*fontSize/4+bhCount.num*fontSize/4, 780, 0.5, 0.5)
 	//
-	//// 设置字体颜色
-	//dc.SetColor(color.RGBA{A: 255})
+	// // 设置字体颜色
+	// dc.SetColor(color.RGBA{A: 255})
 	//
-	//senderCount := countNum(sender)
-	//dc.DrawStringAnchored(sender, 900+senderCount.hzc*fontSize/2+senderCount.num*fontSize/4, 679+360+20, 0.5, 0.5)
+	// senderCount := countNum(sender)
+	// dc.DrawStringAnchored(sender, 900+senderCount.hzc*fontSize/2+senderCount.num*fontSize/4, 679+360+20, 0.5, 0.5)
 	//
-	//peopleCount := countNum(people)
-	//dc.DrawStringAnchored(people, 900+peopleCount.hzc*fontSize/2+peopleCount.num*fontSize/4, 1039+180+10+10, 0.5, 0.5)
+	// peopleCount := countNum(people)
+	// dc.DrawStringAnchored(people, 900+peopleCount.hzc*fontSize/2+peopleCount.num*fontSize/4, 1039+180+10+10, 0.5, 0.5)
 	//
-	//idcardCount := countNum(idcard)
-	//dc.DrawStringAnchored(idcard, 900+idcardCount.word*fontSize/4+idcardCount.num*fontSize/4, 1419+10, 0.5, 0.5)
+	// idcardCount := countNum(idcard)
+	// dc.DrawStringAnchored(idcard, 900+idcardCount.word*fontSize/4+idcardCount.num*fontSize/4, 1419+10, 0.5, 0.5)
 	//
-	//categoryCount := countNum(category)
-	//dc.DrawStringAnchored(category, 900+categoryCount.hzc*fontSize/2+categoryCount.num*fontSize/4, 1599+10, 0.5, 0.5)
+	// categoryCount := countNum(category)
+	// dc.DrawStringAnchored(category, 900+categoryCount.hzc*fontSize/2+categoryCount.num*fontSize/4, 1599+10, 0.5, 0.5)
 	//
-	//timeCount := countNum(time)
-	//dc.DrawStringAnchored(time, 900+timeCount.hzc*fontSize/2+timeCount.num*fontSize/4+60, 1779+10, 0.5, 0.5)
+	// timeCount := countNum(time)
+	// dc.DrawStringAnchored(time, 900+timeCount.hzc*fontSize/2+timeCount.num*fontSize/4+60, 1779+10, 0.5, 0.5)
 	//
-	//dc.DrawStringAnchored("同济区块链", 900+5*fontSize/2, 1959+10, 0.5, 0.5)
+	// dc.DrawStringAnchored("同济区块链", 900+5*fontSize/2, 1959+10, 0.5, 0.5)
 	//
-	//signoffTimeCount := countNum(signoffTime)
-	//dc.DrawStringAnchored(signoffTime, 900+signoffTimeCount.hzc*fontSize/2+signoffTimeCount.num*fontSize/4+60, 2139+10, 0.5, 0.5)
+	// signoffTimeCount := countNum(signoffTime)
+	// dc.DrawStringAnchored(signoffTime, 900+signoffTimeCount.hzc*fontSize/2+signoffTimeCount.num*fontSize/4+60, 2139+10, 0.5, 0.5)
 
 	dc.Clip()
 
