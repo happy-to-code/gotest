@@ -145,7 +145,7 @@ func ReadJson(filePath string) (result string) {
 
 func GetPicTemplate(templateName string) (template PicTemplate) {
 	// var filePath = GetCurrentPath() + "/" + templateName
-	var filePath = "E:/20.06.16Project/GoTest/src/MyTest/writeTextToPic/picandqrcode1/conf/" + templateName
+	var filePath = "D:/200707Go/gotest/src/MyTest/writeTextToPic/picandqrcode1/conf/" + templateName
 
 	var data PicTemplate
 	result := ReadJson(filePath)
@@ -156,7 +156,8 @@ func GetPicTemplate(templateName string) (template PicTemplate) {
 	return data
 }
 
-func main() {
+func main1() {
 	template := GetPicTemplate("delivery.json")
 	fmt.Println("template::::", template)
+
 }

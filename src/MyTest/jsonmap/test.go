@@ -42,18 +42,18 @@ func main() {
 	fmt.Printf("Converted to map result: %+v\n", m)
 
 	// test map to json string
-	jsonRes, err := MapToJson(m)
-	if err != nil {
-		fmt.Printf("Convert json to map failed with error: %+v\n", err)
-	}
-
-	fmt.Printf("Convert to json string result: %+v\n", jsonRes)
+	//jsonRes, err := MapToJson(m)
+	//if err != nil {
+	//	fmt.Printf("Convert json to map failed with error: %+v\n", err)
+	//}
+	//
+	//fmt.Printf("Convert to json string result: %+v\n", jsonRes)
 
 }
 
 // Convert json string to map
-func JsonToMap(jsonStr string) (map[string]string, error) {
-	m := make(map[string]string)
+func JsonToMap(jsonStr string) (map[string]interface{}, error) {
+	m := make(map[string]interface{})
 	err := json.Unmarshal([]byte(jsonStr), &m)
 	if err != nil {
 		fmt.Printf("Unmarshal with error: %+v\n", err)

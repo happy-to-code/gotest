@@ -10,8 +10,11 @@ import (
 	"github.com/skip2/go-qrcode"
 	"image"
 	"image/color"
+	//"image/jpeg"
+	"image/png"
 	"log"
 	"os"
+	"path"
 	"unicode"
 )
 
@@ -63,8 +66,8 @@ type PicConfig struct {
 	LeftSideText      []LeftSideText
 }
 type QrCode struct {
-	Size             int
-	QrCodeStartPoint []float64
+	Size    int
+	Address string
 }
 type Text struct {
 	MainTitleFontSize   int64
@@ -86,7 +89,18 @@ type LeftSideText struct {
 	Value string
 }
 
-func main1() {
+func main2() {
+	qrSize := 320
+	content := "file.QrCode.Address"
+	qrCodeImg, err = createAvatar(content, qrSize)
+	if err != nil {
+		fmt.Println("生成二维码失败:", err)
+		return
+	}
+	i, _ := os.Create(path.Base("二维码1212.png"))
+	png.Encode(i, qrCodeImg)
+}
+func main() {
 	var storeInfoStr = `{
     "check": {
         "digest": "64313237313338663739393632663038643965356663363639353965366562373133346436323432363030376432626230323866383830373265343731306339",
@@ -112,29 +126,21 @@ func main1() {
         "timestamp": 1593772650696
     }
 }`
-	fmt.Println("storeInfoStr:", storeInfoStr)
-	var storeInfo StoreInfo
-	var infoByte = []byte(storeInfoStr)
-	err := json.Unmarshal(infoByte, &storeInfo)
-	if err != nil {
-		panic(err)
-		return
-	}
+	paramMap, _ := JsonToMap(storeInfoStr, 1594137931634)
+	fmt.Printf("paramMap：：：：===》 %+v\n", paramMap)
 
-	fmt.Println("storeInfoStruct::::", storeInfo)
+	//file := readTemplateFile("delivery.toml")
 
-	file := readTemplateFile("delivery.toml")
-	fmt.Println("conf.Text.MainTitleFontColor:", file.Text.MainTitleFontColor)
-	fmt.Println("conf.Text.MainTitleFontColor:", file.Text.MainTitleFontColor[0])
-	fmt.Println("conf.Text.MainTitleFontColor:", file.Text.MainTitleFontColor[1])
-	fmt.Println("conf.Text.MainTitleFontColor:", file.Text.MainTitleFontColor[2])
+	// 从json模板中读取数据
+	template := GetPicTemplate("delivery.json")
 
-	dc := writeTextToPic(file)
+	//dc := writeTextToPic(file, template, paramMap)
+	dc := writeTextToPic(template, paramMap)
 
 	// bgImg, _ := gg.LoadImage(picPath)
 
 	// 03: 生成二维码
-	qrSize := file.QrCode.Size
+	qrSize := 290
 	content := "file.QrCode.Address"
 	qrCodeImg, err = createAvatar(content, qrSize)
 	if err != nil {
@@ -142,13 +148,46 @@ func main1() {
 		return
 	}
 	dc.DrawImage(qrCodeImg, 2551-458-qrSize, 3437-597-qrSize)
-	dc.SavePNG("123467.jpg")
+	dc.SavePNG("123456789.png")
 
+}
+
+func JsonToMap(jsonStr string, onchianTime int64) (f map[string]interface{}, err error) {
+
+	var storeInfo StoreInfo
+	var infoByte = []byte(jsonStr)
+	err = json.Unmarshal(infoByte, &storeInfo)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("storeInfoStruct::::", storeInfo)
+	var fieldMap = make(map[string]interface{})
+
+	fieldMap["digest"] = storeInfo.Check.Digest
+	fieldMap["hashAlgo"] = storeInfo.Check.HashAlgo
+	fieldMap["sign"] = storeInfo.Check.Sign
+	fieldMap["address"] = storeInfo.Data.Address
+	fieldMap["signoffTime"] = storeInfo.Data.SignoffTime
+	fieldMap["method"] = storeInfo.Data.Method
+	fieldMap["sender"] = storeInfo.Data.Sender
+	fieldMap["idcard"] = storeInfo.Data.Idcard
+	fieldMap["people"] = storeInfo.Data.People
+	fieldMap["sendTime"] = storeInfo.Data.SendTime
+	fieldMap["bizSystemId"] = storeInfo.Header.BizSystemId
+	fieldMap["caseId"] = storeInfo.Header.CaseId
+	fieldMap["category"] = storeInfo.Header.Category
+	fieldMap["courtId"] = storeInfo.Header.CourtId
+	fieldMap["courtName"] = storeInfo.Header.CourtName
+	fieldMap["subCategory"] = storeInfo.Header.SubCategory
+	fieldMap["timestamp"] = storeInfo.Header.Timestamp
+	fieldMap["onchianTime"] = onchianTime
+
+	return fieldMap, nil
 }
 
 //  读取配置文件
 func readTemplateFile(templateName string) (conf PicConfig) {
-	var templateUrl = "E:/20.06.16Project/GoTest/src/MyTest/writeTextToPic/picandqrcode1/conf/" + templateName
+	var templateUrl = "D:/200707Go/gotest/src/MyTest/writeTextToPic/picandqrcode1/conf/" + templateName
 
 	if _, err := toml.DecodeFile(templateUrl, &conf); err != nil {
 		log.Fatal("读取配置文件失败", err)
@@ -162,9 +201,10 @@ func readTemplateFile(templateName string) (conf PicConfig) {
 	templatePicPath 模板图片地址
 	fontSize 字体大小，单位像素
 */
-func writeTextToPic(conf PicConfig) *gg.Context {
+func writeTextToPic( /*conf PicConfig,*/ template PicTemplate, param map[string]interface{}) *gg.Context {
 	// 加载模板图片
-	templatePicPath := conf.ImageFilePath
+	//templatePicPath := conf.ImageFilePath
+	templatePicPath := template.ImagePath
 	im, err := gg.LoadImage(templatePicPath)
 	if err != nil {
 		log.Fatal(err)
@@ -173,97 +213,134 @@ func writeTextToPic(conf PicConfig) *gg.Context {
 	width := im.Bounds().Size().X
 	height := im.Bounds().Size().Y
 
-	fmt.Println("width:", width)
-	fmt.Println("height:", height)
+	//fmt.Println("width:", width)
+	//fmt.Println("height:", height)
 
-	// dc := gg.NewContext(width, height)
-	// dc := gg.NewContext(1513, 2452)
 	dc := gg.NewContextForImage(im)
 
-	template := GetPicTemplate("delivery.json")
-	blocks := template.Blocks
-
-	// // GenerateCert(dc,blocks,_)
-
-	dc.DrawImage(im, 0, 0)
-
-	// 1、写主标题
-	titleFontFilePath := conf.TitleFontFilePath
-	mainTitleFontSize := conf.Text.MainTitleFontSize
-	mainTitleFontColor := conf.Text.MainTitleFontColor
-	mainTitleContent := conf.Text.MainTitleContent
-	titleStartPoint := conf.Text.MainTitleStartPoint
-	if err := dc.LoadFontFace(titleFontFilePath, float64(mainTitleFontSize)); err != nil {
-		panic(err)
-	}
-	// 设置字体颜色
-	dc.SetColor(color.RGBA{R: uint8(mainTitleFontColor[0]), G: uint8(mainTitleFontColor[1]), B: uint8(mainTitleFontColor[2]), A: 255})
-
+	//dc.DrawImage(im, 0, 0)
 	dc.DrawRoundedRectangle(0, 0, float64(width), float64(height), 0)
+	// 将字体写入文件
+	drawTextToPic(dc, template, param)
 
-	titleCount := countNum(mainTitleContent)
-	dc.DrawStringAnchored(mainTitleContent, float64(titleStartPoint[0])+titleCount.word*float64(mainTitleFontSize)/4+titleCount.num*float64(mainTitleFontSize)/4, float64(titleStartPoint[1]), 0.5, 0.5)
-
-	// 2、写入副标题
-	bodyFontFilePath := conf.BodyFontFilePath
-	subTitleFontSize := conf.Text.SubTitleFontSize
-	subTitleFontColor := conf.Text.SubTitleFontColor
-	subTitleContent := conf.Text.SubTitleContent
-	subTitleStartPoint := conf.Text.SubTitleStartPoint
-	if err := dc.LoadFontFace(bodyFontFilePath, float64(subTitleFontSize)); err != nil {
-		panic(err)
-	}
-	// 设置字体颜色
-	dc.SetColor(color.RGBA{R: uint8(subTitleFontColor[0]), G: uint8(subTitleFontColor[1]), B: uint8(subTitleFontColor[2]), A: 255})
-	subTitleCount := countNum(subTitleContent)
-	dc.DrawStringAnchored(subTitleContent, float64(subTitleStartPoint[0])+subTitleCount.word*float64(subTitleFontSize)/4+subTitleCount.num*float64(subTitleFontSize)/4, float64(subTitleStartPoint[1]), 0.5, 0.5)
-
-	// 发送人
-	sender := "相城法院"
-	// 当事人
-	people := "张三"
-	// 身份证号
-	idcard := "345678199303264569"
-	// 送达时间
-	time := "2020年06月11日 10:32:19"
-	// 上链时间
-	signoffTime := "2020年06月11日 10:32:26"
-	//  送达方式
-	category := "短信"
-
-	bh := "TJ-XSSDFD123"
-
-	var fontSize float64 = 90
-
-	bhCount := countNum(bh)
-	dc.DrawStringAnchored(bh, 1140+bhCount.word*fontSize/4+bhCount.num*fontSize/4, 780, 0.5, 0.5)
-
-	// 设置字体颜色
-	dc.SetColor(color.RGBA{A: 255})
-
-	senderCount := countNum(sender)
-	dc.DrawStringAnchored(sender, 900+senderCount.hzc*fontSize/2+senderCount.num*fontSize/4, 679+360+20, 0.5, 0.5)
-
-	peopleCount := countNum(people)
-	dc.DrawStringAnchored(people, 900+peopleCount.hzc*fontSize/2+peopleCount.num*fontSize/4, 1039+180+10+10, 0.5, 0.5)
-
-	idcardCount := countNum(idcard)
-	dc.DrawStringAnchored(idcard, 900+idcardCount.word*fontSize/4+idcardCount.num*fontSize/4, 1419+10, 0.5, 0.5)
-
-	categoryCount := countNum(category)
-	dc.DrawStringAnchored(category, 900+categoryCount.hzc*fontSize/2+categoryCount.num*fontSize/4, 1599+10, 0.5, 0.5)
-
-	timeCount := countNum(time)
-	dc.DrawStringAnchored(time, 900+timeCount.hzc*fontSize/2+timeCount.num*fontSize/4+60, 1779+10, 0.5, 0.5)
-
-	dc.DrawStringAnchored("同济区块链", 900+5*fontSize/2, 1959+10, 0.5, 0.5)
-
-	signoffTimeCount := countNum(signoffTime)
-	dc.DrawStringAnchored(signoffTime, 900+signoffTimeCount.hzc*fontSize/2+signoffTimeCount.num*fontSize/4+60, 2139+10, 0.5, 0.5)
+	//// 1、写主标题
+	//titleFontFilePath := conf.TitleFontFilePath
+	//mainTitleFontSize := conf.Text.MainTitleFontSize
+	//mainTitleFontColor := conf.Text.MainTitleFontColor
+	//mainTitleContent := conf.Text.MainTitleContent
+	//titleStartPoint := conf.Text.MainTitleStartPoint
+	//if err := dc.LoadFontFace(titleFontFilePath, float64(mainTitleFontSize)); err != nil {
+	//	panic(err)
+	//}
+	//// 设置字体颜色
+	//dc.SetColor(color.RGBA{R: uint8(mainTitleFontColor[0]), G: uint8(mainTitleFontColor[1]), B: uint8(mainTitleFontColor[2]), A: 255})
+	//
+	//dc.DrawRoundedRectangle(0, 0, float64(width), float64(height), 0)
+	//
+	//titleCount := countNum(mainTitleContent)
+	//dc.DrawStringAnchored(mainTitleContent, float64(titleStartPoint[0])+titleCount.word*float64(mainTitleFontSize)/4+titleCount.num*float64(mainTitleFontSize)/4, float64(titleStartPoint[1]), 0.5, 0.5)
+	//
+	//// 2、写入副标题
+	//bodyFontFilePath := conf.BodyFontFilePath
+	//subTitleFontSize := conf.Text.SubTitleFontSize
+	//subTitleFontColor := conf.Text.SubTitleFontColor
+	//subTitleContent := conf.Text.SubTitleContent
+	//subTitleStartPoint := conf.Text.SubTitleStartPoint
+	//if err := dc.LoadFontFace(bodyFontFilePath, float64(subTitleFontSize)); err != nil {
+	//	panic(err)
+	//}
+	//// 设置字体颜色
+	//dc.SetColor(color.RGBA{R: uint8(subTitleFontColor[0]), G: uint8(subTitleFontColor[1]), B: uint8(subTitleFontColor[2]), A: 255})
+	//subTitleCount := countNum(subTitleContent)
+	//dc.DrawStringAnchored(subTitleContent, float64(subTitleStartPoint[0])+subTitleCount.word*float64(subTitleFontSize)/4+subTitleCount.num*float64(subTitleFontSize)/4, float64(subTitleStartPoint[1]), 0.5, 0.5)
+	//
+	//// 发送人
+	//sender := "相城法院"
+	//// 当事人
+	//people := "张三"
+	//// 身份证号
+	//idcard := "345678199303264569"
+	//// 送达时间
+	//time := "2020年06月11日 10:32:19"
+	//// 上链时间
+	//signoffTime := "2020年06月11日 10:32:26"
+	////  送达方式
+	//category := "短信"
+	//
+	//bh := "TJ-XSSDFD123"
+	//
+	//var fontSize float64 = 90
+	//
+	//bhCount := countNum(bh)
+	//dc.DrawStringAnchored(bh, 1140+bhCount.word*fontSize/4+bhCount.num*fontSize/4, 780, 0.5, 0.5)
+	//
+	//// 设置字体颜色
+	//dc.SetColor(color.RGBA{A: 255})
+	//
+	//senderCount := countNum(sender)
+	//dc.DrawStringAnchored(sender, 900+senderCount.hzc*fontSize/2+senderCount.num*fontSize/4, 679+360+20, 0.5, 0.5)
+	//
+	//peopleCount := countNum(people)
+	//dc.DrawStringAnchored(people, 900+peopleCount.hzc*fontSize/2+peopleCount.num*fontSize/4, 1039+180+10+10, 0.5, 0.5)
+	//
+	//idcardCount := countNum(idcard)
+	//dc.DrawStringAnchored(idcard, 900+idcardCount.word*fontSize/4+idcardCount.num*fontSize/4, 1419+10, 0.5, 0.5)
+	//
+	//categoryCount := countNum(category)
+	//dc.DrawStringAnchored(category, 900+categoryCount.hzc*fontSize/2+categoryCount.num*fontSize/4, 1599+10, 0.5, 0.5)
+	//
+	//timeCount := countNum(time)
+	//dc.DrawStringAnchored(time, 900+timeCount.hzc*fontSize/2+timeCount.num*fontSize/4+60, 1779+10, 0.5, 0.5)
+	//
+	//dc.DrawStringAnchored("同济区块链", 900+5*fontSize/2, 1959+10, 0.5, 0.5)
+	//
+	//signoffTimeCount := countNum(signoffTime)
+	//dc.DrawStringAnchored(signoffTime, 900+signoffTimeCount.hzc*fontSize/2+signoffTimeCount.num*fontSize/4+60, 2139+10, 0.5, 0.5)
 
 	dc.Clip()
 
 	return dc
+}
+
+// 将字体写入文件
+func drawTextToPic(dc *gg.Context, template PicTemplate, param map[string]interface{}) {
+
+	// 获取默认字体路径
+	defaultFontPath := template.DefaultFontPath
+	// 获取默认字体大小
+	fontDPI := template.FontDPI
+	// 加载默认字体
+	dc.LoadFontFace(defaultFontPath, fontDPI)
+
+	// 获取blocks
+	blocks := template.Blocks
+	for _, blk := range blocks {
+		blockType := blk.BlockType
+		face := blk.FontFace
+		size := blk.FontSize
+		if len(face) >= 0 && size > 0 {
+			dc.LoadFontFace(face, size)
+		}
+		dc.SetColor(color.RGBA{R: blk.Color[0], G: blk.Color[1], B: blk.Color[2], A: blk.Color[3]})
+
+		switch blockType {
+		case string(BlockType_Text):
+			dc.DrawStringAnchored(blk.Content, blk.Point[0], blk.Point[1], 0, 0)
+		case string(BlockType_DynamicText):
+			var temp float64 = 0
+			for _, arg := range blk.ContentList {
+				fmt.Printf("arg:%+v\n", arg)
+				value, has := param[arg.Field]
+				if !has {
+					continue
+				}
+				dc.DrawStringAnchored(arg.ShowValue, blk.Point[0], blk.Point[1]+temp, 0, 0)
+				dc.DrawStringAnchored(fmt.Sprintf("%v", value), blk.Point[0]+1000, blk.Point[1]+1000+temp, 0, 0)
+				temp += 300
+			}
+		}
+	}
+
 }
 
 var err error
