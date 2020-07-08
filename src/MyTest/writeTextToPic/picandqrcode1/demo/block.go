@@ -105,8 +105,8 @@ func (dtb DynamicTextBlock) Draw(dc *gg.Context, params map[string]interface{}) 
 		if !has {
 			continue
 		}
-		// dc.DrawStringAnchored(arg.ShowValue)
-		// dc.DrawStringAnchored(fmt.Sprintf("%v", value))
+		dc.DrawStringAnchored(arg.ShowValue, x, y, 0, 0)
+		dc.DrawStringAnchored(fmt.Sprintf("%v", value), x, y, 0, 0)
 	}
 }
 
@@ -143,11 +143,11 @@ func ReadJson(filePath string) (result string) {
 	return result
 }
 
-func GetPicTemplate(templateName string) (template CertTemplate) {
+func GetPicTemplate(templateName string) (template PicTemplate) {
 	// var filePath = GetCurrentPath() + "/" + templateName
 	var filePath = "E:/20.06.16Project/GoTest/src/MyTest/writeTextToPic/picandqrcode1/conf/" + templateName
 
-	var data CertTemplate
+	var data PicTemplate
 	result := ReadJson(filePath)
 	err := json.Unmarshal([]byte(result), &data)
 	if err != nil {

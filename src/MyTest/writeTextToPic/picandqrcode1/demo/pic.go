@@ -63,8 +63,8 @@ type PicConfig struct {
 	LeftSideText      []LeftSideText
 }
 type QrCode struct {
-	Size    int
-	Address string
+	Size             int
+	QrCodeStartPoint []float64
 }
 type Text struct {
 	MainTitleFontSize   int64
@@ -135,7 +135,7 @@ func main1() {
 
 	// 03: 生成二维码
 	qrSize := file.QrCode.Size
-	content := file.QrCode.Address
+	content := "file.QrCode.Address"
 	qrCodeImg, err = createAvatar(content, qrSize)
 	if err != nil {
 		fmt.Println("生成二维码失败:", err)
@@ -180,12 +180,12 @@ func writeTextToPic(conf PicConfig) *gg.Context {
 	// dc := gg.NewContext(1513, 2452)
 	dc := gg.NewContextForImage(im)
 
-	// template := GetPicTemplate("delivery.json")
-	// blocks := template.Blocks
-	//
+	template := GetPicTemplate("delivery.json")
+	blocks := template.Blocks
+
 	// // GenerateCert(dc,blocks,_)
 
-	// dc.DrawImage(im, 0, 0)
+	dc.DrawImage(im, 0, 0)
 
 	// 1、写主标题
 	titleFontFilePath := conf.TitleFontFilePath
