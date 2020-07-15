@@ -1,0 +1,29 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+*.test
+.idea
+.iml
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
+.glide/
+keys/
+pem/
+dm/
+*.pem
+*.rar
+*.db
+*.lock
+httpservice/httpservice
+core/conf
+tj-export/tj-export
+httpservice/wtsdk
+httpservice/handler/wtsdk
+go.sum
+go.mod
