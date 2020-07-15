@@ -15,7 +15,6 @@ with speed and efficiency.`,
 		Error(cmd, args, errors.New("unrecognized command"))
 	},
 }
-
 func Execute() {
 	rootCmd.Execute()
 }

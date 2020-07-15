@@ -15,7 +15,7 @@
 .glide/
 keys/
 pem/
-dm/
+src/dm/
 *.pem
 *.rar
 *.db
