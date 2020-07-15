@@ -24,10 +24,10 @@ func main7() {
 		// 因此我们可以使用Context中的JSON方法来返回一个json结构的数据
 		// 可用的方法有如下几种，我们可以根据实际需求进行选择
 		/*
-		   IndentedJSON(code int, obj interface{}): 带缩进的json(消耗cpu和mem)
-		   SecureJSON(code int, obj interface{}): 安全化json
-		   JSONP(code int, obj interface{})
-		   JSON(code int, obj interface{}): 序列化为JSON,并写Content-Type:"application/json"头
+		   IndentedJSON(code int, obj interfacetest{}): 带缩进的json(消耗cpu和mem)
+		   SecureJSON(code int, obj interfacetest{}): 安全化json
+		   JSONP(code int, obj interfacetest{})
+		   JSON(code int, obj interfacetest{}): 序列化为JSON,并写Content-Type:"application/json"头
 		*/
 		c.JSON(200, restdata)
 	})
