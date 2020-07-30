@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func dd(i func(int, int) int) int {
 	return i(1, 2)
