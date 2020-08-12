@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/hex"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -51,17 +50,18 @@ func main() {
 
 	fmt.Printf("----%+v\n", body)
 
-	key, s, _ := CreateKey("123456")
-	fmt.Printf("key:%s\n ssss:%v\n", key, s)
+	keyMsg, _ := CreateKey("123456")
+	fmt.Printf("keyMsg:%+v", keyMsg)
+
 }
 
-func CreateKey(pwd string) (string, string, error) {
+func CreateKey(pwd string) (*KeyMsg, error) {
 	body := fmt.Sprintf(createKey, "sm2", pwd, "sm2_pem")
 	client := NewClient()
 	code, res, err := client.Post("http://10.1.3.250:8080/v1/createKey", body)
 	if err != nil {
 		log.Error(err)
-		return "", "", err
+		return nil, err
 	}
 	if code != 200 {
 		log.Error("post code:", code)
@@ -69,54 +69,20 @@ func CreateKey(pwd string) (string, string, error) {
 		err = json.Unmarshal(res, reply)
 		if err != nil {
 			log.Error("json:", err)
-			return "", "", err
+			return nil, err
 		}
 		log.Error("reply:", reply)
-		return "", "", *reply
+		return nil, *reply
 	}
-
 	reply := new(CreateKeyRes)
 	err = json.Unmarshal(res, reply)
 	if err != nil {
 		log.Error(err)
-		return "", "", err
+		return nil, err
 	}
 
 	fmt.Printf("reply==>%+v\n", reply)
-
-	pub, _ := GetPubKey(reply.Data.KeyId)
-	return reply.Data.KeyId, pub, nil
-}
-
-func GetPubKey(id string) (string, error) {
-	body := fmt.Sprintf(getPubKey, id)
-	client := NewClient()
-	code, res, err := client.Post("http://10.1.3.250:8080/v1/getPublicKey", body)
-	if err != nil {
-		return "", err
-	}
-	if code != 200 {
-		reply := new(error)
-		err = json.Unmarshal(res, reply)
-		if err != nil {
-			return "", err
-		}
-		return "", *reply
-	}
-
-	reply := new(GetPubKeyRes)
-	err = json.Unmarshal(res, reply)
-	if err != nil {
-		return "", err
-	}
-
-	pk, err := hex.DecodeString(reply.Data.PublicKey)
-	if err != nil {
-		log.Errorf("hex decode pubkey failed: %v", err)
-		return "", err
-	}
-
-	return string(pk), nil
+	return &reply.Data, nil
 }
 
 type Client interface {
