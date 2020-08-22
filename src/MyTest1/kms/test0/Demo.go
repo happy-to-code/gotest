@@ -51,7 +51,8 @@ func main() {
 	fmt.Printf("----%+v\n", body)
 
 	keyMsg, _ := CreateKey("123456")
-	fmt.Printf("keyMsg:%+v", keyMsg)
+	fmt.Printf("keyMsg:%+v\n", keyMsg)
+	fmt.Println(keyMsg.KeyId, "<===>", keyMsg.PublicKey)
 
 }
 
@@ -80,8 +81,6 @@ func CreateKey(pwd string) (*KeyMsg, error) {
 		log.Error(err)
 		return nil, err
 	}
-
-	fmt.Printf("reply==>%+v\n", reply)
 	return &reply.Data, nil
 }
 
