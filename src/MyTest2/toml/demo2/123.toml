@@ -1,0 +1,48 @@
+# — — — — —  — — — — — — — — — — — — — — — — — — 
+#                   First Item
+# — — — — —  — — — — — — — — — — — — — — — — — — 
+
+[[item]]
+itemname = "Fragments"
+itemdesc = "This one can get a bit longer."
+
+    [item.attributes]
+    material = "Basematname"
+    light    = "Lightname"
+    transpc  = "full"
+    displace = "height"
+
+    [[item.part]]
+    partname = "Shard"
+    partlink = "active"
+
+    [[item.part]]
+    partname = "Tear"
+    partlink = "deferred"
+
+    [[item.part]]
+    partname = "crater"
+    partlink = "disabled"
+
+
+# — — — — —  — — — — — — — — — — — — — — — — — — 
+#                   Second Item
+# — — — — —  — — — — — — — — — — — — — — — — — — 
+
+[[item]]
+itemname = "Splash"
+itemdesc = "This one also can get a bit longer."
+
+    [item.attributes]
+    material = "Other Basematname"
+    light    = "Other Lightname"
+    transpc  = "half"
+    displace = "bump"
+
+    [[item.part]]
+    partname = "Drops"
+    partlink = "active"
+
+    [[item.part]]
+    partname = "Wave"
+    partlink = "deferred"
