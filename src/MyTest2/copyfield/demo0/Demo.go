@@ -20,21 +20,45 @@ type EnterpriseInfoAndContractAddress struct {
 	EquityAbbreviation string `binding:"required"` // 股权简称
 }
 
+type SharesLock struct {
+	Amount        uint64 `binding:"gt=0"`  // 冻结的数量
+	ShareProperty uint16 `binding:"gte=0"` // 股份类型
+}
+type SharesLockForContract struct {
+	Amount        uint64 // 冻结的数量
+	ShareProperty string // 股份类型
+}
+
 func main() {
-	var infoAndContractAddress EnterpriseInfoAndContractAddress
-	infoAndContractAddress.ContractAddress = "0x0001"
-	infoAndContractAddress.EquityCode = "10005"
-	infoAndContractAddress.EquityAbbreviation = "xyz"
+	// var infoAndContractAddress EnterpriseInfoAndContractAddress
+	// infoAndContractAddress.ContractAddress = "0x0001"
+	// infoAndContractAddress.EquityCode = "10005"
+	// infoAndContractAddress.EquityAbbreviation = "xyz"
+	//
+	// var enterpriseInfo EnterpriseInfo
+	//
+	// fmt.Printf("11111====infoAndContractAddress:%v,enterpriseInfo:%v\n", infoAndContractAddress, enterpriseInfo)
+	//
+	// err := SimpleCopyProperties(&enterpriseInfo, infoAndContractAddress)
+	// enterpriseInfo.Name = "QQQQQ"
+	// if err == nil {
+	// 	fmt.Printf("22222====infoAndContractAddress:%v,enterpriseInfo:%+v\n", infoAndContractAddress, enterpriseInfo)
+	// }
 
-	var enterpriseInfo EnterpriseInfo
-
-	fmt.Printf("11111====infoAndContractAddress:%v,enterpriseInfo:%v\n", infoAndContractAddress, enterpriseInfo)
-
-	err := SimpleCopyProperties(&enterpriseInfo, infoAndContractAddress)
-	enterpriseInfo.Name = "QQQQQ"
-	if err == nil {
-		fmt.Printf("22222====infoAndContractAddress:%v,enterpriseInfo:%+v\n", infoAndContractAddress, enterpriseInfo)
+	sharesLock := SharesLock{
+		Amount:        15,
+		ShareProperty: 16,
 	}
+	fmt.Printf("sharesLock:%+v\n", sharesLock)
+
+	var sharesLockForContract SharesLockForContract
+	err := SimpleCopyProperties(&sharesLockForContract, sharesLock)
+	if err != nil {
+		fmt.Println("err:", err)
+	}
+	fmt.Printf("sharesLockForContract:%+v\n", sharesLockForContract)
+	sharesLockForContract.ShareProperty = "123"
+	fmt.Printf("sharesLockForContract:%+v\n", sharesLockForContract)
 
 }
 
