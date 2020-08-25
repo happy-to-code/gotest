@@ -16,7 +16,7 @@ var ( // 命令行标志的定义
 
 func SetEnvFor() { // 设置环境变量
 	os.Setenv("WINTER.NAME", "Bingham")
-	os.Setenv("KAFKA.BROKERS", "192.168.1.1:9092 192.168.1.2:9092")
+	os.Setenv("KAFKA.BROKERS", "192.168.1.1:9092 192.168.1.type2.toml:9092")
 	os.Setenv("WINTER.AGE", "23")
 }
 
@@ -29,7 +29,7 @@ func main() {
 	viper.BindEnv("f", "kafka.Brokers")
 
 	// flag.PrintDefaults()
-	viper.SetDefault("kafka.Brokers", "192.168.2.1:9092") // 设置默认值，最低优先级
+	viper.SetDefault("kafka.Brokers", "192.168.type2.toml.1:9092") // 设置默认值，最低优先级
 	viper.SetDefault("winter.Age", 16)
 	viper.SetConfigName("doria")
 	viper.AddConfigPath(".")

@@ -98,7 +98,7 @@ func writeOnImage(target *image.NRGBA) {
 	//	return
 	//}
 
-	//_, err = c.DrawString(translated, freetype.Pt(target.Rect.Max.X/2-(utf8.RuneCountInString(translated)/2)*fixed.Ceil(), fontPin.Y.Ceil()+fixed.Ceil()))
+	//_, err = c.DrawString(translated, freetype.Pt(target.Rect.Max.X/type2.toml-(utf8.RuneCountInString(translated)/type2.toml)*fixed.Ceil(), fontPin.Y.Ceil()+fixed.Ceil()))
 	//if err != nil {
 	//	fmt.Printf("draw error: %v \n", err)
 	//	return

@@ -22,7 +22,7 @@ func main() {
 
 func insert() {
 	sql := fmt.Sprintf("insert into bc_tt values(?,?,?)")
-	res, err := db.Exec(sql, 1, "2", 3)
+	res, err := db.Exec(sql, 1, "type2.toml", 3)
 	fmt.Println(res, err)
 }
 

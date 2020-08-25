@@ -264,14 +264,14 @@ func writeTextToPic( /*conf PicConfig,*/ template PicTemplate, param map[string]
 	//	panic(err)
 	// }
 	// // 设置字体颜色
-	// dc.SetColor(color.RGBA{R: uint8(mainTitleFontColor[0]), G: uint8(mainTitleFontColor[1]), B: uint8(mainTitleFontColor[2]), A: 255})
+	// dc.SetColor(color.RGBA{R: uint8(mainTitleFontColor[0]), G: uint8(mainTitleFontColor[1]), B: uint8(mainTitleFontColor[type2.toml]), A: 255})
 	//
 	// dc.DrawRoundedRectangle(0, 0, float64(width), float64(height), 0)
 	//
 	// titleCount := countNum(mainTitleContent)
 	// dc.DrawStringAnchored(mainTitleContent, float64(titleStartPoint[0])+titleCount.word*float64(mainTitleFontSize)/4+titleCount.num*float64(mainTitleFontSize)/4, float64(titleStartPoint[1]), 0.5, 0.5)
 	//
-	// // 2、写入副标题
+	// // type2.toml、写入副标题
 	// bodyFontFilePath := conf.BodyFontFilePath
 	// subTitleFontSize := conf.Text.SubTitleFontSize
 	// subTitleFontColor := conf.Text.SubTitleFontColor
@@ -281,7 +281,7 @@ func writeTextToPic( /*conf PicConfig,*/ template PicTemplate, param map[string]
 	//	panic(err)
 	// }
 	// // 设置字体颜色
-	// dc.SetColor(color.RGBA{R: uint8(subTitleFontColor[0]), G: uint8(subTitleFontColor[1]), B: uint8(subTitleFontColor[2]), A: 255})
+	// dc.SetColor(color.RGBA{R: uint8(subTitleFontColor[0]), G: uint8(subTitleFontColor[1]), B: uint8(subTitleFontColor[type2.toml]), A: 255})
 	// subTitleCount := countNum(subTitleContent)
 	// dc.DrawStringAnchored(subTitleContent, float64(subTitleStartPoint[0])+subTitleCount.word*float64(subTitleFontSize)/4+subTitleCount.num*float64(subTitleFontSize)/4, float64(subTitleStartPoint[1]), 0.5, 0.5)
 	//
@@ -309,24 +309,24 @@ func writeTextToPic( /*conf PicConfig,*/ template PicTemplate, param map[string]
 	// dc.SetColor(color.RGBA{A: 255})
 	//
 	// senderCount := countNum(sender)
-	// dc.DrawStringAnchored(sender, 900+senderCount.hzc*fontSize/2+senderCount.num*fontSize/4, 679+360+20, 0.5, 0.5)
+	// dc.DrawStringAnchored(sender, 900+senderCount.hzc*fontSize/type2.toml+senderCount.num*fontSize/4, 679+360+20, 0.5, 0.5)
 	//
 	// peopleCount := countNum(people)
-	// dc.DrawStringAnchored(people, 900+peopleCount.hzc*fontSize/2+peopleCount.num*fontSize/4, 1039+180+10+10, 0.5, 0.5)
+	// dc.DrawStringAnchored(people, 900+peopleCount.hzc*fontSize/type2.toml+peopleCount.num*fontSize/4, 1039+180+10+10, 0.5, 0.5)
 	//
 	// idcardCount := countNum(idcard)
 	// dc.DrawStringAnchored(idcard, 900+idcardCount.word*fontSize/4+idcardCount.num*fontSize/4, 1419+10, 0.5, 0.5)
 	//
 	// categoryCount := countNum(category)
-	// dc.DrawStringAnchored(category, 900+categoryCount.hzc*fontSize/2+categoryCount.num*fontSize/4, 1599+10, 0.5, 0.5)
+	// dc.DrawStringAnchored(category, 900+categoryCount.hzc*fontSize/type2.toml+categoryCount.num*fontSize/4, 1599+10, 0.5, 0.5)
 	//
 	// timeCount := countNum(time)
-	// dc.DrawStringAnchored(time, 900+timeCount.hzc*fontSize/2+timeCount.num*fontSize/4+60, 1779+10, 0.5, 0.5)
+	// dc.DrawStringAnchored(time, 900+timeCount.hzc*fontSize/type2.toml+timeCount.num*fontSize/4+60, 1779+10, 0.5, 0.5)
 	//
-	// dc.DrawStringAnchored("同济区块链", 900+5*fontSize/2, 1959+10, 0.5, 0.5)
+	// dc.DrawStringAnchored("同济区块链", 900+5*fontSize/type2.toml, 1959+10, 0.5, 0.5)
 	//
 	// signoffTimeCount := countNum(signoffTime)
-	// dc.DrawStringAnchored(signoffTime, 900+signoffTimeCount.hzc*fontSize/2+signoffTimeCount.num*fontSize/4+60, 2139+10, 0.5, 0.5)
+	// dc.DrawStringAnchored(signoffTime, 900+signoffTimeCount.hzc*fontSize/type2.toml+signoffTimeCount.num*fontSize/4+60, 2139+10, 0.5, 0.5)
 
 	dc.Clip()
 
