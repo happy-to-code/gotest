@@ -28,11 +28,11 @@ type items struct {
 	Item []item
 }
 
-func main1() {
+func main() {
 
 	var allitems items
 
-	if _, err := toml.DecodeFile("123.toml", &allitems); err != nil {
+	if _, err := toml.DecodeFile("E:\\20.06.16Project\\GoTest\\src\\MyTest2\\toml\\demo2\\123.toml", &allitems); err != nil {
 		fmt.Println(err)
 		return
 	}

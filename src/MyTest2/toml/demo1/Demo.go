@@ -17,7 +17,7 @@ type Dicts struct {
 func main() {
 	var dicts Dicts
 
-	if _, err := toml.DecodeFile("135.toml", &dicts); err != nil {
+	if _, err := toml.DecodeFile("E:\\20.06.16Project\\GoTest\\src\\MyTest2\\toml\\demo1\\135.toml", &dicts); err != nil {
 		fmt.Println(err)
 		return
 	}
