@@ -1,8 +1,8 @@
 package global
 
 import (
-	"github.com/blok-service/pkg/logger"
-	"github.com/blok-service/pkg/setting"
+	"github.com/blog-service/pkg/logger"
+	"github.com/blog-service/pkg/setting"
 )
 
 var (

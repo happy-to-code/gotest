@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/blok-service/global"
-	"github.com/blok-service/internal/model"
-	"github.com/blok-service/internal/routers"
-	"github.com/blok-service/pkg/logger"
-	"github.com/blok-service/pkg/setting"
+	"github.com/blog-service/global"
+	"github.com/blog-service/internal/model"
+	"github.com/blog-service/internal/routers"
+	"github.com/blog-service/pkg/logger"
+	"github.com/blog-service/pkg/setting"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"log"
 	"net/http"

@@ -1,4 +1,4 @@
-module github.com/blok-service
+module github.com/blog-service
 
 go 1.14
 

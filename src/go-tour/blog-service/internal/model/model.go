@@ -2,8 +2,8 @@ package model
 
 import (
 	"fmt"
-	"github.com/blok-service/global"
-	"github.com/blok-service/pkg/setting"
+	"github.com/blog-service/global"
+	"github.com/blog-service/pkg/setting"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql" // mysql驱动
 )

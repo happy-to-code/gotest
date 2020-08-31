@@ -1,7 +1,7 @@
 package routers
 
 import (
-	v1 "github.com/blok-service/internal/routers/api/v1"
+	v1 "github.com/blog-service/internal/routers/api/v1"
 	"github.com/gin-gonic/gin"
 )
 
