@@ -19,7 +19,7 @@ var (
 	hinting     = flag.String("hinting", "none", "none | full")
 	size        = flag.Float64("size", 280, "font size in points")
 	outLineSize = flag.Float64("outLineSize", 10, "font size in points")
-	spacing     = flag.Float64("spacing", 1.5, "line spacing (e.g. 2 means double spaced)")
+	spacing     = flag.Float64("spacing", 1.5, "line spacing (e.g. type2.toml means double spaced)")
 	wonb        = flag.Bool("whiteonblack", false, "white text on a black background")
 )
 

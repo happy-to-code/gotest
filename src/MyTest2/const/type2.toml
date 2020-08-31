@@ -1,0 +1,32 @@
+[[BZ]]
+    name = "币种"
+    code = 1
+    describe = "人民币"
+[[BZ]]
+    name = "币种"
+    code = 2
+    describe = "美元"
+[[BZ]]
+    name = "币种"
+    code = 3
+    describe = "欧元"
+[[BZ]]
+    name = "币种"
+    code = 4
+    describe = "英镑"
+[[BZ]]
+    name = "币种"
+    code = 5
+    describe = "日元"
+[[BZ]]
+    name = "币种"
+    code = 6
+    describe = "港币"
+[[CQ_GFXZ]]
+    name = "股权性质"
+    code = 0
+    describe = "流通股"
+[[CQ_GFXZ]]
+    name = "股权性质"
+    code = 1
+    describe = "优先股"

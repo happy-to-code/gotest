@@ -23,10 +23,12 @@ type EnterpriseInfoAndContractAddress struct {
 type SharesLock struct {
 	Amount        uint64 `binding:"gt=0"`  // 冻结的数量
 	ShareProperty uint16 `binding:"gte=0"` // 股份类型
+	Name          string
 }
 type SharesLockForContract struct {
 	Amount        uint64 // 冻结的数量
-	ShareProperty string // 股份类型
+	ShareProperty uint16 // 股份类型
+	Name          []string
 }
 
 func main() {
@@ -48,6 +50,7 @@ func main() {
 	sharesLock := SharesLock{
 		Amount:        15,
 		ShareProperty: 16,
+		Name:          "AAAAA",
 	}
 	fmt.Printf("sharesLock:%+v\n", sharesLock)
 
@@ -57,7 +60,8 @@ func main() {
 		fmt.Println("err:", err)
 	}
 	fmt.Printf("sharesLockForContract:%+v\n", sharesLockForContract)
-	sharesLockForContract.ShareProperty = "123"
+	// sharesLockForContract.ShareProperty = "123"
+	sharesLockForContract.Name = []string{sharesLock.Name}
 	fmt.Printf("sharesLockForContract:%+v\n", sharesLockForContract)
 
 }
