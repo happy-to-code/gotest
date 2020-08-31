@@ -5,7 +5,7 @@ import (
 	"github.com/blok-service/global"
 	"github.com/blok-service/pkg/setting"
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	_ "github.com/jinzhu/gorm/dialects/mysql" // mysql驱动
 )
 
 type Model struct {
@@ -18,6 +18,7 @@ type Model struct {
 	IsDel      uint8  `json:"is_del"`
 }
 
+// 连接数据库
 func NewDBEngine(databaseSetting *setting.DatabaseSettingS) (*gorm.DB, error) {
 	db, err := gorm.Open(databaseSetting.DBType, fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=%s&parseTime=%t&loc=Local",
 		databaseSetting.UserName,

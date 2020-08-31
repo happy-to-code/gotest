@@ -28,7 +28,7 @@ Email:
     - xxx
 JWT:
   Secret: yida
-  Issuer: blog-service
+  Issuer: blog_service
   Expire: 7200
 Database:
   DBType: mysql
