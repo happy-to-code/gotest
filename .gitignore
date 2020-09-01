@@ -26,4 +26,3 @@ tj-export/tj-export
 httpservice/wtsdk
 httpservice/handler/wtsdk
 go.sum
-go.mod
