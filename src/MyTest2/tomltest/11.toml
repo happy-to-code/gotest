@@ -1,0 +1,9 @@
+[servers]
+  # 你可以依照你的意愿缩进。使用空格或Tab。TOML不会在意。
+  [servers.a]
+  ip="34.23.1.4"
+  port=6379
+
+  [servers.b]
+  ip="34.23.1.6"
+  port=9921
