@@ -1,0 +1,1081 @@
+dicts:
+  - item: "BZ"
+    label:
+      name: "币种"
+      code: 1
+      describe: "人民币"
+  - item: "BZ"
+    label:
+      name: "币种"
+      code: 2
+      describe: "美元"
+  - item: "BZ"
+    label:
+      name: "币种"
+      code: 3
+      describe: "欧元"
+  - item: "BZ"
+    label:
+      name: "币种"
+      code: 4
+      describe: "英镑"
+  - item: "BZ"
+    label:
+      name: "币种"
+      code: 5
+      describe: "日元"
+  - item: "BZ"
+    label:
+      name: "币种"
+      code: 6
+      describe: "港币"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 0
+      describe: "流通股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 1
+      describe: "优先股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 11
+      describe: "公众已托管-社会公众股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 12
+      describe: "公众已托管-高管买入股份"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 13
+      describe: "公众已托管-限售流通股(个人)"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 14
+      describe: "公众已托管-限售流通股(机构)"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 2
+      describe: "资格股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 21
+      describe: "发起人股-境内法人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 22
+      describe: "发起人股-国有股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 23
+      describe: "发起人股-境外法人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 24
+      describe: "发起人股-境内自然人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 25
+      describe: "发起人股-境外自然人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 26
+      describe: "发起人股-境内其它机构"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 27
+      describe: "发起人股-境外其它机构"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 28
+      describe: "发起人股-认缴未出资"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 29
+      describe: "发起人股-其它"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 3
+      describe: "定增股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 31
+      describe: "定增股-国有股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 32
+      describe: "定增股-境内法人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 33
+      describe: "定增股-境外法人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 34
+      describe: "定增股-境内自然人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 35
+      describe: "定增股-境外自然人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 36
+      describe: "定增股-境内其它机构"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 37
+      describe: "定增股-境外其它机构"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 39
+      describe: "定增股-其它"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 4
+      describe: "特限股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 41
+      describe: "控股股东、实控人、一致行动人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 42
+      describe: "承诺人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 43
+      describe: "高管分红股、转增股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 44
+      describe: "高管定增股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 45
+      describe: "高管限售股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 46
+      describe: "股权激励股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 49
+      describe: "特限股-其它"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 5
+      describe: "托管股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 51
+      describe: "托管股-国有股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 52
+      describe: "托管股-境内法人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 53
+      describe: "托管股-境外法人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 54
+      describe: "托管股-境内自然人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 55
+      describe: "托管股-境外自然人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 56
+      describe: "托管股-境内其它机构"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 57
+      describe: "托管股-境外其它机构"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 58
+      describe: "托管股-高管股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 59
+      describe: "托管股-其它"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 6
+      describe: "有限公司股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 61
+      describe: "有限公司股-国有股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 62
+      describe: "有限公司股-境内法人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 63
+      describe: "有限公司股-境外法人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 64
+      describe: "有限公司股-境内自然人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 65
+      describe: "有限公司股-境外自然人股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 66
+      describe: "有限公司股-境内其它机构"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 67
+      describe: "有限公司股-境外其它机构"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 68
+      describe: "有限公司股-高管股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 69
+      describe: "有限公司股-其它"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 9
+      describe: "其他类型"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 91
+      describe: "股份合作制"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 92
+      describe: "退托管股-记录信息无法律效力"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 93
+      describe: "退托管股-记录信息无法律效力-未缴"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 94
+      describe: "退托管股-记录信息无法律效力-承诺人"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 97
+      describe: "社会团体"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 98
+      describe: "改制股"
+  - item: "CQ_GFXZ"
+    label:
+      name: "股权性质"
+      code: 99
+      describe: "其他"
+  - item: "CQ_DJLB"
+    label:
+      name: "股权冻结类别"
+      code: 1
+      describe: "委托冻结"
+  - item: "CQ_DJLB"
+    label:
+      name: "股权冻结类别"
+      code: 2
+      describe: "增加可卖量"
+  - item: "CQ_DJLB"
+    label:
+      name: "股权冻结类别"
+      code: 3
+      describe: "减少可卖量"
+  - item: "CQ_DJLB"
+    label:
+      name: "股权冻结类别"
+      code: 4
+      describe: "手工长期冻结"
+  - item: "CQ_DJLB"
+    label:
+      name: "股权冻结类别"
+      code: 5
+      describe: "清算冻结"
+  - item: "CQ_DJLB"
+    label:
+      name: "股权冻结类别"
+      code: 6
+      describe: "司法冻结"
+  - item: "CQ_DJLB"
+    label:
+      name: "股权冻结类别"
+      code: 7
+      describe: "质押冻结"
+  - item: "CQ_DJLB"
+    label:
+      name: "股权冻结类别"
+      code: 37
+      describe: "定向增资"
+  - item: "CQ_DJLB"
+    label:
+      name: "股权冻结类别"
+      code: 42
+      describe: "高管股"
+  - item: "CQ_DJLB"
+    label:
+      name: "股权冻结类别"
+      code: 47
+      describe: "未确权冻结"
+  - item: "CQ_DJLB"
+    label:
+      name: "股权冻结类别"
+      code: 51
+      describe: "未上市红股"
+  - item: "CQ_DJLB"
+    label:
+      name: "股权冻结类别"
+      code: 52
+      describe: "未上市配股"
+  - item: "CQ_FLLB"
+    label:
+      name: "股权费率类别"
+      code: 1
+      describe: "普通企业"
+  - item: "CQ_FLLB"
+    label:
+      name: "股权费率类别"
+      code: 2
+      describe: "发行债券企业"
+  - item: "CQ_FLLB"
+    label:
+      name: "股权费率类别"
+      code: 3
+      describe: "可转债券收费企业"
+  - item: "CQ_FLLB"
+    label:
+      name: "股权费率类别"
+      code: 4
+      describe: "非可转债券收费企业"
+  - item: "CQ_FLLB"
+    label:
+      name: "股权费率类别"
+      code: 5
+      describe: "科创企业"
+  - item: "CQ_FLLB"
+    label:
+      name: "股权费率类别"
+      code: 6
+      describe: "可转债券收费企业2"
+  - item: "CQ_FLLB"
+    label:
+      name: "股权费率类别"
+      code: 7
+      describe: "可转债券收费企业3"
+  - item: "CQ_FXMS"
+    label:
+      name: "发行模式"
+      code: 0
+      describe: "多次付息"
+  - item: "CQ_FXMS"
+    label:
+      name: "发行模式"
+      code: 1
+      describe: "到期付息"
+  - item: "CQ_GQZHZT"
+    label:
+      name: "股权帐户状态"
+      code: 0
+      describe: "正常"
+  - item: "CQ_GQZHZT"
+    label:
+      name: "股权帐户状态"
+      code: 1
+      describe: "冻结"
+  - item: "CQ_GQZHZT"
+    label:
+      name: "股权帐户状态"
+      code: 2
+      describe: "挂失"
+  - item: "CQ_GQZHZT"
+    label:
+      name: "股权帐户状态"
+      code: 3
+      describe: "销户"
+  - item: "CQ_JYZT"
+    label:
+      name: "股权交易状态"
+      code: 0
+      describe: "正常"
+  - item: "CQ_JYZT"
+    label:
+      name: "股权交易状态"
+      code: 1
+      describe: "停牌"
+  - item: "CQ_JYZT"
+    label:
+      name: "股权交易状态"
+      code: 2
+      describe: "临时停牌"
+  - item: "CQ_JYZT"
+    label:
+      name: "股权交易状态"
+      code: 3
+      describe: "退市"
+  - item: "FWXM"
+    label:
+      name: "服务项目"
+      code: 64
+      describe: "电话"
+  - item: "FWXM"
+    label:
+      name: "服务项目"
+      code: 128
+      describe: "电子邮件"
+  - item: "FWXM"
+    label:
+      name: "服务项目"
+      code: 256
+      describe: "短信"
+  - item: "FWXM"
+    label:
+      name: "服务项目"
+      code: 512
+      describe: "邮寄"
+  - item: "FXCSNL"
+    label:
+      name: "客户风险承受能力"
+      code: 0
+      describe: "未设定"
+  - item: "FXCSNL"
+    label:
+      name: "客户风险承受能力"
+      code: 1
+      describe: "保守型"
+  - item: "FXCSNL"
+    label:
+      name: "客户风险承受能力"
+      code: 2
+      describe: "稳健型"
+  - item: "FXCSNL"
+    label:
+      name: "客户风险承受能力"
+      code: 3
+      describe: "积极型"
+  - item: "FXCSNL"
+    label:
+      name: "客户风险承受能力"
+      code: 4
+      describe: "激进型"
+  - item: "KHJGBZ"
+    label:
+      name: "客户机构标志"
+      code: 0
+      describe: "个人"
+  - item: "KHJGBZ"
+    label:
+      name: "客户机构标志"
+      code: 1
+      describe: "机构"
+  - item: "KHSX"
+    label:
+      name: "客户属性"
+      code: 1
+      describe: "禁止存款"
+  - item: "KHSX"
+    label:
+      name: "客户属性"
+      code: 2
+      describe: "禁止取款"
+  - item: "KHSX"
+    label:
+      name: "客户属性"
+      code: 4
+      describe: "禁止银证转账"
+  - item: "KHSX"
+    label:
+      name: "客户属性"
+      code: 8
+      describe: "禁止转托管"
+  - item: "KHSX"
+    label:
+      name: "客户属性"
+      code: 16
+      describe: "禁止撤指"
+  - item: "KHSX"
+    label:
+      name: "客户属性"
+      code: 32
+      describe: "禁止销户"
+  - item: "KHSX"
+    label:
+      name: "客户属性"
+      code: 64
+      describe: "禁止买入"
+  - item: "KHSX"
+    label:
+      name: "客户属性"
+      code: 128
+      describe: "禁止卖出"
+  - item: "KHSX"
+    label:
+      name: "客户属性"
+      code: 512
+      describe: "股份需授权方能委托"
+  - item: "KHZT"
+    label:
+      name: "客户状态"
+      code: 0
+      describe: "正常"
+  - item: "KHZT"
+    label:
+      name: "客户状态"
+      code: 1
+      describe: "冻结"
+  - item: "KHZT"
+    label:
+      name: "客户状态"
+      code: 2
+      describe: "客户卡挂失"
+  - item: "KHZT"
+    label:
+      name: "客户状态"
+      code: 3
+      describe: "销户"
+  - item: "KHZT"
+    label:
+      name: "客户状态"
+      code: 6
+      describe: "小额休眠"
+  - item: "KHZT"
+    label:
+      name: "客户状态"
+      code: 7
+      describe: "不合格"
+  - item: "KHZT"
+    label:
+      name: "客户状态"
+      code: 9
+      describe: "公司不合格"
+  - item: "OF_GHYY"
+    label:
+      name: "非交易过户原因"
+      code: 0
+      describe: "司法"
+  - item: "OF_GHYY"
+    label:
+      name: "非交易过户原因"
+      code: 1
+      describe: "继承"
+  - item: "OF_GHYY"
+    label:
+      name: "非交易过户原因"
+      code: 2
+      describe: "赠予"
+  - item: "OF_GHYY"
+    label:
+      name: "非交易过户原因"
+      code: 9
+      describe: "超过风险承受能力"
+  - item: "WTFS"
+    label:
+      name: "委托方式"
+      code: 8
+      describe: "柜台"
+  - item: "WTFS"
+    label:
+      name: "委托方式"
+      code: 32
+      describe: "互联网"
+  - item: "XB"
+    label:
+      name: "性别"
+      code: 0
+      describe: "未知"
+  - item: "XB"
+    label:
+      name: "性别"
+      code: 1
+      describe: "男"
+  - item: "XB"
+    label:
+      name: "性别"
+      code: 2
+      describe: "女"
+  - item: "XB"
+    label:
+      name: "性别"
+      code: 3
+      describe: "非自然人"
+  - item: "XLDM"
+    label:
+      name: "学历代码"
+      code: 1
+      describe: "博士"
+  - item: "XLDM"
+    label:
+      name: "学历代码"
+      code: 2
+      describe: "硕士"
+  - item: "XLDM"
+    label:
+      name: "学历代码"
+      code: 3
+      describe: "学士"
+  - item: "XLDM"
+    label:
+      name: "学历代码"
+      code: 4
+      describe: "大专"
+  - item: "XLDM"
+    label:
+      name: "学历代码"
+      code: 5
+      describe: "中专"
+  - item: "XLDM"
+    label:
+      name: "学历代码"
+      code: 6
+      describe: "高中"
+  - item: "XLDM"
+    label:
+      name: "学历代码"
+      code: 7
+      describe: "初中及其以下"
+  - item: "XLDM"
+    label:
+      name: "学历代码"
+      code: 8
+      describe: "其他"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 0
+      describe: "身份证"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 1
+      describe: "护照"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 2
+      describe: "军官证"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 3
+      describe: "士兵证"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 4
+      describe: "港澳通行证"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 6
+      describe: "外国护照"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 7
+      describe: "技术监督局代码"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 8
+      describe: "营业执照"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 9
+      describe: "行政机关"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 10
+      describe: "社会团体"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 11
+      describe: "军队"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 12
+      describe: "武警"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 13
+      describe: "下属机构"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 14
+      describe: "基金会"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 15
+      describe: "台胞证"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 16
+      describe: "港澳台居民身份证"
+  - item: "ZJLB"
+    label:
+      name: "证件类别"
+      code: 99
+      describe: "其它"
+  - item: "ZQJYZT"
+    label:
+      name: "证券交易状态"
+      code: 0
+      describe: "正常"
+  - item: "ZQJYZT"
+    label:
+      name: "证券交易状态"
+      code: 1
+      describe: "停牌"
+  - item: "ZQJYZT"
+    label:
+      name: "证券交易状态"
+      code: 2
+      describe: "发行"
+  - item: "ZQJYZT"
+    label:
+      name: "证券交易状态"
+      code: 3
+      describe: "首日上市"
+  - item: "ZQJYZT"
+    label:
+      name: "证券交易状态"
+      code: 4
+      describe: "退市"
+  - item: "ZYDM"
+    label:
+      name: "职业代码"
+      code: 1
+      describe: "文教科卫专业人员"
+  - item: "ZYDM"
+    label:
+      name: "职业代码"
+      code: 2
+      describe: "党政机关干部"
+  - item: "ZYDM"
+    label:
+      name: "职业代码"
+      code: 3
+      describe: "企事业单位干部"
+  - item: "ZYDM"
+    label:
+      name: "职业代码"
+      code: 4
+      describe: "行政企事业单位工人"
+  - item: "ZYDM"
+    label:
+      name: "职业代码"
+      code: 5
+      describe: "农民"
+  - item: "ZYDM"
+    label:
+      name: "职业代码"
+      code: 6
+      describe: "个体"
+  - item: "ZYDM"
+    label:
+      name: "职业代码"
+      code: 7
+      describe: "无业"
+  - item: "ZYDM"
+    label:
+      name: "职业代码"
+      code: 8
+      describe: "军人"
+  - item: "ZYDM"
+    label:
+      name: "职业代码"
+      code: 99
+      describe: "其他"
+  - item: "QYLB"
+    label:
+      name: "权益类别"
+      code: 1
+      describe: "红利"
+  - item: "QYLB"
+    label:
+      name: "权益类别"
+      code: 2
+      describe: "红股"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 1
+      describe: "定价买入"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 2
+      describe: "定价卖出"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 3
+      describe: "缴款"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 6
+      describe: "红利派发"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 8
+      describe: "配号"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 16
+      describe: "送股"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 20
+      describe: "调账转入"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 21
+      describe: "调账转出"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 55
+      describe: "意向买入"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 56
+      describe: "意向卖出"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 59
+      describe: "确定买入"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 60
+      describe: "确定卖出"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 80
+      describe: "缴申购款"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 81
+      describe: "还申购款"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 83
+      describe: "缴中签款"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 84
+      describe: "股权确权"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 96
+      describe: "调整可卖"
+  - item: "WTLB"
+    label:
+      name: "委托类别"
+      code: 97
+      describe: "手工冻结"
+  - item: "GQLB"
+    label:
+      name: "股权类别"
+      code: 01
+      describe: "非公众"
+  - item: "GQLB"
+    label:
+      name: "股权类别"
+      code: 02
+      describe: "报价股份"
+  - item: "GQLB"
+    label:
+      name: "股权类别"
+      code: 03
+      describe: "报价有限"
+  - item: "GQLB"
+    label:
+      name: "股权类别"
+      code: 04
+      describe: "托管股份"
+  - item: "GQLB"
+    label:
+      name: "股权类别"
+      code: 05
+      describe: "私募基金"
+  - item: "GQLB"
+    label:
+      name: "股权类别"
+      code: 06
+      describe: "科创"
+  - item: "GQLB"
+    label:
+      name: "股权类别"
+      code: 07
+      describe: "规范股份"
+  - item: "GQLB"
+    label:
+      name: "股权类别"
+      code: 08
+      describe: "科Q股份"
+  - item: "GQLB"
+    label:
+      name: "股权类别"
+      code: 09
+      describe: "科Q有限"
+  - item: "GQLB"
+    label:
+      name: "股权类别"
+      code: 98
+      describe: "债券"
+  - item: "JYZT"
+    label:
+      name: "交易状态"
+      code: 0
+      describe: "正常"
+  - item: "JYZT"
+    label:
+      name: "交易状态"
+      code: 1
+      describe: "停牌"
+  - item: "JYZT"
+    label:
+      name: "交易状态"
+      code: 2
+      describe: "临时停牌"
+  - item: "JYZT"
+    label:
+      name: "交易状态"
+      code: 3
+      describe: "退市"
+  - item: "WTFS"
+    label:
+      name: "委托方式"
+      code: 8
+      describe: "柜台"
+  - item: "WTFS"
+    label:
+      name: "委托方式"
+      code: 32
+      describe: "互联网"
+  - item: "WTFS"
+    label:
+      name: "委托方式"
+      code: 64
+      describe: "移动交易"
+  - item: "WTFS"
+    label:
+      name: "委托方式"
+      code: 128
+      describe: "网厅"
+  - item: "FXMS"
+    label:
+      name: "发行模式"
+      code: 0
+      describe: "多次付息"
+  - item: "FXMS"
+    label:
+      name: "发行模式"
+      code: 1
+      describe: "到期付息"
+  - item: "YYB"
+    label:
+      name: "营业部"
+      code: 0001
+      describe: "本部"
+  - item: "YYB"
+    label:
+      name: "营业部"
+      code: 0002
+      describe: "业务一部"
+  - item: "YYB"
+    label:
+      name: "营业部"
+      code: 0003
+      describe: "业务二部"
+  - item: "YYB"
+    label:
+      name: "营业部"
+      code: 0006
+      describe: "业务三部"

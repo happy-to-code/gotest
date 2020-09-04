@@ -1,0 +1,865 @@
+dicts:
+    BZ
+        name = "币种"
+        code = 1
+        describe = "人民币"
+    BZ
+        name = "币种"
+        code = 2
+        describe = "美元"
+    BZ
+        name = "币种"
+        code = 3
+        describe = "欧元"
+    BZ
+        name = "币种"
+        code = 4
+        describe = "英镑"
+    BZ
+        name = "币种"
+        code = 5
+        describe = "日元"
+    BZ
+        name = "币种"
+        code = 6
+        describe = "港币"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 0
+        describe = "流通股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 1
+        describe = "优先股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 11
+        describe = "公众已托管-社会公众股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 12
+        describe = "公众已托管-高管买入股份"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 13
+        describe = "公众已托管-限售流通股(个人)"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 14
+        describe = "公众已托管-限售流通股(机构)"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 2
+        describe = "资格股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 21
+        describe = "发起人股-境内法人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 22
+        describe = "发起人股-国有股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 23
+        describe = "发起人股-境外法人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 24
+        describe = "发起人股-境内自然人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 25
+        describe = "发起人股-境外自然人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 26
+        describe = "发起人股-境内其它机构"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 27
+        describe = "发起人股-境外其它机构"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 28
+        describe = "发起人股-认缴未出资"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 29
+        describe = "发起人股-其它"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 3
+        describe = "定增股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 31
+        describe = "定增股-国有股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 32
+        describe = "定增股-境内法人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 33
+        describe = "定增股-境外法人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 34
+        describe = "定增股-境内自然人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 35
+        describe = "定增股-境外自然人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 36
+        describe = "定增股-境内其它机构"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 37
+        describe = "定增股-境外其它机构"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 39
+        describe = "定增股-其它"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 4
+        describe = "特限股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 41
+        describe = "控股股东、实控人、一致行动人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 42
+        describe = "承诺人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 43
+        describe = "高管分红股、转增股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 44
+        describe = "高管定增股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 45
+        describe = "高管限售股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 46
+        describe = "股权激励股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 49
+        describe = "特限股-其它"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 5
+        describe = "托管股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 51
+        describe = "托管股-国有股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 52
+        describe = "托管股-境内法人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 53
+        describe = "托管股-境外法人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 54
+        describe = "托管股-境内自然人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 55
+        describe = "托管股-境外自然人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 56
+        describe = "托管股-境内其它机构"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 57
+        describe = "托管股-境外其它机构"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 58
+        describe = "托管股-高管股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 59
+        describe = "托管股-其它"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 6
+        describe = "有限公司股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 61
+        describe = "有限公司股-国有股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 62
+        describe = "有限公司股-境内法人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 63
+        describe = "有限公司股-境外法人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 64
+        describe = "有限公司股-境内自然人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 65
+        describe = "有限公司股-境外自然人股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 66
+        describe = "有限公司股-境内其它机构"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 67
+        describe = "有限公司股-境外其它机构"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 68
+        describe = "有限公司股-高管股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 69
+        describe = "有限公司股-其它"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 9
+        describe = "其他类型"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 91
+        describe = "股份合作制"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 92
+        describe = "退托管股-记录信息无法律效力"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 93
+        describe = "退托管股-记录信息无法律效力-未缴"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 94
+        describe = "退托管股-记录信息无法律效力-承诺人"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 97
+        describe = "社会团体"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 98
+        describe = "改制股"
+    CQ_GFXZ
+        name = "股权性质"
+        code = 99
+        describe = "其他"
+    CQ_DJLB
+        name = "股权冻结类别"
+        code = 1
+        describe = "委托冻结"
+    CQ_DJLB
+        name = "股权冻结类别"
+        code = 2
+        describe = "增加可卖量"
+    CQ_DJLB
+        name = "股权冻结类别"
+        code = 3
+        describe = "减少可卖量"
+    CQ_DJLB
+        name = "股权冻结类别"
+        code = 4
+        describe = "手工长期冻结"
+    CQ_DJLB
+        name = "股权冻结类别"
+        code = 5
+        describe = "清算冻结"
+    CQ_DJLB
+        name = "股权冻结类别"
+        code = 6
+        describe = "司法冻结"
+    CQ_DJLB
+        name = "股权冻结类别"
+        code = 7
+        describe = "质押冻结"
+    CQ_DJLB
+        name = "股权冻结类别"
+        code = 37
+        describe = "定向增资"
+    CQ_DJLB
+        name = "股权冻结类别"
+        code = 42
+        describe = "高管股"
+    CQ_DJLB
+        name = "股权冻结类别"
+        code = 47
+        describe = "未确权冻结"
+    CQ_DJLB
+        name = "股权冻结类别"
+        code = 51
+        describe = "未上市红股"
+    CQ_DJLB
+        name = "股权冻结类别"
+        code = 52
+        describe = "未上市配股"
+    CQ_FLLB
+        name = "股权费率类别"
+        code = 1
+        describe = "普通企业"
+    CQ_FLLB
+        name = "股权费率类别"
+        code = 2
+        describe = "发行债券企业"
+    CQ_FLLB
+        name = "股权费率类别"
+        code = 3
+        describe = "可转债券收费企业"
+    CQ_FLLB
+        name = "股权费率类别"
+        code = 4
+        describe = "非可转债券收费企业"
+    CQ_FLLB
+        name = "股权费率类别"
+        code = 5
+        describe = "科创企业"
+    CQ_FLLB
+        name = "股权费率类别"
+        code = 6
+        describe = "可转债券收费企业2"
+    CQ_FLLB
+        name = "股权费率类别"
+        code = 7
+        describe = "可转债券收费企业3"
+    CQ_FXMS
+        name = "发行模式"
+        code = 0
+        describe = "多次付息"
+    CQ_FXMS
+        name = "发行模式"
+        code = 1
+        describe = "到期付息"
+    CQ_GQZHZT
+        name = "股权帐户状态"
+        code = 0
+        describe = "正常"
+    CQ_GQZHZT
+        name = "股权帐户状态"
+        code = 1
+        describe = "冻结"
+    CQ_GQZHZT
+        name = "股权帐户状态"
+        code = 2
+        describe = "挂失"
+    CQ_GQZHZT
+        name = "股权帐户状态"
+        code = 3
+        describe = "销户"
+    CQ_JYZT
+        name = "股权交易状态"
+        code = 0
+        describe = "正常"
+    CQ_JYZT
+        name = "股权交易状态"
+        code = 1
+        describe = "停牌"
+    CQ_JYZT
+        name = "股权交易状态"
+        code = 2
+        describe = "临时停牌"
+    CQ_JYZT
+        name = "股权交易状态"
+        code = 3
+        describe = "退市"
+    FWXM
+        name = "服务项目"
+        code = 64
+        describe = "电话"
+    FWXM
+        name = "服务项目"
+        code = 128
+        describe = "电子邮件"
+    FWXM
+        name = "服务项目"
+        code = 256
+        describe = "短信"
+    FWXM
+        name = "服务项目"
+        code = 512
+        describe = "邮寄"
+    FXCSNL
+        name = "客户风险承受能力"
+        code = 0
+        describe = "未设定"
+    FXCSNL
+        name = "客户风险承受能力"
+        code = 1
+        describe = "保守型"
+    FXCSNL
+        name = "客户风险承受能力"
+        code = 2
+        describe = "稳健型"
+    FXCSNL
+        name = "客户风险承受能力"
+        code = 3
+        describe = "积极型"
+    FXCSNL
+        name = "客户风险承受能力"
+        code = 4
+        describe = "激进型"
+    KHJGBZ
+        name = "客户机构标志"
+        code = 0
+        describe = "个人"
+    KHJGBZ
+        name = "客户机构标志"
+        code = 1
+        describe = "机构"
+    KHSX
+        name = "客户属性"
+        code = 1
+        describe = "禁止存款"
+    KHSX
+        name = "客户属性"
+        code = 2
+        describe = "禁止取款"
+    KHSX
+        name = "客户属性"
+        code = 4
+        describe = "禁止银证转账"
+    KHSX
+        name = "客户属性"
+        code = 8
+        describe = "禁止转托管"
+    KHSX
+        name = "客户属性"
+        code = 16
+        describe = "禁止撤指"
+    KHSX
+        name = "客户属性"
+        code = 32
+        describe = "禁止销户"
+    KHSX
+        name = "客户属性"
+        code = 64
+        describe = "禁止买入"
+    KHSX
+        name = "客户属性"
+        code = 128
+        describe = "禁止卖出"
+    KHSX
+        name = "客户属性"
+        code = 512
+        describe = "股份需授权方能委托"
+    KHZT
+        name = "客户状态"
+        code = 0
+        describe = "正常"
+    KHZT
+        name = "客户状态"
+        code = 1
+        describe = "冻结"
+    KHZT
+        name = "客户状态"
+        code = 2
+        describe = "客户卡挂失"
+    KHZT
+        name = "客户状态"
+        code = 3
+        describe = "销户"
+    KHZT
+        name = "客户状态"
+        code = 6
+        describe = "小额休眠"
+    KHZT
+        name = "客户状态"
+        code = 7
+        describe = "不合格"
+    KHZT
+        name = "客户状态"
+        code = 9
+        describe = "公司不合格"
+    OF_GHYY
+        name = "非交易过户原因"
+        code = 0
+        describe = "司法"
+    OF_GHYY
+        name = "非交易过户原因"
+        code = 1
+        describe = "继承"
+    OF_GHYY
+        name = "非交易过户原因"
+        code = 2
+        describe = "赠予"
+    OF_GHYY
+        name = "非交易过户原因"
+        code = 9
+        describe = "超过风险承受能力"
+    WTFS
+        name = "委托方式"
+        code = 8
+        describe = "柜台"
+    WTFS
+        name = "委托方式"
+        code = 32
+        describe = "互联网"
+    XB
+        name = "性别"
+        code = 0
+        describe = "未知"
+    XB
+        name = "性别"
+        code = 1
+        describe = "男"
+    XB
+        name = "性别"
+        code = 2
+        describe = "女"
+    XB
+        name = "性别"
+        code = 3
+        describe = "非自然人"
+    XLDM
+        name = "学历代码"
+        code = 1
+        describe = "博士"
+    XLDM
+        name = "学历代码"
+        code = 2
+        describe = "硕士"
+    XLDM
+        name = "学历代码"
+        code = 3
+        describe = "学士"
+    XLDM
+        name = "学历代码"
+        code = 4
+        describe = "大专"
+    XLDM
+        name = "学历代码"
+        code = 5
+        describe = "中专"
+    XLDM
+        name = "学历代码"
+        code = 6
+        describe = "高中"
+    XLDM
+        name = "学历代码"
+        code = 7
+        describe = "初中及其以下"
+    XLDM
+        name = "学历代码"
+        code = 8
+        describe = "其他"
+    ZJLB
+        name = "证件类别"
+        code = 0
+        describe = "身份证"
+    ZJLB
+        name = "证件类别"
+        code = 1
+        describe = "护照"
+    ZJLB
+        name = "证件类别"
+        code = 2
+        describe = "军官证"
+    ZJLB
+        name = "证件类别"
+        code = 3
+        describe = "士兵证"
+    ZJLB
+        name = "证件类别"
+        code = 4
+        describe = "港澳通行证"
+    ZJLB
+        name = "证件类别"
+        code = 6
+        describe = "外国护照"
+    ZJLB
+        name = "证件类别"
+        code = 7
+        describe = "技术监督局代码"
+    ZJLB
+        name = "证件类别"
+        code = 8
+        describe = "营业执照"
+    ZJLB
+        name = "证件类别"
+        code = 9
+        describe = "行政机关"
+    ZJLB
+        name = "证件类别"
+        code = 10
+        describe = "社会团体"
+    ZJLB
+        name = "证件类别"
+        code = 11
+        describe = "军队"
+    ZJLB
+        name = "证件类别"
+        code = 12
+        describe = "武警"
+    ZJLB
+        name = "证件类别"
+        code = 13
+        describe = "下属机构"
+    ZJLB
+        name = "证件类别"
+        code = 14
+        describe = "基金会"
+    ZJLB
+        name = "证件类别"
+        code = 15
+        describe = "台胞证"
+    ZJLB
+        name = "证件类别"
+        code = 16
+        describe = "港澳台居民身份证"
+    ZJLB
+        name = "证件类别"
+        code = 99
+        describe = "其它"
+    ZQJYZT
+        name = "证券交易状态"
+        code = 0
+        describe = "正常"
+    ZQJYZT
+        name = "证券交易状态"
+        code = 1
+        describe = "停牌"
+    ZQJYZT
+        name = "证券交易状态"
+        code = 2
+        describe = "发行"
+    ZQJYZT
+        name = "证券交易状态"
+        code = 3
+        describe = "首日上市"
+    ZQJYZT
+        name = "证券交易状态"
+        code = 4
+        describe = "退市"
+    ZYDM
+        name = "职业代码"
+        code = 1
+        describe = "文教科卫专业人员"
+    ZYDM
+        name = "职业代码"
+        code = 2
+        describe = "党政机关干部"
+    ZYDM
+        name = "职业代码"
+        code = 3
+        describe = "企事业单位干部"
+    ZYDM
+        name = "职业代码"
+        code = 4
+        describe = "行政企事业单位工人"
+    ZYDM
+        name = "职业代码"
+        code = 5
+        describe = "农民"
+    ZYDM
+        name = "职业代码"
+        code = 6
+        describe = "个体"
+    ZYDM
+        name = "职业代码"
+        code = 7
+        describe = "无业"
+    ZYDM
+        name = "职业代码"
+        code = 8
+        describe = "军人"
+    ZYDM
+        name = "职业代码"
+        code = 99
+        describe = "其他"
+    QYLB
+        name = "权益类别"
+        code = 1
+        describe = "红利"
+    QYLB
+        name = "权益类别"
+        code = 2
+        describe = "红股"
+    WTLB
+        name = "委托类别"
+        code = 1
+        describe = "定价买入"
+    WTLB
+        name = "委托类别"
+        code = 2
+        describe = "定价卖出"
+    WTLB
+        name = "委托类别"
+        code = 3
+        describe = "缴款"
+    WTLB
+        name = "委托类别"
+        code = 6
+        describe = "红利派发"
+    WTLB
+        name = "委托类别"
+        code = 8
+        describe = "配号"
+    WTLB
+        name = "委托类别"
+        code = 16
+        describe = "送股"
+    WTLB
+        name = "委托类别"
+        code = 20
+        describe = "调账转入"
+    WTLB
+        name = "委托类别"
+        code = 21
+        describe = "调账转出"
+    WTLB
+        name = "委托类别"
+        code = 55
+        describe = "意向买入"
+    WTLB
+        name = "委托类别"
+        code = 56
+        describe = "意向卖出"
+    WTLB
+        name = "委托类别"
+        code = 59
+        describe = "确定买入"
+    WTLB
+        name = "委托类别"
+        code = 60
+        describe = "确定卖出"
+    WTLB
+        name = "委托类别"
+        code = 80
+        describe = "缴申购款"
+    WTLB
+        name = "委托类别"
+        code = 81
+        describe = "还申购款"
+    WTLB
+        name = "委托类别"
+        code = 83
+        describe = "缴中签款"
+    WTLB
+        name = "委托类别"
+        code = 84
+        describe = "股权确权"
+    WTLB
+        name = "委托类别"
+        code = 96
+        describe = "调整可卖"
+    WTLB
+        name = "委托类别"
+        code = 97
+        describe = "手工冻结"
+    GQLB
+        name = "股权类别"
+        code = 01
+        describe = "非公众"
+    GQLB
+        name = "股权类别"
+        code = 02
+        describe = "报价股份"
+    GQLB
+        name = "股权类别"
+        code = 03
+        describe = "报价有限"
+    GQLB
+        name = "股权类别"
+        code = 04
+        describe = "托管股份"
+    GQLB
+        name = "股权类别"
+        code = 05
+        describe = "私募基金"
+    GQLB
+        name = "股权类别"
+        code = 06
+        describe = "科创"
+    GQLB
+        name = "股权类别"
+        code = 07
+        describe = "规范股份"
+    GQLB
+        name = "股权类别"
+        code = 08
+        describe = "科Q股份"
+    GQLB
+        name = "股权类别"
+        code = 09
+        describe = "科Q有限"
+    GQLB
+        name = "股权类别"
+        code = 98
+        describe = "债券"
+    JYZT
+        name = "交易状态"
+        code = 0
+        describe = "正常"
+    JYZT
+        name = "交易状态"
+        code = 1
+        describe = "停牌"
+    JYZT
+        name = "交易状态"
+        code = 2
+        describe = "临时停牌"
+    JYZT
+        name = "交易状态"
+        code = 3
+        describe = "退市"
+    WTFS
+        name = "委托方式"
+        code = 8
+        describe = "柜台"
+    WTFS
+        name = "委托方式"
+        code = 32
+        describe = "互联网"
+    WTFS
+        name = "委托方式"
+        code = 64
+        describe = "移动交易"
+    WTFS
+        name = "委托方式"
+        code = 128
+        describe = "网厅"
+    FXMS
+        name = "发行模式"
+        code = 0
+        describe = "多次付息"
+    FXMS
+        name = "发行模式"
+        code = 1
+        describe = "到期付息"
+    YYB
+        name = "营业部"
+        code = 0001
+        describe = "本部"
+    YYB
+        name = "营业部"
+        code = 0002
+        describe = "业务一部"
+    YYB
+        name = "营业部"
+        code = 0003
+        describe = "业务二部"
+    YYB
+        name = "营业部"
+        code = 0006
+        describe = "业务三部"
