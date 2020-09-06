@@ -1,0 +1,3 @@
+2020/09/01 00:38:41 {"callers":["D:/200707Go/gotest/src/go-tour/blok-service/main.go: 50 main.init.0"],"level":"info","message":"yida:go-programming-tour 1232","time":1598891921692736900}
+2020/09/01 00:43:53 {"callers":["D:/200707Go/gotest/src/go-tour/blok-service/main.go: 48 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1598892233096469500}
+2020/09/01 00:49:10 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 49 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1598892550614739300}
