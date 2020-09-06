@@ -1,0 +1,26 @@
+dicts:
+  - item: BZ
+    label:
+        name: "币种"
+        code: 1
+        describe: "人民币"
+  - item: BZ
+    label:
+      name: "币种"
+      code: 2
+      describe: "美元"
+  - item: BZ
+    label:
+      name: "币种"
+      code: 3
+      describe: "欧元"
+  - item: CQ_GFXZ
+    label:
+      name: "股权性质"
+      code: 0
+      describe: "流通股"
+  - item: CQ_GFXZ
+    label:
+      name: "股权性质"
+      code: 1
+      describe: "优先股"
