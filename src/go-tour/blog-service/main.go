@@ -7,12 +7,17 @@ import (
 	"github.com/blog-service/internal/routers"
 	"github.com/blog-service/pkg/logger"
 	"github.com/blog-service/pkg/setting"
+	_ "github.com/swaggo/gin-swagger/example/docs"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"log"
 	"net/http"
 	"time"
 )
 
+// @title 博客系统
+// @version 1.0
+// @description Go 语言编程之旅：一起用 Go 做项目
+// @termsOfService https://github.com/go-programming-tour-book
 func main() {
 	router := routers.NewRouter()
 	s := &http.Server{
