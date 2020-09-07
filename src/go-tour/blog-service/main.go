@@ -7,7 +7,7 @@ import (
 	"github.com/blog-service/internal/routers"
 	"github.com/blog-service/pkg/logger"
 	"github.com/blog-service/pkg/setting"
-	_ "github.com/swaggo/gin-swagger/example/docs"
+	// _ "github.com/swaggo/gin-swagger/example/docs"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"log"
 	"net/http"
