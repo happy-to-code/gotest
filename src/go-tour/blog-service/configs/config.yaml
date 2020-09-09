@@ -11,7 +11,7 @@ App:
   LogFileName: app
   LogFileExt: .log
   UploadSavePath: storage/uploads
-  UploadServerUrl: http://127.0.0.1:8000/static
+  UploadServerUrl: http://127.0.0.1.json:8000/static
   UploadImageMaxSize: 5  # MB
   UploadImageAllowExts:
     - .jpg
@@ -35,7 +35,7 @@ Database:
   UserName: root
 #  Password: root
   Password: 123456
-  Host: 127.0.0.1:3306
+  Host: 127.0.0.1.json:3306
   DBName: blog_service
   TablePrefix: blog_
   Charset: utf8

@@ -1,0 +1,89 @@
+{
+  "product_object_id": "",
+  "basic_information": {
+    "issuer_subject_ref": "",
+    "issuer_name": "",
+    "registry_subject_ref": "",
+    "trustee_subject_ref": "",
+    "product_code": "",
+    "product_name": "",
+    "product_abbreviation": "",
+    "product_type": 1,
+    "product_term": 1,
+    "info_disclosure_way": 1,
+    "product_scale_unit": 1,
+    "product_scale_currency": "",
+    "product_scale": "",
+    "customer_browsing_right": 0,
+    "customer_trading_right": 1
+  },
+  "product_release_information": {
+    "service_provider_information": {
+      "underwriter_subject_ref": "",
+      "underwriter_name": "",
+      "law_firm_subject_ref": "",
+      "law_firm_name": "",
+      "accounting_firm_subject_ref": "",
+      "accounting_firm_name": ""
+    },
+    "contact_information": {
+      "issuer_contact_person": "",
+      "issuer_contact_info": ""
+    },
+    "release_information": {
+      "issue_code": "",
+      "duration": "",
+      "min_account_num": 5000,
+      "product_face_value": "",
+      "coupon_rate": "",
+      "nonleap_year_interest_bearing_days": 365,
+      "leap_year_interest_bearing_days": 366,
+      "issue_price": "",
+      "option_clause": "",
+      "issue_scale_up": "",
+      "issue_scale_low": "",
+      "issue_start_date": "",
+      "issue_end_date": "",
+      "product_registration_date": "",
+      "product_value_date": "",
+      "product_due_date": "",
+      "first_interest_payment_date": "",
+      "issue_doc_number": "",
+      "issue_doc_list": [],
+      "issuer_credit_rating": 3,
+      "credit_enhancement_agency_subject_ref": "",
+      "credit_enhancement_agency_name": "",
+      "credit_enhancement_agency_credit_rating": 3,
+      "credit_rating_agency_subject_ref": "",
+      "credit_rating_agency_name": "",
+      "guarantor_subject_ref": "",
+      "guarantor_name": "",
+      "guarantee_arrangement": "",
+      "product_termination_conditions": ""
+    },
+    "capital_increase_information": [
+      {
+        "issue_code": "",
+        "authorized_shares": 566666,
+        "issue_price": 36.6,
+        "amount_raised": 36.0,
+        "before_authorized_shares": 8555555,
+        "after_authorized_shares": 252525252,
+        "after_issue_market_value": 252525244,
+        "net_profit": 585858,
+        "number_of_directional_issuers": 25225,
+        "issue_start_date": "",
+        "issue_end_date": "",
+        "product_registration_date": "",
+        "issue_doc_num": "",
+        "issue_doc_list": "",
+        "listing_code": "",
+        "listing_time": "",
+        "listing_status": 1,
+        "listing_remarks": "",
+        "delisting_time": "",
+        "delisting_reason": 0
+      }
+    ]
+  }
+}

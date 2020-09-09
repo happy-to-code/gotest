@@ -9,7 +9,7 @@ import (
 var db *sql.DB
 
 func main() {
-	x, err := sql.Open("dm", "dm://SYSDBA:SYSDBA@10.1.3.150:5236?autoCommit=true")
+	x, err := sql.Open("dm", "dm://SYSDBA:SYSDBA@10.1.json.3.150:5236?autoCommit=true")
 	db = x
 	err = db.Ping()
 	if err != nil {
@@ -29,7 +29,7 @@ func insert() {
 func query() {
 	sql := fmt.Sprintf("select state from bc_tt where id = ? and txid = ? and STATE =?")
 	var state string
-	res := db.QueryRow(sql, 1,234,7).Scan(&state)
+	res := db.QueryRow(sql, 1, 234, 7).Scan(&state)
 	if res != nil {
 		fmt.Println(res.Error())
 	}
@@ -47,7 +47,7 @@ func query() {
 
 func update() {
 	sql := fmt.Sprintf("update  bc_tt set STATE=?,TXID = ? where ID = ? ")
-	res, err := db.Exec(sql, 7,"234")
+	res, err := db.Exec(sql, 7, "234")
 	row, err := res.RowsAffected()
 	fmt.Println(err, row)
 }

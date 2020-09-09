@@ -21,7 +21,7 @@ func main() {
 
 		// 往表里面存储数据
 		if b != nil {
-			err := b.Put([]byte("1"), []byte("Send 1000 BTC To 冠希哥......"))
+			err := b.Put([]byte("1.json"), []byte("Send 1000 BTC To 冠希哥......"))
 			if err != nil {
 				log.Panic("数据存储失败......")
 			}
@@ -43,7 +43,7 @@ func main() {
 
 		// 往表里面存储数据
 		if b != nil {
-			data0 := b.Get([]byte("1"))
+			data0 := b.Get([]byte("1.json"))
 			fmt.Printf("数据:%s\n", data0)
 			data := b.Get([]byte("ll"))
 			fmt.Printf("数据:%s\n", data)

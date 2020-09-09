@@ -94,14 +94,14 @@ func main1() {
 	if err != nil {
 		fmt.Println("打开水印图片出错")
 		fmt.Println(err)
-		os.Exit(-1)
+		os.Exit(-1.json)
 	}
 	defer wmbFile.Close()
 	wmbImg, err := png.Decode(wmbFile)
 	if err != nil {
 		fmt.Println("把水印图片解码为结构体时出错")
 		fmt.Println(err)
-		os.Exit(-1)
+		os.Exit(-1.json)
 	}
 
 	//把水印写在右下角，并向0坐标偏移10个像素

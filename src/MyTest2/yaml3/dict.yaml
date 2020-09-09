@@ -2,12 +2,12 @@ dicts:
   - item: "BZ"
     label:
       name: "币种"
-      code: 1
+      code: 1.json
       describe: "人民币"
   - item: "BZ"
     label:
       name: "币种"
-      code: 2
+      code: 2.json
       describe: "美元"
   - item: "BZ"
     label:
@@ -37,7 +37,7 @@ dicts:
   - item: "CQ_GFXZ"
     label:
       name: "股权性质"
-      code: 1
+      code: 1.json
       describe: "优先股"
   - item: "CQ_GFXZ"
     label:
@@ -62,7 +62,7 @@ dicts:
   - item: "CQ_GFXZ"
     label:
       name: "股权性质"
-      code: 2
+      code: 2.json
       describe: "资格股"
   - item: "CQ_GFXZ"
     label:
@@ -337,12 +337,12 @@ dicts:
   - item: "CQ_DJLB"
     label:
       name: "股权冻结类别"
-      code: 1
+      code: 1.json
       describe: "委托冻结"
   - item: "CQ_DJLB"
     label:
       name: "股权冻结类别"
-      code: 2
+      code: 2.json
       describe: "增加可卖量"
   - item: "CQ_DJLB"
     label:
@@ -397,12 +397,12 @@ dicts:
   - item: "CQ_FLLB"
     label:
       name: "股权费率类别"
-      code: 1
+      code: 1.json
       describe: "普通企业"
   - item: "CQ_FLLB"
     label:
       name: "股权费率类别"
-      code: 2
+      code: 2.json
       describe: "发行债券企业"
   - item: "CQ_FLLB"
     label:
@@ -437,7 +437,7 @@ dicts:
   - item: "CQ_FXMS"
     label:
       name: "发行模式"
-      code: 1
+      code: 1.json
       describe: "到期付息"
   - item: "CQ_GQZHZT"
     label:
@@ -447,12 +447,12 @@ dicts:
   - item: "CQ_GQZHZT"
     label:
       name: "股权帐户状态"
-      code: 1
+      code: 1.json
       describe: "冻结"
   - item: "CQ_GQZHZT"
     label:
       name: "股权帐户状态"
-      code: 2
+      code: 2.json
       describe: "挂失"
   - item: "CQ_GQZHZT"
     label:
@@ -467,12 +467,12 @@ dicts:
   - item: "CQ_JYZT"
     label:
       name: "股权交易状态"
-      code: 1
+      code: 1.json
       describe: "停牌"
   - item: "CQ_JYZT"
     label:
       name: "股权交易状态"
-      code: 2
+      code: 2.json
       describe: "临时停牌"
   - item: "CQ_JYZT"
     label:
@@ -507,12 +507,12 @@ dicts:
   - item: "FXCSNL"
     label:
       name: "客户风险承受能力"
-      code: 1
+      code: 1.json
       describe: "保守型"
   - item: "FXCSNL"
     label:
       name: "客户风险承受能力"
-      code: 2
+      code: 2.json
       describe: "稳健型"
   - item: "FXCSNL"
     label:
@@ -532,17 +532,17 @@ dicts:
   - item: "KHJGBZ"
     label:
       name: "客户机构标志"
-      code: 1
+      code: 1.json
       describe: "机构"
   - item: "KHSX"
     label:
       name: "客户属性"
-      code: 1
+      code: 1.json
       describe: "禁止存款"
   - item: "KHSX"
     label:
       name: "客户属性"
-      code: 2
+      code: 2.json
       describe: "禁止取款"
   - item: "KHSX"
     label:
@@ -587,12 +587,12 @@ dicts:
   - item: "KHZT"
     label:
       name: "客户状态"
-      code: 1
+      code: 1.json
       describe: "冻结"
   - item: "KHZT"
     label:
       name: "客户状态"
-      code: 2
+      code: 2.json
       describe: "客户卡挂失"
   - item: "KHZT"
     label:
@@ -622,12 +622,12 @@ dicts:
   - item: "OF_GHYY"
     label:
       name: "非交易过户原因"
-      code: 1
+      code: 1.json
       describe: "继承"
   - item: "OF_GHYY"
     label:
       name: "非交易过户原因"
-      code: 2
+      code: 2.json
       describe: "赠予"
   - item: "OF_GHYY"
     label:
@@ -652,12 +652,12 @@ dicts:
   - item: "XB"
     label:
       name: "性别"
-      code: 1
+      code: 1.json
       describe: "男"
   - item: "XB"
     label:
       name: "性别"
-      code: 2
+      code: 2.json
       describe: "女"
   - item: "XB"
     label:
@@ -667,12 +667,12 @@ dicts:
   - item: "XLDM"
     label:
       name: "学历代码"
-      code: 1
+      code: 1.json
       describe: "博士"
   - item: "XLDM"
     label:
       name: "学历代码"
-      code: 2
+      code: 2.json
       describe: "硕士"
   - item: "XLDM"
     label:
@@ -712,12 +712,12 @@ dicts:
   - item: "ZJLB"
     label:
       name: "证件类别"
-      code: 1
+      code: 1.json
       describe: "护照"
   - item: "ZJLB"
     label:
       name: "证件类别"
-      code: 2
+      code: 2.json
       describe: "军官证"
   - item: "ZJLB"
     label:
@@ -797,12 +797,12 @@ dicts:
   - item: "ZQJYZT"
     label:
       name: "证券交易状态"
-      code: 1
+      code: 1.json
       describe: "停牌"
   - item: "ZQJYZT"
     label:
       name: "证券交易状态"
-      code: 2
+      code: 2.json
       describe: "发行"
   - item: "ZQJYZT"
     label:
@@ -817,12 +817,12 @@ dicts:
   - item: "ZYDM"
     label:
       name: "职业代码"
-      code: 1
+      code: 1.json
       describe: "文教科卫专业人员"
   - item: "ZYDM"
     label:
       name: "职业代码"
-      code: 2
+      code: 2.json
       describe: "党政机关干部"
   - item: "ZYDM"
     label:
@@ -862,22 +862,22 @@ dicts:
   - item: "QYLB"
     label:
       name: "权益类别"
-      code: 1
+      code: 1.json
       describe: "红利"
   - item: "QYLB"
     label:
       name: "权益类别"
-      code: 2
+      code: 2.json
       describe: "红股"
   - item: "WTLB"
     label:
       name: "委托类别"
-      code: 1
+      code: 1.json
       describe: "定价买入"
   - item: "WTLB"
     label:
       name: "委托类别"
-      code: 2
+      code: 2.json
       describe: "定价卖出"
   - item: "WTLB"
     label:
@@ -1017,12 +1017,12 @@ dicts:
   - item: "JYZT"
     label:
       name: "交易状态"
-      code: 1
+      code: 1.json
       describe: "停牌"
   - item: "JYZT"
     label:
       name: "交易状态"
-      code: 2
+      code: 2.json
       describe: "临时停牌"
   - item: "JYZT"
     label:
@@ -1057,7 +1057,7 @@ dicts:
   - item: "FXMS"
     label:
       name: "发行模式"
-      code: 1
+      code: 1.json
       describe: "到期付息"
   - item: "YYB"
     label:

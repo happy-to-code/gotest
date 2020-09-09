@@ -2,11 +2,11 @@ dicts:
   labels:
     BZ1:
       name: "币种"
-      code: 1
+      code: 1.json
       describe: "人民币"
     BZ2:
       name: "币种"
-      code: 2
+      code: 2.json
       describe: "美元"
     BZ3:
       name: "币种"
@@ -18,5 +18,5 @@ dicts:
       describe: "流通股"
     CQ_GFXZ2:
       name: "股权性质"
-      code: 1
+      code: 1.json
       describe: "优先股"

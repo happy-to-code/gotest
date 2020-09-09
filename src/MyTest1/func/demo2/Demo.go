@@ -9,7 +9,7 @@ func fibonacci() func() int {
 	a, b := 0, 1
 	return func() int {
 		// 在这里，生成关键
-		// 1 1 type2.toml 3 5 8
+		// 1.json 1.json type2.toml 3 5 8
 		//   a b
 		//     a b
 		a, b = b, a+b

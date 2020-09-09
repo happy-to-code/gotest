@@ -16,7 +16,7 @@ metadata:
       nodeName: 172.16.91.110
       role: slave
 spec:
-  replicas: 1
+  replicas: 1.json
   name: kafka-controller
   image: 172.16.26.4:5000/nginx
   ports: 8088

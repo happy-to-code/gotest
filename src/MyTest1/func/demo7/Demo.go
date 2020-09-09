@@ -20,7 +20,7 @@ func main() {
 // 移除字符串的路径和 .后缀部分  只取文件名称
 func basename(str string) string {
 	// 去除路径部分
-	slash := strings.LastIndex(str, "/") // 如果没有找到“/” lastIndex 返回-1
+	slash := strings.LastIndex(str, "/") // 如果没有找到“/” lastIndex 返回-1.json
 	str = str[slash+1:]
 
 	// 取出.的前一部分
