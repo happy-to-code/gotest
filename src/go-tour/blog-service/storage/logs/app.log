@@ -4,3 +4,10 @@
 2020/09/01 00:49:10 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 49 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1598892550614739300}
 2020/09/06 22:57:43 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 49 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599404263110871400}
 2020/09/06 23:05:43 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 49 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599404743458515200}
+2020/09/07 23:21:46 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599492106056912600}
+2020/09/10 23:55:12 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 60 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599753312329229200}
+2020/09/11 00:14:59 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599754499224152600}
+2020/09/11 00:15:43 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 58 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599754543392576100}
+2020/09/11 00:30:53 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599755453228261300}
+2020/09/11 00:48:39 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599756519066669400}
+2020/09/11 01:05:02 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599757502348882400}
