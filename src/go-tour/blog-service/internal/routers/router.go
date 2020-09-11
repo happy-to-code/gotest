@@ -20,6 +20,8 @@ func NewRouter() *gin.Engine {
 	// 静态文件访问路径
 	r.StaticFS("/static", http.Dir(global.AppSetting.UploadSavePath))
 
+	r.GET("/auth", api.GetAuth)
+
 	article := v1.NewArticle()
 	tag := v1.NewTag()
 	apiv1 := r.Group("/api/v1")

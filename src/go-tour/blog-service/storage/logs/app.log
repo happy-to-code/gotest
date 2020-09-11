@@ -11,3 +11,40 @@
 2020/09/11 00:30:53 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599755453228261300}
 2020/09/11 00:48:39 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599756519066669400}
 2020/09/11 01:05:02 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599757502348882400}
+2020/09/12 00:52:37 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599843157375165000}
+2020/09/12 00:54:03 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599843243279214100}
+2020/09/12 00:55:14 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599843314689667700}
+2020/09/12 00:55:20 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599843320002256000}
+2020/09/12 00:58:57 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599843537748497300}
+2020/09/12 00:59:08 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599843548673150300}
+2020/09/12 01:01:46 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599843706910233000}
+2020/09/12 01:05:09 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599843909114936600}
+2020/09/12 01:05:33 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599843933619534100}
+2020/09/12 01:05:55 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599843955873030700}
+2020/09/12 01:06:02 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599843962520475200}
+2020/09/12 01:09:07 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599844147098571700}
+2020/09/12 01:09:12 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599844152269308700}
+2020/09/12 01:09:14 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599844154618417900}
+2020/09/12 01:09:15 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599844155802614900}
+2020/09/12 01:09:16 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599844156669268200}
+2020/09/12 01:09:17 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599844157018309600}
+2020/09/12 01:15:45 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599844545268275200}
+2020/09/12 01:20:36 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599844836967367800}
+2020/09/12 01:33:03 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599845583783293600}
+2020/09/12 01:36:15 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599845775173122600}
+2020/09/12 01:36:27 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599845787333789200}
+2020/09/12 01:36:31 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599845791666239400}
+2020/09/12 01:37:22 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599845842899206900}
+2020/09/12 01:37:28 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599845848976724400}
+2020/09/12 01:44:03 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599846243729373100}
+2020/09/12 01:44:17 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599846257867735900}
+2020/09/12 01:47:38 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599846458834957700}
+2020/09/12 01:47:47 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599846467805422400}
+2020/09/12 01:52:45 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"info","message":"yida:go-tour very-good","time":1599846765719224200}
+2020/09/12 01:53:01 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"app.BindAndValid errs: AppKey为必填字段,AppSecret为必填字段","time":1599846781990049700}
+2020/09/12 01:53:38 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"app.BindAndValid errs: AppKey为必填字段,AppSecret为必填字段","time":1599846818565060400}
+2020/09/12 01:53:42 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"app.BindAndValid errs: AppKey为必填字段,AppSecret为必填字段","time":1599846822817469400}
+2020/09/12 01:53:58 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"app.BindAndValid errs: AppKey为必填字段,AppSecret为必填字段","time":1599846838375398800}
+2020/09/12 01:58:13 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"app.BindAndValid errs: AppKey为必填字段,AppSecret为必填字段","time":1599847093867950500}
+2020/09/12 01:58:22 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599847102344175300}
+2020/09/12 01:58:36 {"callers":["D:/200707Go/gotest/src/go-tour/blog-service/main.go: 54 main.init.0"],"level":"error","message":"svc.CheckAuth err: auth info does not exist.","time":1599847116835458000}
