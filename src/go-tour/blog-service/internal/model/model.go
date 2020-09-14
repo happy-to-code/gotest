@@ -50,7 +50,6 @@ func NewDBEngine(databaseSetting *setting.DatabaseSettingS) (*gorm.DB, error) {
 	otgorm.AddGormCallbacks(db)
 	return db, nil
 }
-
 func updateTimeStampForCreateCallback(scope *gorm.Scope) {
 	if !scope.HasError() {
 		nowTime := time.Now().Unix()
