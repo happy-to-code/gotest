@@ -1,0 +1,27 @@
+| 参数        | 类型   | 是否必要参数 | 说明       |
+| ----------- | ------ | ------------ | ---------- |
+|"settlementObjectId" |String |   Y   |资金结算对象标识|
+|"clearingHouseSubjectRef"    |String |   Y   |结算机构主体引用|
+|"settlementType" |String |   Y   |结算类型|
+|"settlementSerialNum"    |String |   Y   |结算流水号|
+|"settlementTime" |String |   Y   |结算时间|
+|"transactionRef" |String |   Y   |交易报告引用|
+|"currency"   |String |   Y   |结算币种|
+|"amount" |String |   Y   |结算金额|
+|"notes"  |String |   Y   |结算说明|
+|"operationCertificates"  |String |   Y   |结算操作凭证|
+|"outBankCode"    |String |   Y   |转出方银行代号|
+|"outBankName"    |String |   Y   |转出方银行名称|
+|"outBankNumber"  |String |   Y   |转出方银行账号|
+|"outAccountObjRef"   |String |   Y   |转出方账户引用|
+|"outFundAccountName" |String |   Y   |转出方账户名称|
+|"outAmountBeforeTransfer"    |String |   Y   |转出方发生前金额|
+|"outAmountAfterTransfer" |String |   Y   |转出方发生后余额|
+|"inBankCode" |String |   Y   |转入方银行代号|
+|"inBankName" |String |   Y   |转入方银行名称|
+|"inBankNumber"   |String |   Y   |转入方银行账号|
+|"inAccountObjRef"    |String |   Y   |转入方账户引用|
+|"inFundAccountName"  |String |   Y   |转入方账户名称|
+|"inAccountNumber"    |String |   Y   |转入方资金账号|
+|"inAmountBeforeTransfer" |String |   Y   |转入方发生前金额|
+|"inAmountAfterTransfer"  |String |   Y   |转入方发生后余额|

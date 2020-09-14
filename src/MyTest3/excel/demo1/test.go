@@ -24,10 +24,10 @@ func Import() {
 	for _, sheet := range xlFile.Sheets {
 		fmt.Println("sheet name: ", sheet.Name)
 		// 遍历行读取
-		for i, row := range sheet.Rows {
-			if i == 0 {
-				continue
-			}
+		for _, row := range sheet.Rows {
+			// if i == 0 {
+			// 	continue
+			// }
 			// 遍历每行的列读取
 			for _, cell := range row.Cells {
 

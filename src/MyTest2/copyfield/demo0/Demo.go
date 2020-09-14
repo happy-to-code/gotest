@@ -23,34 +23,22 @@ type EnterpriseInfoAndContractAddress struct {
 type SharesLock struct {
 	Amount        uint64 `binding:"gt=0"`  // 冻结的数量
 	ShareProperty uint16 `binding:"gte=0"` // 股份类型
-	Name          string
+	Name          map[string]interface{}
 }
 type SharesLockForContract struct {
 	Amount        uint64 // 冻结的数量
 	ShareProperty uint16 // 股份类型
-	Name          []string
+	Name          string
 }
 
 func main() {
-	// var infoAndContractAddress EnterpriseInfoAndContractAddress
-	// infoAndContractAddress.ContractAddress = "0x0001"
-	// infoAndContractAddress.EquityCode = "10005"
-	// infoAndContractAddress.EquityAbbreviation = "xyz"
-	//
-	// var enterpriseInfo EnterpriseInfo
-	//
-	// fmt.Printf("11111====infoAndContractAddress:%v,enterpriseInfo:%v\n", infoAndContractAddress, enterpriseInfo)
-	//
-	// err := SimpleCopyProperties(&enterpriseInfo, infoAndContractAddress)
-	// enterpriseInfo.Name = "QQQQQ"
-	// if err == nil {
-	// 	fmt.Printf("22222====infoAndContractAddress:%v,enterpriseInfo:%+v\n", infoAndContractAddress, enterpriseInfo)
-	// }
-
+	var m = make(map[string]interface{})
+	m["12112"] = "BBBB"
+	m["12114"] = 888
 	sharesLock := SharesLock{
 		Amount:        15,
 		ShareProperty: 16,
-		Name:          "AAAAA",
+		Name:          m,
 	}
 	fmt.Printf("sharesLock:%+v\n", sharesLock)
 
@@ -59,9 +47,6 @@ func main() {
 	if err != nil {
 		fmt.Println("err:", err)
 	}
-	fmt.Printf("sharesLockForContract:%+v\n", sharesLockForContract)
-	// sharesLockForContract.ShareProperty = "123"
-	sharesLockForContract.Name = []string{sharesLock.Name}
 	fmt.Printf("sharesLockForContract:%+v\n", sharesLockForContract)
 
 }

@@ -1,34 +1,20 @@
 {
-  "account_object_id": "",
-  "basic_information": {
-    "account_holder_subject_ref": "",
-    "account_depository_subject_ref": "",
-    "account_number": "",
-    "account_type": 1,
-    "account_never": 1,
-    "account_status": 1
-  },
-  "life_cycle_information": {
-    "opening": {
-      "opening_date": "2020/02/01 8:06:06",
-      "opening_certificate": []
-    },
-    "closing": {
-      "closing_date": "2020/02/01 8:06:06",
-      "closing_certificate": []
-    },
-    "forzen": {
-      "forzen_date": "2020/02/01 8:06:06",
-      "forzen_certificate": ""
-    },
-    "thaw": {
-      "thaw_date": "2020/02/01 8:06:06",
-      "thaw_certificate": []
-    }
-  },
-  "account_related_information": {
-    "association": 1,
-    "associated_account_ref": "",
-    "associated_acct_certificates": []
-  }
+  "account_object_id": "1231213",
+  "account_holder_subject_ref": "dasd",
+  "account_depository_subject_ref": "sadsdad",
+  "account_number": "dasdasdasdas",
+  "account_type": 1,
+  "account_never": 1,
+  "account_status": 1,
+  "opening_date": "2020/02/01 8:06:06",
+  "opening_certificate": ["122.asdas/app","122.asdsfsdas/app"],
+  "closing_date": "2020/02/01 8:06:06",
+  "closing_certificate": ["122.asdasfsdfs/app","122.dfsdasdas/app"],
+  "forzen_date": "2020/02/01 8:06:06",
+  "forzen_certificate": "",
+  "thaw_date": "2020/02/01 8:06:06",
+  "thaw_certificate": ["122.asdas/ssapp","122.asdas/app"],
+  "association": 1,
+  "associated_account_ref": "sddfsd",
+  "associated_acct_certificates": ["122.asdas/app","122.asdsdfsas/app"]
 }
