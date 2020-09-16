@@ -4,10 +4,13 @@ import "fmt"
 
 func main() {
 	var m map[string]interface{} = make(map[string]interface{}, 5)
+
+	fmt.Println("len(m):", len(m))
 	m["aa"] = "xiaoming"
 	m["bb"] = "xiaoHua"
 	m["cc"] = 3
 	m["dd"] = true
+	fmt.Println("len(m):", len(m))
 
 	fmt.Println("m:::", m)
 
