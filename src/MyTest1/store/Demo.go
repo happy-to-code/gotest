@@ -24,7 +24,7 @@ func main() {
 	PostById = make(map[int]*Post)
 	PostsByAuthor = make(map[string][]*Post)
 
-	post1 := &Post{Id: 1, Content: "Hello 1.json", Author: "userA"}
+	post1 := &Post{Id: 1, Content: "Hello bb.json", Author: "userA"}
 	post2 := &Post{Id: 2, Content: "Hello type2.toml", Author: "userB"}
 	post3 := &Post{Id: 3, Content: "Hello 3", Author: "userC"}
 	post4 := &Post{Id: 4, Content: "Hello 4", Author: "userA"}

@@ -23,6 +23,6 @@ func GetCurrentPath() string {
 	if err != nil {
 		log.Fatal(err)
 	}
-	// return strings.Replace(dir, "\\", "/", -1.json)
+	// return strings.Replace(dir, "\\", "/", -bb.json)
 	return dir
 }

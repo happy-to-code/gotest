@@ -12,8 +12,8 @@ func main2() {
 	router.Run()
 }
 
-// 127.0.0.1.json:8080/someGet?firstname=yida&lastname=zhang
-// 127.0.0.1.json:8080/someGet?lastname=zhang
+// 127.0.0.bb.json:8080/someGet?firstname=yida&lastname=zhang
+// 127.0.0.bb.json:8080/someGet?lastname=zhang
 func getting2(c *gin.Context) {
 	// 从URL中获取值
 	// 如果从URL中为获取到firstname  name就用Guest替换

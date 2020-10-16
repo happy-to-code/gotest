@@ -59,7 +59,7 @@ func main() {
 func CreateKey(pwd string) (*KeyMsg, error) {
 	body := fmt.Sprintf(createKey, "sm2", pwd, "sm2_pem")
 	client := NewClient()
-	code, res, err := client.Post("http://10.1.json.3.250:8080/v1/createKey", body)
+	code, res, err := client.Post("http://10.bb.json.3.250:8080/v1/createKey", body)
 	if err != nil {
 		log.Error(err)
 		return nil, err

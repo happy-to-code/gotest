@@ -32,11 +32,11 @@ func Import() {
 		// 一个sheet 遍历行读取
 		for i, row := range sheet.Rows {
 			// 遍历每行的列读取
-			for _, cell := range row.Cells {
+			for j, cell := range row.Cells {
 				if i == 0 {
-					ztzz[i] = cell.String()
+					ztzz[j] = cell.String()
 				} else {
-					ztzzmap[ztzz[i]] = cell.String()
+					ztzzmap[ztzz[j]] = cell.String()
 				}
 
 				// text := cell.String()
@@ -44,6 +44,7 @@ func Import() {
 			}
 			fmt.Print("\n")
 		}
+		fmt.Printf("ztzzmap:%+v\n", ztzzmap)
 	}
 	fmt.Println("\n\nimport success")
 }

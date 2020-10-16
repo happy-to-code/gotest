@@ -9,14 +9,14 @@ import (
 )
 
 var ( // 命令行标志的定义
-	kafkaBrokers = flag.StringArray("kb", []string{"192.168.0.0:9092", "192.168.0.1.json:9092"}, "kafka brokers")
+	kafkaBrokers = flag.StringArray("kb", []string{"192.168.0.0:9092", "192.168.0.bb.json:9092"}, "kafka brokers")
 	conf         = flag.String("c", "doria.toml", "specify the configuration file, default is doria.toml")
 	num          = flag.Int("n", 6, "specify the number")
 )
 
 func SetEnvFor() { // 设置环境变量
 	os.Setenv("WINTER.NAME", "Bingham")
-	os.Setenv("KAFKA.BROKERS", "192.168.1.json.1.json:9092 192.168.1.json.type2.toml:9092")
+	os.Setenv("KAFKA.BROKERS", "192.168.bb.json.bb.json:9092 192.168.bb.json.type2.toml:9092")
 	os.Setenv("WINTER.AGE", "23")
 }
 
@@ -29,7 +29,7 @@ func main() {
 	viper.BindEnv("f", "kafka.Brokers")
 
 	// flag.PrintDefaults()
-	viper.SetDefault("kafka.Brokers", "192.168.type2.toml.1.json:9092") // 设置默认值，最低优先级
+	viper.SetDefault("kafka.Brokers", "192.168.type2.toml.bb.json:9092") // 设置默认值，最低优先级
 	viper.SetDefault("winter.Age", 16)
 	viper.SetConfigName("doria")
 	viper.AddConfigPath(".")

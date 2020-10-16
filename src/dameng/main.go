@@ -9,7 +9,7 @@ import (
 var db *sql.DB
 
 func main() {
-	x, err := sql.Open("dm", "dm://SYSDBA:SYSDBA@10.1.json.3.150:5236?autoCommit=true")
+	x, err := sql.Open("dm", "dm://SYSDBA:SYSDBA@10.bb.json.3.150:5236?autoCommit=true")
 	db = x
 	err = db.Ping()
 	if err != nil {

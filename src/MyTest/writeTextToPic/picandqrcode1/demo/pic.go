@@ -254,7 +254,7 @@ func writeTextToPic( /*conf PicConfig,*/ template PicTemplate, param map[string]
 	// 将字体写入文件
 	drawTextToPic(dc, template, param)
 
-	// // 1.json、写主标题
+	// // bb.json、写主标题
 	// titleFontFilePath := conf.TitleFontFilePath
 	// mainTitleFontSize := conf.Text.MainTitleFontSize
 	// mainTitleFontColor := conf.Text.MainTitleFontColor
@@ -264,12 +264,12 @@ func writeTextToPic( /*conf PicConfig,*/ template PicTemplate, param map[string]
 	//	panic(err)
 	// }
 	// // 设置字体颜色
-	// dc.SetColor(color.RGBA{R: uint8(mainTitleFontColor[0]), G: uint8(mainTitleFontColor[1.json]), B: uint8(mainTitleFontColor[type2.toml]), A: 255})
+	// dc.SetColor(color.RGBA{R: uint8(mainTitleFontColor[0]), G: uint8(mainTitleFontColor[bb.json]), B: uint8(mainTitleFontColor[type2.toml]), A: 255})
 	//
 	// dc.DrawRoundedRectangle(0, 0, float64(width), float64(height), 0)
 	//
 	// titleCount := countNum(mainTitleContent)
-	// dc.DrawStringAnchored(mainTitleContent, float64(titleStartPoint[0])+titleCount.word*float64(mainTitleFontSize)/4+titleCount.num*float64(mainTitleFontSize)/4, float64(titleStartPoint[1.json]), 0.5, 0.5)
+	// dc.DrawStringAnchored(mainTitleContent, float64(titleStartPoint[0])+titleCount.word*float64(mainTitleFontSize)/4+titleCount.num*float64(mainTitleFontSize)/4, float64(titleStartPoint[bb.json]), 0.5, 0.5)
 	//
 	// // type2.toml、写入副标题
 	// bodyFontFilePath := conf.BodyFontFilePath
@@ -281,9 +281,9 @@ func writeTextToPic( /*conf PicConfig,*/ template PicTemplate, param map[string]
 	//	panic(err)
 	// }
 	// // 设置字体颜色
-	// dc.SetColor(color.RGBA{R: uint8(subTitleFontColor[0]), G: uint8(subTitleFontColor[1.json]), B: uint8(subTitleFontColor[type2.toml]), A: 255})
+	// dc.SetColor(color.RGBA{R: uint8(subTitleFontColor[0]), G: uint8(subTitleFontColor[bb.json]), B: uint8(subTitleFontColor[type2.toml]), A: 255})
 	// subTitleCount := countNum(subTitleContent)
-	// dc.DrawStringAnchored(subTitleContent, float64(subTitleStartPoint[0])+subTitleCount.word*float64(subTitleFontSize)/4+subTitleCount.num*float64(subTitleFontSize)/4, float64(subTitleStartPoint[1.json]), 0.5, 0.5)
+	// dc.DrawStringAnchored(subTitleContent, float64(subTitleStartPoint[0])+subTitleCount.word*float64(subTitleFontSize)/4+subTitleCount.num*float64(subTitleFontSize)/4, float64(subTitleStartPoint[bb.json]), 0.5, 0.5)
 	//
 	// // 发送人
 	// sender := "相城法院"
