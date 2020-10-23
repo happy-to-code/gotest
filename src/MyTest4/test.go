@@ -56,5 +56,9 @@ func main() {
 		decreaseShareholderNum--
 	}
 	fmt.Println("decreaseShareholderNum:", decreaseShareholderNum)
+	var result map[string]string
+	fmt.Println(len(result))
 
+	result = nil
+	fmt.Println(len(result))
 }
