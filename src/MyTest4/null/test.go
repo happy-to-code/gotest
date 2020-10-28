@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	var b []byte
@@ -8,4 +11,11 @@ func main() {
 	fmt.Println(b)
 	fmt.Println(b == nil)
 
+}
+
+func isNil(s string) bool {
+	if strings.TrimSpace(s) == "" {
+		return true
+	}
+	return false
 }

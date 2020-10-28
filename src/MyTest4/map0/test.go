@@ -20,6 +20,16 @@ func main() {
 		"C++":          10,
 	}
 	fmt.Printf("%+v\n", m)
+	v, has := m["C++"]
+	if !has {
+		fmt.Printf("=====%v\n", has)
+	} else {
+		fmt.Printf("==========----%v\n", v)
+	}
+	fmt.Println("__________________________________________________")
+	fromMap, b := getValueFromMap("reddit0", "reddit", m)
+	fmt.Println("AAAAAAAAAAAAAAAA:", fromMap, b)
+
 	var keys []string
 	for k := range m {
 		keys = append(keys, k)
@@ -28,4 +38,11 @@ func main() {
 	for _, k := range keys {
 		fmt.Println("Key:", k, "Value:", m[k])
 	}
+}
+func getValueFromMap(k1, k2 string, m map[string]int) (interface{}, bool) {
+	inter, has := m[k1]
+	if !has {
+		inter, has = m[k2]
+	}
+	return inter, has
 }
