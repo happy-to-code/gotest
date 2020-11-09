@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/base64"
 	"encoding/hex"
 	"fmt"
 )
@@ -17,4 +18,14 @@ func Demo() {
 	var a uint64 = 10
 	// fmt.Println(-a)
 	fmt.Println(-int64(a))
+
+	fmt.Println("===================================")
+	ss := "52a056e17566283a110010b1c4022a5b382dac3dfbd4948b21b14f5960f9a1b5"
+	decodeString, _ := base64.StdEncoding.DecodeString(ss)
+
+	fmt.Println("====>", decodeString)
+	fmt.Println("====>", string(decodeString))
+	toString := base64.StdEncoding.EncodeToString(decodeString)
+	fmt.Println("==================>", toString)
+
 }
