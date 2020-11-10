@@ -7,6 +7,8 @@ import (
 	"github.com/blog-service/internal/routers"
 	"github.com/blog-service/pkg/logger"
 	"github.com/blog-service/pkg/setting"
+	"github.com/blog-service/pkg/tracer"
+
 	// _ "github.com/swaggo/gin-swagger/example/docs"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"log"
@@ -55,6 +57,21 @@ func init() {
 	if err != nil {
 		log.Fatalf("init.setupLogger err: %v\n", err)
 	}
+
+	// 链路追踪
+	err = setupTracer()
+	if err != nil {
+		log.Fatalf("init.setupTracer err: %v\n", err)
+	}
+}
+
+func setupTracer() error {
+	jaegerTracer, _, err := tracer.NewJaegerTracer("blog-service", "127.0.0.1:6831")
+	if err != nil {
+		return err
+	}
+	global.Tracer = jaegerTracer
+	return nil
 }
 
 func setupLogger() error {
