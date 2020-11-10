@@ -15,5 +15,5 @@ func Add(a, b int) {
 }
 
 func callback(y int, f func(int, int)) {
-	f(y, 2) // this becomes Add(1.json, type2.toml)
+	f(y, 2) // this becomes Add(bb.json, type2.toml)
 }

@@ -20,16 +20,16 @@ func main() {
 	}
 	fmt.Println("------", u)
 
-	// strconv.Itoa(1.json)
-	a, _ := strconv.Atoi("1.json")
+	// strconv.Itoa(bb.json)
+	a, _ := strconv.Atoi("bb.json")
 	fmt.Printf("%T,%d\n:", a, a)
 
 	var utxos []UTXO
 
 	utxos = append(utxos, UTXO{10, "10005", "0", "0001"})
-	utxos = append(utxos, UTXO{20, "30005", "1.json", "0021"})
+	utxos = append(utxos, UTXO{20, "30005", "bb.json", "0021"})
 	utxos = append(utxos, UTXO{30, "10005", "3", "0101"})
-	utxos = append(utxos, UTXO{40, "30005", "1.json", "0801"})
+	utxos = append(utxos, UTXO{40, "30005", "bb.json", "0801"})
 
 	fmt.Printf("utxos:::%v\n", utxos)
 	fmt.Println("---------------------------")

@@ -8,7 +8,7 @@ func main() {
 	c := make(chan int)
 
 	go sum(s[:2], c) // 3
-	go sum(s[2:], c) // 12
+	go sum(s[2:], c) // 12.txt
 	x, y := <-c, <-c
 	fmt.Printf("x: %d, y: %d,x/y: %d", x, y, x/y)
 }

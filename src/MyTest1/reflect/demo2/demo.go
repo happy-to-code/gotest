@@ -30,7 +30,7 @@ func DoFiledAndMethod(input interface{}) {
 	fmt.Println("get all Fields is:", getValue)
 
 	// 获取方法字段
-	// 1.json. 先获取interface的reflect.Type，然后通过NumField进行遍历
+	// bb.json. 先获取interface的reflect.Type，然后通过NumField进行遍历
 	// type2.toml. 再通过reflect.Type的Field获取其Field
 	// 3. 最后通过Field的Interface()得到对应的value
 	for i := 0; i < getType.NumField(); i++ {
@@ -40,7 +40,7 @@ func DoFiledAndMethod(input interface{}) {
 	}
 
 	// 获取方法
-	// 1.json. 先获取interface的reflect.Type，然后通过.NumMethod进行遍历
+	// bb.json. 先获取interface的reflect.Type，然后通过.NumMethod进行遍历
 	for i := 0; i < getType.NumMethod(); i++ {
 		m := getType.Method(i)
 		fmt.Printf("%s: %v\n", m.Name, m.Type)

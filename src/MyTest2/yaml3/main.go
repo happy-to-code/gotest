@@ -26,8 +26,9 @@ func main() {
 	ds = getProfileMap()
 	fmt.Printf("---%v\n", ds)
 
-	fmt.Println("=======", ds["BZ"])
-	fmt.Println("=======", getLabel("BZ", 11))
+	fmt.Println("=======", ds["CQ_GFXZ"])
+	fmt.Println("=======", getLabel("CQ_GFXZ", 1).Describe)
+	// fmt.Println("=======", getLabel("BZ", 20).Describe)
 
 	// dir,_ := os.Getwd()
 	// fmt.Println("当前路径：",dir)

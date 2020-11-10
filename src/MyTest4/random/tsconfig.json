@@ -1,0 +1,36 @@
+{
+  "onChainScale": {
+    "upChainRate": 65,
+    "registeredCapital": 18178281.52,
+    "actualCapital": 12781548.19,
+    "shareholderNum": 429007
+  },
+  "businessSituation": {
+    "listedEnterprisesNum": 528,
+    "enterprisesNum": 5777,
+    "pureCustodyEnterprisesNum": 55,
+    "intermediariesNum": 582
+  },
+  "transactionStatus": {
+    "transactionAmount": 1111.75,
+    "transferOfShares": 211.75,
+    "transferOfConvertibleBonds": 0,
+    "equityTransferOfLimitedLiabilityCompany": 0,
+    "transferOfOtherProducts": 0,
+    "tradingActivity": 900,
+    "transactionSize": 59
+  },
+  "financialStatus": {
+    "averageValueOfTotalAssets": 5089.06,
+    "averageNetAssets": 2266.29,
+    "averageNetProfit": 65.53
+  },
+  "financingStatus": {
+    "totalFinancing": 4956.56,
+    "amountOfSharesIssued": 4895624.56,
+    "issuanceAmountOfConvertibleBonds": 23568.58,
+    "shareExpansionOfLimitedLiabilityCompanyNum": 0,
+    "financingAmountOfEquityPledge": 0,
+    "otherMethods": 0
+  }
+}
