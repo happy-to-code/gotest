@@ -20,12 +20,12 @@ App:
 Email:
   Host: smtp.qq.com
   Port: 465
-  UserName: xxx
-  Password: xxx
+  UserName: 576661812@qq.com
+  Password: gameneverover
   IsSSL: true
   From: xxx
   To:
-    - xxx
+    - 576661812@qq.com
 JWT:
   Secret: yida
   Issuer: blog_service

@@ -2,6 +2,7 @@ package api
 
 import (
 	"github.com/blog-service/global"
+	"github.com/blog-service/internal/middleware"
 	"github.com/blog-service/internal/service"
 	"github.com/blog-service/pkg/app"
 	"github.com/blog-service/pkg/errcode"
@@ -9,6 +10,7 @@ import (
 )
 
 func GetAuth(c *gin.Context) {
+	middleware.Recovery()
 	param := service.AuthRequest{}
 	response := app.NewResponse(c)
 	valid, errs := app.BindAndValid(c, &param)
