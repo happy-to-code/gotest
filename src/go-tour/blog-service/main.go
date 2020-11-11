@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"github.com/blog-service/global"
 	"github.com/blog-service/internal/model"
@@ -39,6 +40,13 @@ func main() {
 	s.ListenAndServe()
 }
 
+var (
+	port      string
+	runMode   string
+	config    string
+	isVersion bool
+)
+
 func init() {
 	// 配置文件
 	err := setupSetting()
@@ -63,8 +71,21 @@ func init() {
 	if err != nil {
 		log.Fatalf("init.setupTracer err: %v\n", err)
 	}
-}
 
+	err = setupFlag()
+	if err != nil {
+		log.Fatalf("init.setupFlag err: %v", err)
+	}
+}
+func setupFlag() error {
+	flag.StringVar(&port, "port", "", "启动端口")
+	flag.StringVar(&runMode, "mode", "", "启动模式")
+	flag.StringVar(&config, "config", "configs/", "指定要使用的配置文件路径")
+	flag.BoolVar(&isVersion, "version", false, "编译信息")
+	flag.Parse()
+
+	return nil
+}
 func setupTracer() error {
 	jaegerTracer, _, err := tracer.NewJaegerTracer("blog-service", "127.0.0.1:6831")
 	if err != nil {
