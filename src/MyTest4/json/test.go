@@ -26,7 +26,7 @@ func BenchmarkJsonMarshall(b *testing.B) {
 }
 
 func BenchmarkJsonUnmarshal(b *testing.B) {
-	bytes := `{"foo": 1, "bar": "my string", bar: 1.123}`
+	bytes := `{"foo": 1.jon, "bar": "my string", bar: 1.jon.123}`
 	str := []byte(bytes)
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {

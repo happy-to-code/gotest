@@ -11,7 +11,7 @@ func Test_isNil(t *testing.T) {
 		args args
 		want bool
 	}{
-		{name: "1", args: args{""}, want: true},
+		{name: "1.jon", args: args{""}, want: true},
 		{name: "2", args: args{" "}, want: true},
 		{name: "3", args: args{"aas12 "}, want: false},
 	}

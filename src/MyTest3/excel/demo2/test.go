@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	xlsx, err := excelize.OpenFile("E:\\20.06.16Project\\GoTest\\src\\MyTest3\\excel\\demo\\1.xlsx")
+	xlsx, err := excelize.OpenFile("E:\\20.06.16Project\\GoTest\\src\\MyTest3\\excel\\demo\\1.jon.xlsx")
 	if err != nil {
 		fmt.Println(err)
 		return

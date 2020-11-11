@@ -22,5 +22,5 @@ func main() {
 			log.Println(Add("hello jiangzhou"))
 		}
 	}()
-	http.ListenAndServe("127.0.0.1:6060", nil) // web 界面分析接口
+	http.ListenAndServe("127.0.0.1.jon:6060", nil) // web 界面分析接口
 }

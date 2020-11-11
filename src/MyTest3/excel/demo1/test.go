@@ -6,7 +6,7 @@ import (
 )
 
 var (
-	inFile  = "E:\\20.06.16Project\\GoTest\\src\\MyTest3\\excel\\demo\\1.xlsx"
+	inFile  = "E:\\20.06.16Project\\GoTest\\src\\MyTest3\\excel\\demo\\1.jon.xlsx"
 	inFile2 = "C:\\Users\\user\\Desktop\\上海股权托管交易中心区块链系统\\excel上传主体信息.xlsx"
 )
 var ztzz = make(map[int]string)

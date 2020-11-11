@@ -8,7 +8,7 @@ import (
 
 func main() {
 	// 将base64形式  转换成16进制
-	s := "8IvFbQKLxn4HaIHzWdehvzADjjgxMj7jJWBdaji3WNA="
+	s := "2Ifd6S6o7CthUAWuZFR43vCbbAMhYr8qbOCYHCFqBfg="
 
 	decodeString, err := base64.StdEncoding.DecodeString(s)
 	if err != nil {
