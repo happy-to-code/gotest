@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"fmt"
 	"github.com/blog-service/global"
@@ -9,6 +10,9 @@ import (
 	"github.com/blog-service/pkg/logger"
 	"github.com/blog-service/pkg/setting"
 	"github.com/blog-service/pkg/tracer"
+	"os"
+	"os/signal"
+	"syscall"
 
 	// _ "github.com/swaggo/gin-swagger/example/docs"
 	"gopkg.in/natefinch/lumberjack.v2"
@@ -30,6 +34,24 @@ func main() {
 		WriteTimeout:   global.ServerSetting.WriteTimeout,
 		MaxHeaderBytes: 1 << 20, // 1048576
 	}
+	go func() {
+		err := s.ListenAndServe()
+		if err != nil && err != http.ErrServerClosed {
+			log.Fatalf("s.ListenAndServe err:%v", err)
+		}
+	}()
+	quit := make(chan os.Signal)
+	// 接收syscall.SIGINT 和 syscall.SIGTERM 信号
+	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
+	<-quit
+	log.Println("Shutting down server ……")
+	// 最大时间控制，用于通知该服务端它有5秒时间来处理原有的请求
+	ctx, cancle := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancle()
+	if err := s.Shutdown(ctx); err != nil {
+		log.Fatalf("Server forced to shutDown:", err)
+	}
+	log.Println("Server exiting")
 
 	fmt.Println("1111:::==>", global.ServerSetting.HttpPort)
 	fmt.Println("2222:::==>", global.DatabaseSetting.Password)
@@ -37,7 +59,6 @@ func main() {
 	// 打印日志
 	global.Logger.Infof("%s:go-tour %s", "yida", "very-good")
 
-	s.ListenAndServe()
 }
 
 var (
