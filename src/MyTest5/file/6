@@ -1,0 +1,224 @@
+if strings.EqualFold(k,"subject_object_id"){
+e.Subject_object_id=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_object_information_type"){
+e.Subject_object_information_type=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_id"){
+e.Subject_id=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_industry_code"){
+e.Subject_industry_code=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_type"){
+e.Subject_type=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_create_time"){
+e.Subject_create_time=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_qualification_category"){
+e.Subject_qualification_category=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_market_roles_types"){
+e.Subject_market_roles_types=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_financial_qualification_types"){
+e.Subject_financial_qualification_types=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_role_qualification_number"){
+e.Subject_role_qualification_number=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_role_qualification_certification_document"){
+e.Subject_role_qualification_certification_document=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_qualification_party_certification"){
+e.Subject_qualification_party_certification=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_role_qualification_reviewer"){
+e.Subject_role_qualification_reviewer=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_certification_time"){
+e.Subject_certification_time=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_audit_time"){
+e.Subject_audit_time=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_organization_type"){
+e.Subject_organization_type=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_organization_nature"){
+e.Subject_organization_nature=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_company_name"){
+e.Subject_company_name=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_company_english_name"){
+e.Subject_company_english_name=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_company_short_name"){
+e.Subject_company_short_name=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_company_short_english_name"){
+e.Subject_company_short_english_name=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_company_type"){
+e.Subject_company_type=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_company_component"){
+e.Subject_company_component=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_unified_social_credit_code"){
+e.Subject_unified_social_credit_code=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_organization_code"){
+e.Subject_organization_code=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_establishment_day"){
+e.Subject_establishment_day=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_business_license"){
+e.Subject_business_license=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_business_scope"){
+e.Subject_business_scope=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_industry"){
+e.Subject_industry=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_company_business"){
+e.Subject_company_business=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_company_profile"){
+e.Subject_company_profile=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_registered_capital"){
+e.Subject_registered_capital=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_registered_capital_currency"){
+e.Subject_registered_capital_currency=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_paid_in_capital"){
+e.Subject_paid_in_capital=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_paid_in_capital_currency"){
+e.Subject_paid_in_capital_currency=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_registered_address"){
+e.Subject_registered_address=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_office_address"){
+e.Subject_office_address=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_contact_address"){
+e.Subject_contact_address=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_contact_number"){
+e.Subject_contact_number=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_fax"){
+e.Subject_fax=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_postal_code"){
+e.Subject_postal_code=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_internet_address"){
+e.Subject_internet_address=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_mail_box"){
+e.Subject_mail_box=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_association_articles"){
+e.Subject_association_articles=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_competent_unit"){
+e.Subject_competent_unit=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_shareholders_number"){
+e.Subject_shareholders_number=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_total_share_capital"){
+e.Subject_total_share_capital=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_actual_controller"){
+e.Subject_actual_controller=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_actual_controller_id_type"){
+e.Subject_actual_controller_id_type=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_actual_controller_id"){
+e.Subject_actual_controller_id=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_legal_rep_name"){
+e.Subject_legal_rep_name=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_legal_person_nature"){
+e.Subject_legal_person_nature=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_legal_rep_id_doc_type"){
+e.Subject_legal_rep_id_doc_type=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_legal_rep_id_doc_number"){
+e.Subject_legal_rep_id_doc_number=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_legal_rep_post"){
+e.Subject_legal_rep_post=v.(string)
+continue
+}
+if strings.EqualFold(k,"subject_legal_rep_cellphone_number"){
+e.Subject_legal_rep_cellphone_number=v.(string)
+continue
+}
