@@ -6,6 +6,7 @@ require (
 	github.com/HdrHistogram/hdrhistogram-go v1.0.0 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/eddycjy/opentracing-gorm v0.0.0-20200209122056-516a807d2182
+	github.com/fsnotify/fsnotify v1.4.9
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-playground/locales v0.13.0
 	github.com/go-playground/universal-translator v0.17.0
@@ -18,7 +19,7 @@ require (
 	github.com/spf13/viper v1.7.1
 	github.com/uber/jaeger-client-go v2.25.0+incompatible
 	github.com/uber/jaeger-lib v2.4.0+incompatible // indirect
-	golang.org/x/sys v0.0.0-20200905004654-be1d3432aa8f // indirect
+	golang.org/x/sys v0.0.0-20201110211018-35f3e6cf4a65 // indirect
 	golang.org/x/text v0.3.3 // indirect
 	google.golang.org/protobuf v1.25.0 // indirect
 	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect

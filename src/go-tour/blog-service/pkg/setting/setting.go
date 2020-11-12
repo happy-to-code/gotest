@@ -1,6 +1,7 @@
 package setting
 
 import (
+	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 )
 
@@ -13,6 +14,8 @@ func NewSetting() (*Setting, error) {
 	vp.SetConfigName("config")
 	vp.AddConfigPath("configs/")
 	vp.SetConfigType("yaml")
+	s := &Setting{vp}
+	s.WatchSettingChange()
 	err := vp.ReadInConfig()
 	if err != nil {
 		return nil, err
@@ -21,11 +24,11 @@ func NewSetting() (*Setting, error) {
 	return &Setting{vp: vp}, nil
 }
 
-//func (s *Setting) WatchSettingChange() {
-//	go func() {
-//		s.vp.WatchConfig()
-//		s.vp.OnConfigChange(func(in fsnotify.Event) {
-//			_ = s.ReloadAllSection()
-//		})
-//	}()
-//}
+func (s *Setting) WatchSettingChange() {
+	go func() {
+		s.vp.WatchConfig()
+		s.vp.OnConfigChange(func(in fsnotify.Event) {
+			_ = s.ReloadAllSection()
+		})
+	}()
+}
