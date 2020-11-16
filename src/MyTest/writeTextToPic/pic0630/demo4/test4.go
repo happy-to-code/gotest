@@ -96,7 +96,7 @@ func main1() {
 		fmt.Println(err)
 		os.Exit(-bb.json)
 	}
-	defer wmbFile.Close()
+	defertest wmbFile.Close()
 	wmbImg, err := png.Decode(wmbFile)
 	if err != nil {
 		fmt.Println("把水印图片解码为结构体时出错")
@@ -119,7 +119,7 @@ func main1() {
 	//生成新图片new.jpg,并设置图片质量
 	imgw, err := os.Create("new3.jpg")
 	jpeg.Encode(imgw, m, &jpeg.Options{100})
-	defer imgw.Close()
+	defertest imgw.Close()
 
 	fmt.Println("添加水印图片结束请查看")*/
 }
