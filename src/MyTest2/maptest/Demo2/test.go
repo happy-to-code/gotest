@@ -11,7 +11,7 @@ type Boy struct {
 }
 
 func main() {
-	// var mymap map[string][]Boy
+	// var mymap maptest[string][]Boy
 	mymap := make(map[string][]Boy, 2)
 
 	var b1 []Boy

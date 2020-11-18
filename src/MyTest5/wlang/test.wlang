@@ -1,0 +1,809 @@
+contract ShareContract{
+
+    //平台公钥
+    string PubKey = #########
+
+    string ContractKey = "SGJ"
+
+    public string CreatID(string Info){
+        string key = "owner_"+ContractKey
+        db_set(key,Info)
+        return "success"
+    }
+
+    public string GetID(){
+        string info = db_get<string>("owner_"+ContractKey)
+        return info
+    }
+
+    public string init(){
+        Account account
+        account.MinNum = 1
+        account.Quota = 0
+        account.UsedQuota= 0
+        account.Recycle = true
+        string[] MemberList = {""}
+        account.MemberList = MemberList
+        string json = obj_to_json(account)
+        return setAccountInfo(json)
+    }
+
+    //挂牌企业信息
+    struct Enterprise {
+        string EquityCode             // 股权代码
+        int    ShareholdersNumber     // 股东总数
+        uint64 TotalShares            // 总股本
+        int64  DelistingTime          // 摘牌时间
+        string DelistingReason        // 摘牌原因
+        string SubjectObjectId        // 主体标识
+        string ProductObjectId        // 产品交易Id
+        string Extend                 // 扩展字段
+    }
+
+    //股东信息
+    struct ShareHolder {
+        string          ClientNo               // 客户号
+        string          Extend                 // 扩展字段，json串
+        string          Investor               // 投资者信息
+        string          SubjectObjectId        // 主体标识
+        AccountInfo[]   AccountInfoList
+    }
+
+    struct AccountInfo {
+        uint32 State //客户号状态
+	    ShareholderNoAndAddr    ShareholderAccount
+	    FundNoInfo              FundAccount
+    }
+
+    struct AccountObject  {
+        string       account_object_id             // 账户对象标识
+        uint32       account_object_information_type //对象信息类型
+        string       account_holder_subject_ref     // 账户所属主体引用
+        string       account_depository_subject_ref // 开户机构主体引用
+        string       account_number               // 账号
+        uint32       account_type                 // 账户类型
+        uint32       account_never                // 账户用途
+        uint32       account_status               // 账户状态
+        string       account_qualification_certification_file //资质认证文件
+        string       account_certifier            //资质认证方
+        string       account_auditor              //资质审核方
+        string       account_certification_time    //认证时间
+        string       account_audit_time            //审核时间
+        string       account_opening_date                 // 账户开户时间
+        string       account_opening_certificate          // 账户开户核验凭证
+        string       account_closing_date                 // 账户销户时间
+        string       account_closing_certificate            // 账户销户核验凭证
+        string       account_forzen_cate                  // 账户冻结时间
+        string       account_forzen_certificate           // 账户冻结核验凭证
+        string       account_thaw_date                    // 账户解冻时间
+        string       account_thaw_certificate             // 账户解冻核验凭证
+        uint32       account_association                 // 关联关系
+        string       account_associated_account_ref        // 关联账户对象引用
+        string       account_associated_acct_certificates  // 关联账户开户文件
+    }
+    struct ShareholderNoAndAddr {
+	    string ShareholderNo
+	    string Address
+	    string PubKey
+	    AccountObject AccountInfo
+    }
+
+    struct FundNoInfo {
+        string FundNo
+        AccountObject AccountInfo
+    }
+
+    //添加挂牌企业
+    // subjectJsonStr 为企业主体信息的json字符串
+    // productObjectId 为产品信息的对象标识
+    // productJsonStr 为产品信息的json字符串
+    public string AddListedCompany(string json,string subjectJsonStr,string productObjectId,string productJsonStr){
+        Enterprise en = json_to_obj<Enterprise>(json)
+        string key = "com_" + en.EquityCode
+        db_set(key,json)
+        key = "subject_"+ en.SubjectObjectId
+        // string subJson = en.EnterpriseSubjectInfo
+        string subJson = subjectJsonStr
+        db_set(key,subJson)
+		// 将产品对象标识：产品对象json字符串放到数据库
+		key = "product_" + productObjectId
+		db_set(key,productJsonStr)
+		// 将股权代码：产品标识 的对应关系存到数据库
+		key = "equity_productId" + en.EquityCode
+		db_set(key,productObjectId)
+
+        return "success"
+    }
+
+    //更新主体信息
+    public string UpdateSubject(string subjectObjectId,string txid){
+        string key = "subject_"+ subjectObjectId
+        db_set(key,txid)
+        return "success"
+    }
+
+    //获取主体信息
+    public string GetSubject(string subjectObjectId){
+        string key = "subject_"+ subjectObjectId
+        string txid = db_get<string>(key)
+        return txid
+    }
+
+	// 获取产品信息
+    public string GetProduct(string productObjectId){
+        string key = "product_"+ productObjectId
+        string productInfo = db_get<string>(key)
+        return productInfo
+    }
+
+	// 更新产品信息
+    public string UpdateProduct(string productObjectId,string productJsonStr){
+        string key = "subject_"+ productObjectId
+        db_set(key,productJsonStr)
+        return "success"
+    }
+
+	//获取产品存证ID
+    public string GetProductInfoTxId(string EquityCode){
+        string key = "com_" + EquityCode
+        string json = db_get<string>(key)
+        Enterprise en = json_to_obj<Enterprise>(json)
+        string ID = en.ProductObjectId
+		return ID
+    }
+
+
+    //添加股东信息--将账户地址添加再这里结构里
+    public string AddInvestor(string json,string txid){
+        ShareHolder shList = json_to_obj<ShareHolder>(json)
+        ShareHolder shListOld
+        AccountInfo[] AccountInfoList = shList.AccountInfoList
+
+        AccountInfo[1] AccountInfoListOld
+        string cakey = "ca_" + shList.ClientNo
+        bool old = false
+        if(db_exist(cakey)==true){
+            string tmpJson = db_get<string>(cakey)
+            shListOld = json_to_obj<ShareHolder>(tmpJson)
+            AccountInfoListOld = shListOld.AccountInfoList
+            old = true
+        }
+
+        int loop = len(AccountInfoList)
+
+        for(int j=0;j<loop;j++){
+            AccountInfo ai = AccountInfoList[j]
+            ShareholderNoAndAddr sa = ai.ShareholderAccount
+	        FundNoInfo fa = ai.FundAccount
+
+            //使地址关联客户号
+            string addcarkey = "addr_ca_" + sa.Address
+            db_set(addcarkey,cakey)
+
+            string sakey = "sa_"+ sa.ShareholderNo
+            db_set(sakey,cakey)
+
+            //使用客户号关联账号标识
+            string accountcli = "acco_cli" + shList.ClientNo
+            AccountObject saaccount = sa.AccountInfo
+            AccountObject faaccount = fa.AccountInfo
+            string faoi = faaccount.account_object_id
+            string saoi = saaccount.account_object_id
+            string twoaccountid = faoi + "a_a" + saoi
+            db_set("acc_id_"+faoi,faaccount)
+            db_set("acc_id_"+saoi,saaccount)
+            db_set( accountcli , twoaccountid)
+
+            //使地址关联公钥
+            string addrpubkey = "addr_pub_"+sa.Address
+            string pub = sa.PubKey
+            db_set(addrpubkey,pub)
+
+            string makey = "fa_" + fa.FundNo
+            db_set(makey,cakey)
+
+
+            if(old==true){
+               add(AccountInfoListOld,ai)
+            }
+        }
+
+        if(old==true){
+            shList.AccountInfoList = AccountInfoListOld
+        }
+        string tmpJson = obj_to_json(shList)
+        db_set(cakey,tmpJson)
+        string sub =  shList.SubjectObjectId
+
+        string key = "subject_"+ sub
+        // string subJson = shList.Investor
+        string subJson = txid
+        db_set(key,subJson)
+
+        return "success"
+    }
+
+    public string GetSubjectByID(string ID){
+        string key = "subject_"+ ID
+        string json = db_get<string>(key)
+        return json
+    }
+
+    //销户
+    public string DestroyInvestor(string CustomerNumber,string SNocc,string SNoDate,string FNocc,string FNoDate){
+        uint32 state = 1
+        string cakey = "ca_" + CustomerNumber
+        string json = db_get<string>(cakey)
+        ShareHolder sh = json_to_obj<ShareHolder>(json)
+        AccountInfo[] acl =  sh.AccountInfoList
+        int loop = len(acl)
+        for(int j=0;j<loop;j++){
+            AccountInfo ai = acl[j]
+            ShareholderNoAndAddr sa = ai.ShareholderAccount
+	        FundNoInfo fa = ai.FundAccount
+            ai.State = state
+
+            AccountObject ao = sa.AccountInfo
+            ao.account_status = state
+            ao.account_closing_certificate = SNocc
+            ao.account_closing_date = SNoDate
+            sa.AccountInfo = ao
+            ai.ShareholderAccount = sa
+
+            ao = fa.AccountInfo
+            ao.account_status = state
+            ao.account_closing_certificate = FNocc
+            ao.account_closing_date = FNoDate
+            fa.AccountInfo = ao
+            ai.FundAccount = fa
+        }
+
+        //获取客户号对应的账号标识
+        string twoaccountid = db_get<string>("acco_cli" + CustomerNumber)
+        print(twoaccountid)
+        string[2] accountidlist
+        accountidlist = spilt(twoaccountid,"a_a")
+        print(accountidlist)
+        string accid1 = accountidlist[0]
+        string accid2 = accountidlist[1]
+        db_set("acc_id_"+accid1,"")
+        db_set("acc_id_"+accid2,"")
+        sh.AccountInfoList = acl
+        json = obj_to_json(sh)
+
+        db_set(cakey,json)
+        string key =  sh.SubjectObjectId
+        return "success"
+    }
+
+    public string GetPubKeyByAddr(string Address){
+        string addrpubkey = "addr_pub_"+Address
+        string pub = db_get<string>(addrpubkey)
+        if(pub == ""){
+            print("该地址未在链上有记录")
+            return "error"
+        }
+        return pub
+    }
+
+    //根据客户号获取其它账号
+    // public string GetAccountInfoByCliNo(string cliNo){
+    //     string getcakey = "getca_" + cliNo
+    //     string accountInfoJson = db_get<string>(getcakey)
+    //     return accountInfoJson
+    // }
+
+    //根据客户号获取其账号信息
+    public string GetClientInfoByCliNo(string cliNo){
+        string cakey = "ca_" + cliNo
+        string clientInfoJson = db_get<string>(cakey)
+        return clientInfoJson
+    }
+
+    //获取平台公钥
+    public string GetPlatform(){
+        return PubKey
+    }
+
+    string accountKey
+      //发行地址信息
+    struct Account {
+        int MinNum          //最小签名数
+        uint64 Quota        //受信额度
+        uint64 UsedQuota    //已用配额
+        bool Recycle        //是否可以循环受信
+        int64 EffectiveDate //生效日期时间戳
+        int64 ExpiryDate    //授信有效期时间戳
+        string Remark       //备注信息
+        bool Cancel         //授信是否被取消
+        string[] MemberList //发行参与方名称
+    }
+
+    //数字资产
+    struct Token {
+        string Type     //类型/编号
+        string Status   //状态：Normal、Frozen
+        int64 ActiveDate//激活日期
+        int64 ExpireDate//有效日期
+        int Level       //可流转层级
+        uint64 Amount   //数字资产金额
+        bool CanAdd     //是否可增发
+    }
+    //设置账户信息
+    private string setAccountInfo(string json){
+        string tmp = PubKey
+        accountKey = hash(tmp)
+        string accountJson = db_get<string>(accountKey)
+        if(accountJson!=""){
+            print("账户已存在")
+            return "error"
+        }
+        db_set(accountKey,json)
+        return "success"
+    }
+
+    //设置账户信息
+    public string SetAccountInfo(string json){
+        string tmp = PubKey
+        accountKey = hash(tmp)
+        db_set(accountKey,json)
+        return "success"
+    }
+    //获取账号信息
+    public string GetAccountInfo(){
+        string tmp = PubKey
+        accountKey = hash(tmp)
+        //返回账号信息
+        string accountJson = db_get<string>(accountKey)
+        return accountJson
+    }
+
+
+    //发行数字资产之前的验证签名操作
+    public string beforIssue(string pubkey,string tokenJsonTmp,string argsJson){
+        if(contains(PubKey,pubkey)==true){
+            return "success"
+        }
+        print("签名不匹配")
+        return "error"
+    }
+
+    struct IssueStruct {
+        string Type
+        string Product      //产品的存证交易id
+    }
+    //发行之后验证
+    public string afterIssue(string pubkey,string tokenJsonTmp,string argsJson){
+        IssueStruct issue = json_to_obj<IssueStruct>(argsJson)
+        string type = issue.Type
+        string product = issue.Product
+        if(type=="FX"){
+            Token tk = json_to_obj<Token>(tokenJsonTmp)
+            uint64 amount = tk.Amount
+            string tokentype = tk.Type
+            string json = db_get<string>("com_" + tokentype)
+            if(json ==""){
+                print("该股权代码的企业不存在")
+                return "error"
+            }
+        }else if(type=="ZF"){
+            Token tk = json_to_obj<Token>(tokenJsonTmp)
+            uint64 amount = tk.Amount
+            string tokentype = tk.Type
+            string json = db_get<string>("com_" + tokentype)
+            Enterprise en = json_to_obj<Enterprise>(json)
+            en.TotalShares = amount
+            en.ProductObjectId = product
+            json = obj_to_json(en)
+            db_set("com_" + tokentype,json)
+        }
+        return "success"
+    }
+
+     //转账前验证
+    public string beforTransfer(string tokenJsonTmp,string argsJson){
+        print("转账验证")
+        uint64 zero = 0
+        UTXO utxo = tx.UTXO
+        Transfer[] transferList = utxo.TransferList
+        print(transferList)
+        int loop = len(transferList)
+        int num = 0
+        for(int i = 0;i<loop;i++){
+            Transfer transfer = transferList[i]
+            string fromAddr = transfer.Address
+            string tkType = transfer.TokenType
+            string subType = transfer.SubType
+            uint64 val = transfer.Value
+            uint64 balance = getAddressBalance(fromAddr,tkType,subType)
+            uint64 amount = getUnlockBalance(fromAddr,tkType,subType)
+
+            string unlockKey = "unl_"+fromAddr+"_"+tkType+"_"+subType
+            string unlockStr = formatUint(amount,10)
+            db_set(unlockKey,unlockStr)
+
+            if(balance<amount){
+                print("账户可用余额不足")
+                return "账户可用余额不足"
+            }
+            if(val>balance-amount){
+                print("账户可用余额不足")
+                return "账户可用余额不足"
+            }
+            string balKey = "bal_"+fromAddr+"_"+tkType+"_"+subType
+            string balanceStr = formatUint(balance,10)
+            db_set(balKey,balanceStr)
+
+            //操作后的金额
+            string aftKey = "aft_"+fromAddr+"_"+tkType+"_"+subType
+            uint64 aft = balance-val
+            string aftaceStr = formatUint(aft,10)
+            db_set(aftKey,aftaceStr)
+
+            //操作前的总余额
+            uint64 allBalance = getAddressBalance(fromAddr,tkType,"")
+            string alBalKey = "alB_"+fromAddr+"_"+tkType
+            string alBalanceStr = formatUint(allBalance,10)
+            db_set(alBalKey,alBalanceStr)
+
+            //操作后的总余额
+            string alAftKey = "alA_"+fromAddr+"_"+tkType
+            uint64 alAft = allBalance-val
+            string alAftaceStr = formatUint(alAft,10)
+            db_set(alAftKey,alAftaceStr)
+
+            if(balance==val){
+                num = num - 1
+            }
+        }
+        Output[] outputs = utxo.Outputs
+        loop = len(outputs)
+        for(int j = 0;j<loop;j++){
+            Output out = outputs[j]
+            string toAddress = out.Address
+            string tokenType = out.TokenType
+            string subType = out.SubType
+            uint64 val = out.Value
+            uint64 balance = getAddressBalance(toAddress,tokenType,subType)
+            if(balance==zero){
+                num = num + 1
+            }
+            string balKey = "bal_"+toAddress+"_"+tokenType+"_"+subType
+            string balanceStr = formatUint(balance,10)
+            db_set(balKey,balanceStr)
+
+            string aftKey = "aft_"+toAddress+"_"+tokenType+"_"+subType
+
+            string aftStr = db_get<string>(aftKey)
+            uint64 aft
+            if (aftStr!=""){
+                aft = parseUint(aftStr,10,64)
+            }
+
+            if(aft==balance||aft==zero){
+                //操作后的金额
+                aft = balance+val
+                aftStr = formatUint(aft,10)
+                db_set(aftKey,aftStr)
+            }
+
+
+            //操作前的总余额
+            uint64 allBalance = getAddressBalance(toAddress,tokenType,"")
+            string alBalKey = "alB_"+toAddress+"_"+tokenType
+            string alBalanceStr = formatUint(allBalance,10)
+            db_set(alBalKey,alBalanceStr)
+
+            //操作后的总余额
+            string alAftKey = "alA_"+toAddress+"_"+tokenType
+            string alAftaceStr = db_get<string>(alAftKey)
+            uint64 alAft
+            if (alAftaceStr!=""){
+                alAft = parseUint(alAftaceStr,10,64)
+            }
+
+            if(alAft==allBalance||alAft==zero){
+                alAft = allBalance+val
+                alAftaceStr = formatUint(alAft,10)
+                db_set(alAftKey,alAftaceStr)
+            }
+
+            uint64 amount = getUnlockBalance(toAddress,tokenType,subType)
+
+            string unlockKey = "unl_"+toAddress+"_"+tokenType+"_"+subType
+            string unlockStr = formatUint(amount,10)
+            db_set(unlockKey,unlockStr)
+        }
+        if(num!=0){
+            Token tk = json_to_obj<Token>(tokenJsonTmp)
+            string tokentype = tk.Type
+            string json = db_get<string>("com_" + tokentype)
+            Enterprise en = json_to_obj<Enterprise>(json)
+            en.ShareholdersNumber = en.ShareholdersNumber + num
+            json = obj_to_json(en)
+            db_set("com_" + tokentype,json)
+        }
+        return "success"
+    }
+
+    public string afterTransfer(string tokenJsonTmp,string argsJson){
+        print("转账之后")
+        return "success"
+    }
+
+
+    //回收之前验证
+    public string beforRecycle(string tokenJsonTmp,string argsJson){
+        print("回收验证")
+        UTXO utxo = tx.UTXO
+        Transfer[] transferList = utxo.TransferList
+
+        int loop = len(transferList)
+        int num = 0
+        for(int i = 0;i<loop;i++){
+            Transfer transfer = transferList[i]
+            string fromAddr = transfer.Address
+            string tkType = transfer.TokenType
+            string subType = transfer.SubType
+            uint64 val = transfer.Value
+            uint64 balance = getAddressBalance(fromAddr,tkType,subType)
+            uint64 amount = getUnlockBalance(fromAddr,tkType,subType)   //获取冻结金额
+
+            //冻结的金额
+            string unlockKey = "unl_"+fromAddr+"_"+tkType+"_"+subType
+            string unlockStr = formatUint(amount,10)
+            db_set(unlockKey,unlockStr)
+
+            if(balance<amount){
+                print("账户可用余额不足")
+                return "账户可用余额不足"
+            }
+            if(val>balance-amount){
+                print("账户可用余额不足")
+                return "账户可用余额不足"
+            }
+            //操作前的金额
+            string balKey = "bal_"+fromAddr+"_"+tkType+"_"+subType
+            string balaceStr = formatUint(balance,10)
+            db_set(balKey,balaceStr)
+
+            //操作后的金额
+            string aftKey = "aft_"+fromAddr+"_"+tkType+"_"+subType
+            uint64 aft = balance-val
+            string aftaceStr = formatUint(aft,10)
+            db_set(aftKey,aftaceStr)
+
+            if(balance==val){
+                num = num - 1
+            }
+        }
+
+        if(num!=0){
+            Token tk = json_to_obj<Token>(tokenJsonTmp)
+            string tokentype = tk.Type
+            string json = db_get<string>("com_" + tokentype)
+            Enterprise en = json_to_obj<Enterprise>(json)
+            en.ShareholdersNumber = en.ShareholdersNumber + num
+            json = obj_to_json(en)
+            db_set("com_" + tokentype,json)
+        }
+        return "success"
+    }
+
+    //回收之后验证
+    public string afterRecycle(string tokenJsonTmp,string argsJson){
+        return "success"
+    }
+
+    //转场前验证
+    public string beforExchange(string tokenJsonTmp,string argsJson){
+        print("兑换前验证")
+        return "success"
+    }
+
+    // 产品信息和产品对象标识
+    struct ProductInfoAndId {
+        string ProductObjectId     //产品对象标识
+        string ProductInfo         //产品信息
+        string OldEquityCode       //老的股权代码
+    }
+
+    //转场之后验证
+    public string afterExchange(string tokenJsonTmp,string productInfoAndId){
+        print("兑换后验证")
+		ProductInfoAndId p = json_to_obj<ProductInfoAndId>(productInfoAndId)
+
+        Input[] inlist = inputs_var
+        Output[] outlist = outputs_var
+        Input in = inlist[0]
+        Output out = outlist[0]
+
+        string fromToken = in.TokenType
+        string toToken = out.TokenType
+
+        string json = db_get<string>("com_" + fromToken)
+        Enterprise en = json_to_obj<Enterprise>(json)
+        en.EquityCode = toToken
+        en.ProductObjectId = p.ProductObjectId
+
+        json = obj_to_json(en)
+        db_set("com_" + toToken,json)
+
+		// 获取转版之前的产品标识
+		string oldProductId = db_get<string>("equity_productId" + p.OldEquityCode)
+		// 将之前的产品标识：产品信息  从数据库中删除
+		db_set("product_" + oldProductId,"")
+
+		// 设置新的 产品标识：产品字符串
+		db_set("product_" + p.ProductObjectId,p.ProductInfo)
+        return "success"
+    }
+
+    struct Lock{
+        string BizNo           // 业务编号
+        string Address         // 账户地址
+        string EquityCode      // 股权代码
+        uint64 Amount          // 冻结的数量
+        string ShareProperty   // 股份类型
+        string Reason          // 冻结原因
+        int64 CutoffDate      // 截止日期, 格式: yyyy-MM-dd
+    }
+
+    //股权冻结
+    public string ShareLock(string lockJson,string ShareLockJson){
+        Lock l = json_to_obj<Lock>(lockJson)
+        string BizNo = l.BizNo
+        string Address = l.Address
+        string EquityCode = l.EquityCode
+        string ShareProperty = l.ShareProperty
+        string Reason = l.Reason
+
+        if(db_exist("fz_"+BizNo)==true){
+            print("业务号重复!")
+            return "error"
+        }
+
+        //账户余额
+        uint64 balance = getAddressBalance(Address,EquityCode,ShareProperty)
+        string balKey = "bal_"+Address+"_"+EquityCode+"_"+ShareProperty
+        string balaceStr = formatUint(balance,10)
+        db_set(balKey,balaceStr)
+
+        //冻结的金额
+        uint64 unlock = getUnlockBalance(Address,EquityCode,ShareProperty)
+        string unlockKey = "unl_"+Address+"_"+EquityCode+"_"+ShareProperty
+        string unlockStr = formatUint(unlock,10)
+        db_set(unlockKey,unlockStr)
+
+        db_set("fz_"+BizNo,lockJson)
+        string keyJson = "fzJson_"+Address+"_"+EquityCode+"_"+ShareProperty+"_"+BizNo
+        db_set(keyJson,lockJson)
+
+        db_set("ShareLockJson",ShareLockJson)
+        if(Reason!=""){
+            event("ShareLock",Reason)
+        }
+        return "success"
+    }
+
+    //股权解冻
+    public string ShareUnlock(string BizNo,uint64 UnlockAmount,string ShareUnlockJson){
+        uint64 zero = 0
+        string lockJson = db_get<string>("fz_"+BizNo)
+        print(lockJson)
+        if(lockJson==""){
+            print("该标识没有被冻结")
+            return "error"
+        }
+        Lock l = json_to_obj<Lock>(lockJson)
+        print(l)
+        string Address = l.Address
+        string EquityCode = l.EquityCode
+        string ShareProperty = l.ShareProperty
+        string Reason = l.Reason
+        if(l.Amount < UnlockAmount){
+            print("超出解冻额度")
+            return "error"
+        }
+        l.Amount = l.Amount - UnlockAmount
+        string keyJson = "fzJson_"+Address+"_"+EquityCode+"_"+ShareProperty+"_"+BizNo
+
+        //余额
+        uint64 balance = getAddressBalance(Address,EquityCode,ShareProperty)
+        string balKey = "bal_"+Address+"_"+EquityCode+"_"+ShareProperty
+        string balaceStr = formatUint(balance,10)
+        db_set(balKey,balaceStr)
+
+        //冻结的金额
+        uint64 unlock = getUnlockBalance(Address,EquityCode,ShareProperty)
+        string unlockKey = "unl_"+Address+"_"+EquityCode+"_"+ShareProperty
+        string unlockStr = formatUint(unlock,10)
+        db_set(unlockKey,unlockStr)
+
+        //将解冻金额
+        string lockKey = "l_"+Address+"_"+EquityCode+"_"+ShareProperty
+        string UnlockAmountStr = formatUint(UnlockAmount,10)
+        db_set(lockKey,UnlockAmountStr)
+
+        if(l.Amount>zero){
+            lockJson = obj_to_json(l)
+            db_set("fz_"+BizNo,lockJson)
+            db_set(keyJson,lockJson)
+        }else{
+            db_set("fz_"+BizNo,"")
+            db_set(keyJson,"")
+        }
+
+        db_set("ShareUnlockJson",ShareUnlockJson)
+        if(Reason!=""){
+            event("ShareUnlock",Reason)
+        }
+        return "success"
+    }
+
+    //获取冻结的余额
+    private uint64 getUnlockBalance(string Address,string tokenType,string subType){
+        string prefix_key = "fzJson_"+Address+"_"+tokenType+"_"+subType
+
+        map<string,string> res
+        db_search(prefix_key,filter,res)
+        string k
+        string val
+        uint64 amount
+        while(range(res,k,val)==true){
+             Lock l = json_to_obj<Lock>(val)
+             amount = amount + l.Amount
+        }
+        return amount
+    }
+
+    //股权冻结查询
+    public string GetLockInfo(string Address,string tokenType,string subType){
+        string prefix_key = "fzJson_"+Address+"_"+tokenType+"_"+subType
+
+        if(subType==""){
+            prefix_key =  "fzJson_"+Address+"_"+tokenType+"_"
+        }
+        if(tokenType == ""){
+            prefix_key =  "fzJson_"+Address+"_"
+        }
+        map<string,string> res
+        db_search(prefix_key,filter,res)
+        string json = obj_to_json(res)
+        return json
+    }
+
+	private bool filter(string val){
+        print(val)
+        if(val == ""){
+            return false
+        }
+        Lock l = json_to_obj<Lock>(val)
+        int64 data = l.CutoffDate
+        int64 currentData = tx.Timestamp
+        if(data <= currentData){
+            return false
+        }
+        return true
+	}
+	public string GetClientNoByAddr(string Address){
+        string clientNo = db_get<string>("addr_ca_"+Address)
+		return clientNo
+    }
+    //按账户对象标识存入账户信息
+    public string setaccountInfo(string id,string data){
+        string key = "acc_id_" + id
+        AccountObject dat = json_to_obj<AccountObject>(data)
+        db_set(key,dat)
+        return "success"
+    }
+    //按账户对象标识取出账户信息
+    public string GetaccountInfo(string id){
+        string key = "acc_id_"+id
+        if (db_exist(key)==true){
+            return ""
+        }
+        AccountObject data = db_get<AccountObject>(key)
+        return data
+    }
+}

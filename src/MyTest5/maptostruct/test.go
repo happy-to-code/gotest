@@ -18,7 +18,7 @@ func MapToStruct() {
 	mapInstance["Eye"] = []string{"eye1", "eye2"}
 
 	var person Person
-	// 将 map 转换为指定的结构体
+	// 将 maptest 转换为指定的结构体
 	if err := mapstructure.Decode(mapInstance, &person); err != nil {
 		fmt.Println(err)
 	}

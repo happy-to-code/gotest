@@ -23,7 +23,7 @@ type Context struct {
 	// gin框架的Engine结构体指针
 	engine   *Engine
 	// 每个请求的context中的唯一键值对
-	Keys map[string]interfacetest{}
+	Keys maptest[string]interfacetest{}
 	// 绑定到所有使用该context的handler/middlewares的错误列表
 	Errors errorMsgs
 	// 定义了允许的格式被用于内容协商(content)

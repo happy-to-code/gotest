@@ -1,0 +1,78 @@
+{
+  "subject_object_id": "OID123456",
+  "subject_type": 0,
+  "subject_id": "id123456",
+  "subject_main_administrative_region": 0,
+  "subject_create_time": "2020/03/12 18:08:08",
+  "subject_qualification_information": [
+    {
+      "subject_qualification_category": 0,
+      "subject_market_roles_type": 0,
+      "subject_intermediary_qualification": [
+        0
+      ],
+      "subject_financial_qualification_type": 0,
+      "qualification_authentication_information": [
+        {
+          "subject_qualification_code": "code345",
+          "subject_role_qualification_certification_doc": {
+            "file_number": "1",
+            "file_name": "12312312",
+            "url": "12312312",
+            "hash": "12312312",
+            "summary": "12312312",
+            "term_of_validity_type": "0",
+            "term_of_validity": "yyyy/MM/dd"
+          },
+          "subject_qualification_authenticator": "资质认证方",
+          "subject_certification_time": "2020/03/12 18:08:08",
+          "subject_qualification_reviewer": "资质审核方",
+          "subject_review_time": "2020/03/12 18:08:08",
+          "subject_qualification_status": true
+        }
+      ],
+      "investor_suitability_information": [
+        {
+          "subject_investor_qualification": 0,
+          "subject_investor_qualification_sub": "适当性认证子类",
+          "subject_investor_qualification_description": "适当性认证描述",
+          "subject_investor_qualification_certificate": {
+            "file_number": "1",
+            "file_name": "12312312",
+            "url": "12312312",
+            "hash": "12312312",
+            "summary": "12312312",
+            "term_of_validity_type": "0",
+            "term_of_validity": "yyyy/MM/dd"
+          },
+          "subject_investor_qualification_cerifier_ref": "适当性认证方主体引用",
+          "subject_investor_qualification_cerifier_name": "适当性认证方主体名称",
+          "subject_investor_qualification_certificate_time": "2020/03/12 18:08:08",
+          "subject_investor_qualification_status": true
+        }
+      ]
+    }
+  ],
+  "subject_investor_name": "王五",
+  "subject_id_type": 1,
+  "subject_id_number": "369456199012032564",
+  "subject_id_address": "江苏苏州相城",
+  "subject_contact_address": "江苏苏州相城",
+  "subject_contact_number": "15866559999",
+  "subject_cellphone_number": "15866559999",
+  "subject_personal_fax": "无",
+  "subject_postalcode_number": "250000",
+  "subject_id_doc_mailbox": "89556@yeah.net",
+  "subject_education": 1,
+  "subject_occupation": 1,
+  "subject_industry": 1,
+  "subject_birthday": "2000/12/12",
+  "subject_gender": 11,
+  "subject_work_unit": "上海股交所",
+  "subject_investment_period": "8",
+  "subject_investment_experience": "投资经历",
+  "subject_native_place": "江苏苏州",
+  "subject_province": "江苏",
+  "subject_city": "苏州"
+}
+
