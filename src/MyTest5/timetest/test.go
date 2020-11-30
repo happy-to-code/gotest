@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"strconv"
-	"strings"
 	"time"
 )
 
@@ -15,9 +14,14 @@ func main() {
 	if len(timeStr1) == 13 {
 		onchianTime = onchianTime / 1000
 	}
-
-	timeStr := time.Unix(int64(onchianTime), 0).Format("2006-01-02 15:04:05")
+	// yyyy-MM-dd'T'HH:mm:ssX
+	timeStr := time.Unix(int64(onchianTime), 0).Format("2006-01-02'T' 15:04:05X")
 	fmt.Println(timeStr)
 
-	fmt.Println(strings.ToLower("Account_Audit_Time"))
+	timeStr2 := time.Unix(int64(onchianTime), 0).Format("2006-01-02 15:04:05")
+	fmt.Println(timeStr2)
+
+	t7, _ := time.ParseInLocation("2006-01-02T15:04:05", "2018-10-01T16:27:00", time.Local)
+
+	fmt.Println(t7)
 }

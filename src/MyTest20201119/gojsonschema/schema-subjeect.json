@@ -1,0 +1,1047 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "InterChainObject",
+  "properties": {
+    "header": {
+      "description": "数据头",
+      "type": "object",
+      "properties": {
+        "model": {
+          "description": "协议信息",
+          "type": "object",
+          "properties": {
+            "protocol": {
+              "description": "模型描述信息",
+              "type": "string"
+            },
+            "version": {
+              "description": "版本号",
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "description": "数据模型信息",
+          "type": "object",
+          "properties": {
+            "type": {
+              "description": "模型类型",
+              "type": "string",
+              "enum": [
+                "subject",
+                "account",
+                "transaction",
+                "info-disclosure",
+                "product",
+                "registration",
+                "settlement"
+              ]
+            },
+            "object_id": {
+              "description": "对象ID",
+              "type": "string"
+            },
+            "operation": {
+              "description": "操作信息, add, update, delete",
+              "type": "string",
+              "enum": [
+                "add",
+                "update",
+                "delete"
+              ]
+            },
+            "timestamp": {
+              "description": "时间戳",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "type",
+            "object_id",
+            "operation",
+            "timestamp"
+          ]
+        }
+      }
+    },
+    "body": {
+      "description": "消息体",
+      "title": "Body",
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "subject": {
+              "$ref": "#/definitions/Subject"
+            }
+          },
+          "required": [
+            "subject"
+          ]
+        },
+        {
+          "properties": {
+            "product": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          "required": [
+            "product"
+          ]
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "Subject": {
+      "description": "主体",
+      "title": "Subject",
+      "type": "object",
+      "properties": {
+        "basic_information_subject": {
+          "$ref": "#/definitions/BasicInformationSubject"
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "organization_subject_information": {
+              "$ref": "#/definitions/OrganizationSubjectInformation"
+            }
+          },
+          "required": [
+            "organization_subject_information"
+          ]
+        },
+        {
+          "properties": {
+            "personal_subject_information": {
+              "$ref": "#/definitions/PersonalSubjectInformation"
+            }
+          },
+          "required": [
+            "personal_subject_information"
+          ]
+        }
+      ]
+    },
+    "BasicInformationSubject": {
+      "description": "主体基本信息",
+      "title": "BasicInformationSubject",
+      "type": "object",
+      "properties": {
+        "general_information_subject": {
+          "$ref": "#/definitions/GeneralInformationSubject"
+        },
+        "subject_qualification_information": {
+          "$ref": "#/definitions/SubjectQualificationInformation"
+        }
+      }
+    },
+    "OrganizationSubjectInformation": {
+      "description": "机构主体信息",
+      "title": "OrganizationSubjectInformation",
+      "type": "object",
+      "properties": {
+        "basic_information_of_enterprise": {
+          "$ref": "#/definitions/BasicInformationOfEnterprise"
+        }
+      }
+    },
+    "PersonalSubjectInformation": {
+      "description": "个人主体信息",
+      "title": "PersonalSubjectInformation",
+      "type": "object",
+      "properties": {
+        "basic_information_individual_subject": {
+          "$ref": "#/definitions/BasicInformationIndividualSubject"
+        }
+      }
+    },
+    "GeneralInformationSubject": {
+      "description": "主体通用信息",
+      "title": "GeneralInformationSubject",
+      "type": "object",
+      "properties": {
+        "subject_id": {
+          "description": "主体标识",
+          "type": "string",
+          "maxLength": 64
+        },
+        "subject_main_administrative_region": {
+          "description": "主体行政区域",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            255
+          ]
+        },
+        "subject_create_time": {
+          "description": "主体信息维护时间",
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "subject_create_time",
+        "subject_main_administrative_region"
+      ]
+    },
+    "SubjectQualificationInformation": {
+      "description": "主体资质信息",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "qualification_information": {
+            "$ref": "#/definitions/QualificationInformation"
+          },
+          "qualification_authentication_information": {
+            "$ref": "#/definitions/QualificationAuthenticationInformation"
+          },
+          "investor_suitability_information": {
+            "$ref": "#/definitions/InvestorSuitabilityInformation"
+          }
+        }
+      }
+    },
+    "QualificationInformation": {
+      "description": "资质信息",
+      "type": "object",
+      "properties": {
+        "subject_qualification_category": {
+          "description": "资质类别",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            255
+          ]
+        },
+        "subject_market_roles_type": {
+          "description": "市场角色类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            255
+          ]
+        },
+        "subject_intermediary_qualification": {
+          "description": "中介资质类型",
+          "type": "integer",
+          "enum": [
+            0,
+            10,
+            11,
+            12,
+            20,
+            21,
+            22,
+            23,
+            30,
+            31,
+            32,
+            33,
+            255
+          ]
+        },
+        "subject_financial_qualification_type": {
+          "type": "integer",
+          "description": "金融资质类型",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            255
+          ]
+        }
+      }
+    },
+    "QualificationAuthenticationInformation": {
+      "description": "资质认证信息",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "subject_qualification_code": {
+            "description": "资质代码",
+            "type": "string",
+            "maxLength": 128
+          },
+          "subject_role_qualification_certification_document": {
+            "description": "资质认证文件",
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/Document"
+            }
+          },
+          "subject_qualification_party_certification": {
+            "description": "资质认证方",
+            "type": "string",
+            "maxLength": 256
+          },
+          "subject_certification_time": {
+            "description": "资质认证时间",
+            "type": "string",
+            "format": "date-time"
+          },
+          "subject_qualification_reviewer": {
+            "description": "资质审核方",
+            "type": "string",
+            "maxLength": 256
+          },
+          "subject_review_time": {
+            "description": "审核时间",
+            "type": "string",
+            "format": "date-time"
+          },
+          "subject_qualification_status": {
+            "type": "integer",
+            "description": "主体资质状态",
+            "enum": [
+              1,
+              2
+            ]
+          }
+        }
+      }
+    },
+    "InvestorSuitabilityInformation": {
+      "description": "投资者适当性信息",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "subject_investor_qualification": {
+            "description": "适当性类别",
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              255
+            ]
+          },
+          "subject_investor_qualification_sub": {
+            "description": "适当性认证子类",
+            "type": "string",
+            "maxLength": 512
+          },
+          "subject_investor_qualification_description": {
+            "description": "适当性认证描述",
+            "type": "string",
+            "maxLength": 512
+          },
+          "subject_investor_qualification_certificate": {
+            "description": "适当性证明文件",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "$ref": "#/definitions/Document"
+            }
+          },
+          "subject_investor_qualification_cerifier_ref": {
+            "description": "适当性认证方主体引用",
+            "type": "string",
+            "maxLength": 64
+          },
+          "subject_investor_qualification_cerifier_name": {
+            "description": "适当性认证方主体名称",
+            "type": "string",
+            "maxLength": 256
+          },
+          "subject_investor_qualification_certificate_time": {
+            "description": "适当性认证时间",
+            "type": "string",
+            "format": "date-time"
+          },
+          "subject_investor_qualification_status": {
+            "description": "适当性认证状态",
+            "type": "boolean",
+            "enum": [
+              false,
+              true
+            ]
+          }
+        }
+      }
+    },
+    "BasicInformationOfEnterprise": {
+      "description": "企业基本信息",
+      "type": "object",
+      "properties": {
+        "basic_information_description": {
+          "$ref": "#/definitions/BasicInformationDescription"
+        },
+        "leading_member_information": {
+          "$ref": "#/definitions/LeadingMemberInformation"
+        }
+      }
+    },
+    "BasicInformationDescription": {
+      "description": "基本信息描述",
+      "type": "object",
+      "properties": {
+        "subject_company_name": {
+          "description": "公司全称",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_company_english_name": {
+          "description": "英文名称",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_company_short_name": {
+          "description": "公司简称",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_company_short_english_name": {
+          "description": "英文简称",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_organization_nature": {
+          "description": "机构性质",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            255
+          ]
+        },
+        "subject_legal_type": {
+          "description": "法定类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            255
+          ]
+        },
+        "subject_economic_type": {
+          "description": "经济类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            255
+          ]
+        },
+        "subject_company_type": {
+          "description": "股份制企业类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            255
+          ]
+        },
+        "subject_scale_type": {
+          "description": "规模类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            255
+          ]
+        },
+        "subject_high_technology_enterpris": {
+          "description": "高新技术企业",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            255
+          ]
+        },
+        "subject_document_infomation": {
+          "description": "证件类型及证件号码",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "subject_registry_date": {
+          "description": "注册日期",
+          "type": "string",
+          "format": "date"
+        },
+        "subject_business_license": {
+          "description": "营业执照",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Document"
+          }
+        },
+        "subject_business_scope": {
+          "description": "经营范围",
+          "type": "string",
+          "maxLength": 512
+        },
+        "subject_industry": {
+          "description": "企业所属行业",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            255
+          ]
+        },
+        "subject_company_business": {
+          "description": "主营业务",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_company_profile": {
+          "description": "公司简介",
+          "type": "string"
+        },
+        "subject_registered_capital": {
+          "description": "注册资本",
+          "type": "number"
+        },
+        "subject_registered_capital_currency": {
+          "description": "注册资本币种",
+          "type": "string",
+          "maxLength": 16,
+          "enum": [
+            "156",
+            "840",
+            "036",
+            "978",
+            "276",
+            "344"
+          ]
+        },
+        "subject_paid_in_capital": {
+          "description": "实收资本",
+          "type": "number"
+        },
+        "subject_paid_in_capital_currency": {
+          "description": "实收资本币种",
+          "type": "string",
+          "maxLength": 16,
+          "enum": [
+            "156",
+            "840",
+            "036",
+            "978",
+            "276",
+            "344"
+          ]
+        },
+        "subject_registered_address": {
+          "description": "注册地址",
+          "type": "string",
+          "maxLength": 512
+        },
+        "subject_province": {
+          "description": "注册地所在省份",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_city": {
+          "description": "注册地所在市",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_district": {
+          "description": "注册地所在区",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_office_address": {
+          "description": "办公地址",
+          "type": "string",
+          "maxLength": 512
+        },
+        "subject_contact_address": {
+          "description": "联系地址",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_contact_number": {
+          "description": "联系电话",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_fax": {
+          "description": "企业传真",
+          "type": "string",
+          "maxLength": 64
+        },
+        "subject_postal_code": {
+          "description": "邮政编码",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_internet_address": {
+          "description": "互联网地址",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_mail_box": {
+          "description": "电子邮箱",
+          "type": "string",
+          "maxLength": 64
+        },
+        "subject_association_articles": {
+          "description": "公司章程",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Document"
+          }
+        },
+        "subject_regulator": {
+          "description": "主管单位",
+          "type": "string",
+          "maxLength": 128
+        },
+        "subject_shareholders_number": {
+          "description": "股东总数（个）",
+          "type": "integer"
+        },
+        "subject_taxpayer_id_number": {
+          "description": "纳税人识别号",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_invoice_bank": {
+          "description": "发票开户行",
+          "type": "string",
+          "maxLength": 128
+        },
+        "subject_invoice_account_number": {
+          "description": "发票账号",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_invoice_address": {
+          "description": "发票地址",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_invoice_telephone_number": {
+          "description": "发票地址",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_approval_time": {
+          "description": "核准时间",
+          "type": "string",
+          "format": "date-time"
+        },
+        "subject_insured_number": {
+          "description": "参保人数",
+          "type": "integer"
+        },
+        "subject_company_status": {
+          "description": "企业状态",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            255
+          ]
+        },
+        "subject_company_status_deregistration": {
+          "description": "注销原因",
+          "type": "string",
+          "maxLength": 1024
+        },
+        "subject_company_status_deregistration_date": {
+          "description": "注销日期",
+          "type": "string",
+          "format": "date"
+        },
+        "subject_company_status_windingup": {
+          "description": "吊销原因",
+          "type": "string",
+          "maxLength": 1024
+        },
+        "subject_company_status_windingup_date": {
+          "description": "吊销日期",
+          "type": "string",
+          "format": "date"
+        },
+        "subject_name_used_before": {
+          "description": "企业曾用名",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 512
+          }
+        },
+        "subject_personnel_size": {
+          "description": "人员规模",
+          "type": "string",
+          "maxLength": 512
+        }
+      }
+    },
+    "LeadingMemberInformation": {
+      "description": "主要人员信息",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "subject_keypersonnel_name": {
+            "description": "姓名",
+            "type": "string",
+            "maxLength": 128
+          },
+          "subject_keypersonnel_type": {
+            "description": "人员类型",
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              255
+            ]
+          },
+          "subject_keypersonnel_position": {
+            "description": "职务",
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              255
+            ]
+          },
+          "subject_keypersonnel_appointment_start": {
+            "description": "任职开始日期",
+            "type": "string",
+            "format": "date"
+          },
+          "subject_keypersonnel_appointment_end": {
+            "description": "任职结束日期",
+            "type": "string",
+            "format": "date"
+          },
+          "subject_keypersonnel_nationality": {
+            "description": "国籍",
+            "type": "string",
+            "maxLength": 128
+          },
+          "subject_document_type": {
+            "description": "证件类型",
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              255
+            ]
+          },
+          "subject_keypersonnel_id": {
+            "description": "证件号码",
+            "type": "string",
+            "maxLength": 128
+          },
+          "subject_keypersonnel_address": {
+            "description": "证件地址",
+            "type": "string",
+            "maxLength": 128
+          },
+          "subject_keypersonnel_shareholding_ratio": {
+            "description": "持股比例",
+            "type": "number"
+          },
+          "subject_keypersonnel_shareholding": {
+            "description": "持股数量",
+            "type": "number"
+          },
+          "subject_keypersonnel_contact": {
+            "description": "联系方式",
+            "type": "string",
+            "maxLength": 32
+          }
+        }
+      }
+    },
+    "BasicInformationIndividualSubject": {
+      "description": "个人主体基本信息",
+      "type": "object",
+      "properties": {
+        "subject_investor_name": {
+          "description": "个人姓名",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_id_type": {
+          "description": "个人身份证类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            255
+          ]
+        },
+        "subject_id_number": {
+          "description": "个人身份证件号",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_id_address": {
+          "description": "个人证件地址",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_contact_address": {
+          "description": "个人联系地址",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_investor_contact_number": {
+          "description": "个人联系电话",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_cellphone_number": {
+          "description": "个人手机号",
+          "type": "string",
+          "maxLength": 18
+        },
+        "subject_personal_fax": {
+          "description": "个人传真",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_postalcode_number": {
+          "description": "邮政编码",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_id_doc_mailbox": {
+          "description": "电子邮箱",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_education": {
+          "description": "学历",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            255
+          ]
+        },
+        "subject_occupation": {
+          "description": "职业",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            255
+          ]
+        },
+        "subject_industry": {
+          "description": "个人所属行业",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            255
+          ]
+        },
+        "subject_birthday": {
+          "description": "出生日期",
+          "type": "string",
+          "format": "date"
+        },
+        "subject_gender": {
+          "description": "性别",
+          "type": "integer",
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "subject_work_unit": {
+          "description": "工作单位",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_investment_period": {
+          "description": "投资年限",
+          "type": "string",
+          "maxLength": 8
+        },
+        "subject_investment_experience": {
+          "description": "投资经历",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_native_place": {
+          "description": "籍贯",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_province": {
+          "description": "省份",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_city": {
+          "description": "城市",
+          "type": "string",
+          "maxLength": 32
+        }
+      },
+      "required": [
+        "subject_investor_name",
+        "subject_id_type",
+        "subject_id_number"
+      ]
+    }
+  }
+}
