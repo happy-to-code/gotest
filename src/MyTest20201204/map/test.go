@@ -18,4 +18,5 @@ func getValueFromMap(k1, k2 string, m map[string]interface{}) (interface{}, bool
 		inter, has = m[k2]
 	}
 	return inter, has
+
 }
