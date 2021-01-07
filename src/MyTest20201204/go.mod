@@ -3,13 +3,16 @@ module MyTest20201204
 go 1.14
 
 require (
-	github.com/cpuguy83/go-md2man/v2 v2.0.0 // indirect
-	github.com/go-openapi/spec v0.20.0 // indirect
+	github.com/gammazero/workerpool v1.1.1
+	github.com/kr/text v0.2.0 // indirect
 	github.com/minio/minio-go/v7 v7.0.6
+	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7
-	github.com/russross/blackfriday/v2 v2.1.0 // indirect
+	github.com/satori/go.uuid v1.2.0
 	github.com/smartystreets/goconvey v1.6.4 // indirect
-	github.com/swaggo/swag v1.7.0 // indirect
+	github.com/stretchr/testify v1.6.1 // indirect
 	golang.org/x/net v0.0.0-20201216054612-986b41b23924 // indirect
-	golang.org/x/tools v0.0.0-20201218024724-ae774e9781d2 // indirect
+	golang.org/x/text v0.3.4 // indirect
+	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f // indirect
+	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776 // indirect
 )

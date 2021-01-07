@@ -39,6 +39,7 @@ func Authorize() gin.HandlerFunc {
 }
 
 func ServiceWithoutAuth(c *gin.Context) {
+	// time.Sleep(1000)
 	c.JSON(http.StatusOK, gin.H{"message": "这是一个不用经过认证就能访问的接口"})
 }
 

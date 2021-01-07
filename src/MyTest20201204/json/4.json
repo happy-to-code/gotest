@@ -1,0 +1,326 @@
+{
+  "shareholderInfo": {
+    "accountInfo": {
+      "account_number": "h0123555",
+      "account_type": 1,
+      "account_frozen_remark": "phone0001",
+      "account_create_time": "2017-12-16T13:40:00+08:00",
+      "account_opening_date": "2018-10-23",
+      "account_frozen_applicant_name": "name0001",
+      "account_thaw_date": "2018-10-23",
+      "account_depository_ref": "ADRmUmKJwflO",
+      "account_status": 1,
+      "account_purpose": [
+        0,
+        1
+      ],
+      "account_thaw_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_opening_agent_name": "name0001",
+      "account_object_id": "${__UUID}",
+      "account_frozen_date": "2018-10-23",
+      "account_closing_date": "2018-10-23",
+      "account_closing_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_frozen_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_opening_agent_contact_number": "phone0001",
+      "account_establish_date": "2018-10-23",
+      "account_closing_agent_name": "name0001",
+      "account_opening_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_subject_ref": "tet00X8eq3ou8aoz0",
+      "account_thaw_remark": "escription0001",
+      "account_thaw_applicant_name": "name0001",
+      "account_closing_agent_contact_number": "phone0001"
+    },
+    "shareholderNo": "SHtet00X8eq3ou8aoz0",
+    "createTime": 1608062425
+  },
+  "createTime": 1513374000,
+  "contractAddress": "018a976954474678a3a100d33200b7f9fd1b34a60118c4cb13cfd79f6f324b5d",
+  "clientNo": "tet00X8eq3ou8aoz0",
+  "fundInfo": {
+    "accountInfo": {
+      "account_number": "h0123555",
+      "account_type": 2,
+      "account_frozen_remark": "phone0001",
+      "account_create_time": "2017-12-16T13:40:00+08:00",
+      "account_opening_date": "2018-10-23",
+      "account_frozen_applicant_name": "name0001",
+      "account_thaw_date": "2018-10-23",
+      "account_depository_ref": "ADRmUmKJwflO",
+      "account_status": 1,
+      "account_purpose": [
+        0,
+        1
+      ],
+      "account_thaw_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_opening_agent_name": "name0001",
+      "account_object_id": "${__UUID}",
+      "account_frozen_date": "2018-10-23",
+      "account_closing_date": "2018-10-23",
+      "account_closing_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_frozen_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_opening_agent_contact_number": "phone0001",
+      "account_establish_date": "2018-10-23",
+      "account_associated_account_ref": "SHtet00X8eq3ou8aoz0",
+      "account_closing_agent_name": "name0001",
+      "account_opening_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_subject_ref": "tet00X8eq3ou8aoz0",
+      "account_thaw_remark": "escription0001",
+      "account_thaw_applicant_name": "name0001",
+      "account_closing_agent_contact_number": "phone0001",
+      "account_association": 0
+    },
+    "fundNo": "fundtet00X8eq3ou8aoz0",
+    "createTime": 1608062425
+  },
+  "investorInfo": {
+    "subject_object_id": "tet00X8eq3ou8aoz0",
+    "subject_investor_name": "zhangsan",
+    "subject_create_time": "2017-12-16T13:40:00+08:00",
+    "subject_work_unit": "工作单位CHARACTER",
+    "subject_personal_fax": "个人传真CHARACTER",
+    "subject_gender": 1,
+    "subject_occupation": 2,
+    "subject_id_type": 0,
+    "subject_cellphone_number": "个人手机号CHARACTER",
+    "subject_birthday": "2018-10-23",
+    "subject_contact_number": "个人联系电话CHARACTER",
+    "subject_city": "城市CHARACTER",
+    "subject_type": 2,
+    "subject_id_address": "个人证件地址CHARACTER",
+    "subject_investment_period": "12",
+    "subject_native_place": "籍贯CHARACTER",
+    "subject_education": 1,
+    "subject_postal_code": "邮政编码CHARACTER",
+    "subject_province": "省份CHARACTER",
+    "subject_industry": 1,
+    "subject_id_doc_mailbox": "电子邮箱CHARACTER",
+    "subject_main_administrative_region": 0,
+    "subject_qualification_information": [
+      {
+        "investor_suitability_information": [
+          {
+            "subject_investor_qualification": 1,
+            "subject_investor_qualification_certificate_time": "2017-12-16T13:40:00+08:00",
+            "subject_investor_qualification_status": true,
+            "subject_investor_qualification_certifier_ref": "SIQCRRbu93ghVy",
+            "subject_investor_qualification_description": "适当性认证描述",
+            "subject_investor_qualification_certifier_name": "适当性认证方主体名称",
+            "subject_investor_qualification_sub": "适当性认证子类",
+            "subject_investor_qualification_certificate": [
+              {
+                "file_number": "2",
+                "summary": "简述1",
+                "file_name": "1file1.pdf",
+                "term_of_validity": "2018-10-23",
+                "hash": "da1234filehash52221",
+                "url": "http://test.com/file/201/1file1.pdf",
+                "term_of_validity_type": "0"
+              },
+              {
+                "file_number": "2",
+                "summary": "简述2",
+                "file_name": "2file1.pdf",
+                "term_of_validity": "2018-10-23",
+                "hash": "da1234filehash52222",
+                "url": "http://test.com/file/201/2file1.pdf",
+                "term_of_validity_type": "0"
+              }
+            ]
+          }
+        ],
+        "qualification_authentication_information": [
+          {
+            "subject_qualification_reviewer": "审核方",
+            "subject_certification_time": "2017-12-16T13:40:00+08:00",
+            "subject_qualification_authenticator": "认证方",
+            "subject_review_time": "2017-12-16T13:40:00+08:00",
+            "subject_role_qualification_certification_doc": [
+              {
+                "file_number": "2",
+                "summary": "简述1",
+                "file_name": "1file1.pdf",
+                "term_of_validity": "2018-10-23",
+                "hash": "da1234filehash52221",
+                "url": "http://test.com/file/201/1file1.pdf",
+                "term_of_validity_type": "0"
+              },
+              {
+                "file_number": "2",
+                "summary": "简述2",
+                "file_name": "2file1.pdf",
+                "term_of_validity": "2018-10-23",
+                "hash": "da1234filehash52222",
+                "url": "http://test.com/file/201/2file1.pdf",
+                "term_of_validity_type": "0"
+              }
+            ],
+            "subject_qualification_code": "资质代码",
+            "subject_qualification_status": true
+          }
+        ],
+        "subject_market_roles_type": 1,
+        "subject_intermediary_qualification": [
+          0,
+          1
+        ],
+        "subject_financial_qualification_type": 1,
+        "subject_qualification_category": 1
+      }
+    ],
+    "subject_investment_experience": "投资经历CHARACTER",
+    "subject_id_number": "个人身份证件号CHARACTER",
+    "subject_contact_address": "个人联系地址CHARACTER"
+  }
+}

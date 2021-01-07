@@ -1,0 +1,326 @@
+{
+  "shareholderInfo": {
+    "accountInfo": {
+      "account_number": "h0123555",
+      "account_type": 1,
+      "account_frozen_remark": "phone0001",
+      "account_create_time": "2017-12-16T13:40:00+08:00",
+      "account_opening_date": "2018-10-23",
+      "account_frozen_applicant_name": "name0001",
+      "account_thaw_date": "2018-10-23",
+      "account_depository_ref": "ADR514",
+      "account_status": 1,
+      "account_purpose": [
+        0,
+        1
+      ],
+      "account_thaw_doc": [
+        {
+          "file_number": "2",
+          "summary": "ݲ˶1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "ݲ˶2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_opening_agent_name": "name0001",
+      "account_object_id": "SHNo9006ZYc2",
+      "account_frozen_date": "2018-10-23",
+      "account_closing_date": "2018-10-23",
+      "account_closing_doc": [
+        {
+          "file_number": "2",
+          "summary": "ݲ˶1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "ݲ˶2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_frozen_doc": [
+        {
+          "file_number": "2",
+          "summary": "ݲ˶1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "ݲ˶2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_opening_agent_contact_number": "phone0001",
+      "account_establish_date": "2018-10-23",
+      "account_closing_agent_name": "name0001",
+      "account_opening_doc": [
+        {
+          "file_number": "2",
+          "summary": "ݲ˶1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "ݲ˶2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_subject_ref": "No9006ZYc2",
+      "account_thaw_remark": "escription0001",
+      "account_thaw_applicant_name": "name0001",
+      "account_closing_agent_contact_number": "phone0001"
+    },
+    "shareholderNo": "SHNo9006ZYc2",
+    "createTime": 1608062425
+  },
+  "createTime": 1513374000,
+  "contractAddress": "018a976954474678a3a100d33200b7f9fd1b34a60118c4cb13cfd79f6f324b5d",
+  "clientNo": "No9006ZYc2",
+  "fundInfo": {
+    "accountInfo": {
+      "account_number": "h0123555",
+      "account_type": 2,
+      "account_frozen_remark": "phone0001",
+      "account_create_time": "2017-12-16T13:40:00+08:00",
+      "account_opening_date": "2018-10-23",
+      "account_frozen_applicant_name": "name0001",
+      "account_thaw_date": "2018-10-23",
+      "account_depository_ref": "ADR514",
+      "account_status": 1,
+      "account_purpose": [
+        0,
+        1
+      ],
+      "account_thaw_doc": [
+        {
+          "file_number": "2",
+          "summary": "ݲ˶1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "ݲ˶2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_opening_agent_name": "name0001",
+      "account_object_id": "fundNo9006ZYc2",
+      "account_frozen_date": "2018-10-23",
+      "account_closing_date": "2018-10-23",
+      "account_closing_doc": [
+        {
+          "file_number": "2",
+          "summary": "ݲ˶1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "ݲ˶2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_frozen_doc": [
+        {
+          "file_number": "2",
+          "summary": "ݲ˶1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "ݲ˶2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_opening_agent_contact_number": "phone0001",
+      "account_establish_date": "2018-10-23",
+      "account_associated_account_ref": "SHNo9006ZYc2",
+      "account_closing_agent_name": "name0001",
+      "account_opening_doc": [
+        {
+          "file_number": "2",
+          "summary": "ݲ˶1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "ݲ˶2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "account_subject_ref": "No9006ZYc2",
+      "account_thaw_remark": "escription0001",
+      "account_thaw_applicant_name": "name0001",
+      "account_closing_agent_contact_number": "phone0001",
+      "account_association": 0
+    },
+    "fundNo": "fundNo9006ZYc2",
+    "createTime": 1608062425
+  },
+  "investorInfo": {
+    "subject_object_id": "No9006ZYc2",
+    "subject_investor_name": "zhangsan",
+    "subject_create_time": "2017-12-16T13:40:00+08:00",
+    "subject_work_unit": "٤طեλCHARACTER",
+    "subject_personal_fax": "ٶɋԫ֦CHARACTER",
+    "subject_gender": 1,
+    "subject_occupation": 2,
+    "subject_id_type": 0,
+    "subject_cellphone_number": "ٶɋ˖ܺۅCHARACTER",
+    "subject_birthday": "2018-10-23",
+    "subject_contact_number": "ٶɋjϵ֧۰CHARACTER",
+    "subject_city": "ԇːCHARACTER",
+    "subject_type": 2,
+    "subject_id_address": "ٶɋ֤ݾַ֘CHARACTER",
+    "subject_investment_period": "12",
+    "subject_native_place": "ܮڡCHARACTER",
+    "subject_education": 1,
+    "subject_postal_code": "Ԋ־ҠëCHARACTER",
+    "subject_province": "ʡ؝CHARACTER",
+    "subject_industry": 1,
+    "subject_id_doc_mailbox": "֧ؓԊФCHARACTER",
+    "subject_main_administrative_region": 0,
+    "subject_qualification_information": [
+      {
+        "investor_suitability_information": [
+          {
+            "subject_investor_qualification": 1,
+            "subject_investor_qualification_certificate_time": "2017-12-16T13:40:00+08:00",
+            "subject_investor_qualification_status": true,
+            "subject_investor_qualification_certifier_ref": "SIQCR514",
+            "subject_investor_qualification_description": "ˊձєɏ֤Ĩ˶",
+            "subject_investor_qualification_certifier_name": "ˊձєɏ֤׽׷ͥĻԆ",
+            "subject_investor_qualification_sub": "ˊձєɏ֤ؓ`",
+            "subject_investor_qualification_certificate": [
+              {
+                "file_number": "2",
+                "summary": "ݲ˶1",
+                "file_name": "1file1.pdf",
+                "term_of_validity": "2018-10-23",
+                "hash": "da1234filehash52221",
+                "url": "http://test.com/file/201/1file1.pdf",
+                "term_of_validity_type": "0"
+              },
+              {
+                "file_number": "2",
+                "summary": "ݲ˶2",
+                "file_name": "2file1.pdf",
+                "term_of_validity": "2018-10-23",
+                "hash": "da1234filehash52222",
+                "url": "http://test.com/file/201/2file1.pdf",
+                "term_of_validity_type": "0"
+              }
+            ]
+          }
+        ],
+        "qualification_authentication_information": [
+          {
+            "subject_qualification_reviewer": "ʳۋ׽",
+            "subject_certification_time": "2017-12-16T13:40:00+08:00",
+            "subject_qualification_authenticator": "ɏ֤׽",
+            "subject_review_time": "2017-12-16T13:40:00+08:00",
+            "subject_role_qualification_certification_doc": [
+              {
+                "file_number": "2",
+                "summary": "ݲ˶1",
+                "file_name": "1file1.pdf",
+                "term_of_validity": "2018-10-23",
+                "hash": "da1234filehash52221",
+                "url": "http://test.com/file/201/1file1.pdf",
+                "term_of_validity_type": "0"
+              },
+              {
+                "file_number": "2",
+                "summary": "ݲ˶2",
+                "file_name": "2file1.pdf",
+                "term_of_validity": "2018-10-23",
+                "hash": "da1234filehash52222",
+                "url": "http://test.com/file/201/2file1.pdf",
+                "term_of_validity_type": "0"
+              }
+            ],
+            "subject_qualification_code": "؊׊պë",
+            "subject_qualification_status": true
+          }
+        ],
+        "subject_market_roles_type": 1,
+        "subject_intermediary_qualification": [
+          0,
+          1
+        ],
+        "subject_financial_qualification_type": 1,
+        "subject_qualification_category": 1
+      }
+    ],
+    "subject_investment_experience": "Ͷ؊ޭzCHARACTER",
+    "subject_id_number": "ٶɋʭ؝֤ݾۅCHARACTER",
+    "subject_contact_address": "ٶɋjϵַ֘CHARACTER"
+  }
+}

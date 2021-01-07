@@ -20,4 +20,5 @@ func main() {
 	ints := append(b, a...)
 	fmt.Println(ints)
 	// 品牌商的方式
+
 }
