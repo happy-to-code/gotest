@@ -15,6 +15,7 @@ func printTime() {
 		fmt.Println(time.Now())
 	}
 }
+
 func init() {
 	println("11111111111111111")
 }
