@@ -15,10 +15,9 @@ func printTime() {
 		fmt.Println(time.Now())
 	}
 }
-
-func init()  {
+func init() {
 	println("11111111111111111")
 }
-func init()  {
+func init() {
 	go printTime()
 }
