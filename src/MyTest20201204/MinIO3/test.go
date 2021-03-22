@@ -17,9 +17,9 @@ var ctx context.Context
 func init() {
 	var err error
 	ctx = context.Background()
-	endpoint := "b2904236d6.zicp.vip:8098"
+	endpoint := "121.224.59.167:9000"
 	accessKeyID := "minioadmin"
-	secretAccessKey := "Pass@7899"
+	secretAccessKey := "minioadmin"
 	useSSL := false
 	// 初使化 minio client对象。
 	minioClient, err = minio.New(endpoint, &minio.Options{
@@ -34,35 +34,35 @@ func init() {
 func main() {
 
 	// 创建一个叫mymusic的存储桶。
-	// bucketName := "my-oss-test"
+	bucketName := "zyf-test"
 
-	// var bt bytes.Buffer
-	//
-	// file, err := minioClient.GetObject(ctx, bucketName, "fundtet00KEeko8RfViV5_01.json", minio.GetObjectOptions{})
-	// if err != nil {
-	// 	fmt.Printf("err1:%+v\n", err)
-	// }
-	// defer file.Close()
-	// reader := bufio.NewReader(file)
-	// for {
-	// 	data, _, err := reader.ReadLine()
-	// 	if err != nil {
-	// 		if err == io.EOF {
-	// 			break
-	// 		} else {
-	// 			fmt.Printf("err2:%+v\n", err)
-	// 			return
-	// 		}
-	// 	}
-	//
-	// 	bt.WriteString(string(data))
-	// }
-	// fmt.Printf("res:%s\n\n", bt.String())
-	fromMinio, err := GetInfoFromMinio("RSR006_0")
+	var bt bytes.Buffer
+
+	file, err := minioClient.GetObject(ctx, bucketName, "30018", minio.GetObjectOptions{})
 	if err != nil {
-		panic(err)
+		fmt.Printf("err1:%+v\n", err)
 	}
-	fmt.Printf("===%s\n", fromMinio)
+	defer file.Close()
+	reader := bufio.NewReader(file)
+	for {
+		data, _, err := reader.ReadLine()
+		if err != nil {
+			if err == io.EOF {
+				break
+			} else {
+				fmt.Printf("err2:%+v\n", err)
+				return
+			}
+		}
+
+		bt.WriteString(string(data))
+	}
+	fmt.Printf("res:%s\n\n", bt.String())
+	// fromMinio, err := GetInfoFromMinio("RSR006_0")
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// fmt.Printf("===%s\n", fromMinio)
 }
 
 func GetInfoFromMinio(fileName string) ([]byte, error) {
