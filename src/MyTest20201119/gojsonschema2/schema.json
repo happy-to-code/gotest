@@ -1,0 +1,2391 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "InterChainObject",
+  "properties": {
+    "header": {
+      "description": "数据头",
+      "type": "object",
+      "properties": {
+        "model": {
+          "description": "协议信息",
+          "type": "object",
+          "properties": {
+            "protocol": {
+              "description": "模型描述信息",
+              "type": "string"
+            },
+            "version": {
+              "description": "版本号",
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "description": "数据模型信息",
+          "type": "object",
+          "properties": {
+            "type": {
+              "description": "模型类型",
+              "type": "string",
+              "enum": [
+                "subject",
+                "account",
+                "transaction",
+                "info-disclosure",
+                "product",
+                "registration",
+                "settlement"
+              ]
+            },
+            "object_id": {
+              "description": "对象ID",
+              "type": "string"
+            },
+            "operation": {
+              "description": "操作信息, add, update, delete",
+              "type": "string",
+              "enum": [
+                "add",
+                "update",
+                "delete"
+              ]
+            },
+            "timestamp": {
+              "description": "时间戳",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "type",
+            "object_id",
+            "operation",
+            "timestamp"
+          ]
+        }
+      }
+    },
+    "body": {
+      "description": "消息体",
+      "title": "Body",
+      "type": "object",
+      "oneOf": [
+        {
+          "properties": {
+            "subject": {
+              "$ref": "#/definitions/Subject"
+            }
+          },
+          "required": [
+            "subject"
+          ]
+        },
+        {
+          "properties": {
+            "product": {
+              "$ref": "#/definitions/Product"
+            }
+          },
+          "required": [
+            "product"
+          ]
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "Subject": {
+      "description": "主体",
+      "title": "Subject",
+      "type": "object",
+      "properties": {
+        "basic_information_subject": {
+          "$ref": "#/definitions/BasicInformationSubject"
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "organization_subject_information": {
+              "$ref": "#/definitions/OrganizationSubjectInformation"
+            }
+          },
+          "required": [
+            "organization_subject_information"
+          ]
+        },
+        {
+          "properties": {
+            "personal_subject_information": {
+              "$ref": "#/definitions/PersonalSubjectInformation"
+            }
+          },
+          "required": [
+            "personal_subject_information"
+          ]
+        }
+      ]
+    },
+    "BasicInformationSubject": {
+      "description": "主体基本信息",
+      "title": "BasicInformationSubject",
+      "type": "object",
+      "properties": {
+        "general_information_subject": {
+          "$ref": "#/definitions/GeneralInformationSubject"
+        },
+        "subject_qualification_information": {
+          "$ref": "#/definitions/SubjectQualificationInformation"
+        }
+      }
+    },
+    "OrganizationSubjectInformation": {
+      "description": "机构主体信息",
+      "title": "OrganizationSubjectInformation",
+      "type": "object",
+      "properties": {
+        "basic_information_of_enterprise": {
+          "$ref": "#/definitions/BasicInformationOfEnterprise"
+        }
+      }
+    },
+    "PersonalSubjectInformation": {
+      "description": "个人主体信息",
+      "title": "PersonalSubjectInformation",
+      "type": "object",
+      "properties": {
+        "basic_information_individual_subject": {
+          "$ref": "#/definitions/BasicInformationIndividualSubject"
+        }
+      }
+    },
+    "GeneralInformationSubject": {
+      "description": "主体通用信息",
+      "title": "GeneralInformationSubject",
+      "type": "object",
+      "properties": {
+        "subject_id": {
+          "description": "主体标识",
+          "type": "string",
+          "maxLength": 64
+        },
+        "subject_main_administrative_region": {
+          "description": "主体行政区域",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            255
+          ]
+        },
+        "subject_create_time": {
+          "description": "主体信息维护时间",
+          "type": "string",
+          "format": "yyyy/MM/dd HH:mm:ss"
+        }
+      },
+      "required": [
+        "subject_create_time",
+        "subject_main_administrative_region"
+      ]
+    },
+    "SubjectQualificationInformation": {
+      "description": "主体资质信息",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "qualification_information": {
+            "$ref": "#/definitions/QualificationInformation"
+          },
+          "qualification_authentication_information": {
+            "$ref": "#/definitions/QualificationAuthenticationInformation"
+          },
+          "investor_suitability_information": {
+            "$ref": "#/definitions/InvestorSuitabilityInformation"
+          }
+        }
+      }
+    },
+    "QualificationInformation": {
+      "description": "资质信息",
+      "type": "object",
+      "properties": {
+        "subject_qualification_category": {
+          "description": "资质类别",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            255
+          ]
+        },
+        "subject_market_roles_type": {
+          "description": "市场角色类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            255
+          ]
+        },
+        "subject_intermediary_qualification": {
+          "description": "中介资质类型",
+          "type": "integer",
+          "enum": [
+            0,
+            10,
+            11,
+            12,
+            20,
+            21,
+            22,
+            23,
+            30,
+            31,
+            32,
+            33,
+            255
+          ]
+        },
+        "subject_financial_qualification_type": {
+          "type": "integer",
+          "description": "金融资质类型",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            255
+          ]
+        }
+      }
+    },
+    "QualificationAuthenticationInformation": {
+      "description": "资质认证信息",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "subject_qualification_code": {
+            "description": "资质代码",
+            "type": "string",
+            "maxLength": 128
+          },
+          "subject_role_qualification_certification_document": {
+            "description": "资质认证文件",
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/Document"
+            }
+          },
+          "subject_qualification_party_certification": {
+            "description": "资质认证方",
+            "type": "string",
+            "maxLength": 256
+          },
+          "subject_certification_time": {
+            "description": "资质认证时间",
+            "type": "string",
+            "format": "date-time"
+          },
+          "subject_qualification_reviewer": {
+            "description": "资质审核方",
+            "type": "string",
+            "maxLength": 256
+          },
+          "subject_review_time": {
+            "description": "审核时间",
+            "type": "string",
+            "format": "date-time"
+          },
+          "subject_qualification_status": {
+            "type": "integer",
+            "description": "主体资质状态",
+            "enum": [
+              1,
+              2
+            ]
+          }
+        }
+      }
+    },
+    "InvestorSuitabilityInformation": {
+      "description": "投资者适当性信息",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "subject_investor_qualification": {
+            "description": "适当性类别",
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              255
+            ]
+          },
+          "subject_investor_qualification_sub": {
+            "description": "适当性认证子类",
+            "type": "string",
+            "maxLength": 512
+          },
+          "subject_investor_qualification_description": {
+            "description": "适当性认证描述",
+            "type": "string",
+            "maxLength": 512
+          },
+          "subject_investor_qualification_certificate": {
+            "description": "适当性证明文件",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "$ref": "#/definitions/Document"
+            }
+          },
+          "subject_investor_qualification_cerifier_ref": {
+            "description": "适当性认证方主体引用",
+            "type": "string",
+            "maxLength": 64
+          },
+          "subject_investor_qualification_cerifier_name": {
+            "description": "适当性认证方主体名称",
+            "type": "string",
+            "maxLength": 256
+          },
+          "subject_investor_qualification_certificate_time": {
+            "description": "适当性认证时间",
+            "type": "string",
+            "format": "date-time"
+          },
+          "subject_investor_qualification_status": {
+            "description": "适当性认证状态",
+            "type": "boolean",
+            "enum": [
+              false,
+              true
+            ]
+          }
+        }
+      }
+    },
+    "BasicInformationOfEnterprise": {
+      "description": "企业基本信息",
+      "type": "object",
+      "properties": {
+        "basic_information_description": {
+          "$ref": "#/definitions/BasicInformationDescription"
+        },
+        "leading_member_information": {
+          "$ref": "#/definitions/LeadingMemberInformation"
+        }
+      }
+    },
+    "BasicInformationDescription": {
+      "description": "基本信息描述",
+      "type": "object",
+      "properties": {
+        "subject_company_name": {
+          "description": "公司全称",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_company_english_name": {
+          "description": "英文名称",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_company_short_name": {
+          "description": "公司简称",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_company_short_english_name": {
+          "description": "英文简称",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_organization_nature": {
+          "description": "机构性质",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            255
+          ]
+        },
+        "subject_legal_type": {
+          "description": "法定类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            255
+          ]
+        },
+        "subject_economic_type": {
+          "description": "经济类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            255
+          ]
+        },
+        "subject_company_type": {
+          "description": "股份制企业类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            255
+          ]
+        },
+        "subject_scale_type": {
+          "description": "规模类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            255
+          ]
+        },
+        "subject_high_technology_enterpris": {
+          "description": "高新技术企业",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            255
+          ]
+        },
+        "subject_document_infomation": {
+          "description": "证件类型及证件号码",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "subject_registry_date": {
+          "description": "注册日期",
+          "type": "string",
+          "format": "date"
+        },
+        "subject_business_license": {
+          "description": "营业执照",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Document"
+          }
+        },
+        "subject_business_scope": {
+          "description": "经营范围",
+          "type": "string",
+          "maxLength": 512
+        },
+        "subject_industry": {
+          "description": "企业所属行业",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            255
+          ]
+        },
+        "subject_company_business": {
+          "description": "主营业务",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_company_profile": {
+          "description": "公司简介",
+          "type": "string"
+        },
+        "subject_registered_capital": {
+          "description": "注册资本",
+          "type": "number"
+        },
+        "subject_registered_capital_currency": {
+          "description": "注册资本币种",
+          "type": "string",
+          "maxLength": 16,
+          "enum": [
+            "156",
+            "840",
+            "036",
+            "978",
+            "276",
+            "344"
+          ]
+        },
+        "subject_paid_in_capital": {
+          "description": "实收资本",
+          "type": "number"
+        },
+        "subject_paid_in_capital_currency": {
+          "description": "实收资本币种",
+          "type": "string",
+          "maxLength": 16,
+          "enum": [
+            "156",
+            "840",
+            "036",
+            "978",
+            "276",
+            "344"
+          ]
+        },
+        "subject_registered_address": {
+          "description": "注册地址",
+          "type": "string",
+          "maxLength": 512
+        },
+        "subject_province": {
+          "description": "注册地所在省份",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_city": {
+          "description": "注册地所在市",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_district": {
+          "description": "注册地所在区",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_office_address": {
+          "description": "办公地址",
+          "type": "string",
+          "maxLength": 512
+        },
+        "subject_contact_address": {
+          "description": "联系地址",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_contact_number": {
+          "description": "联系电话",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_fax": {
+          "description": "企业传真",
+          "type": "string",
+          "maxLength": 64
+        },
+        "subject_postal_code": {
+          "description": "邮政编码",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_internet_address": {
+          "description": "互联网地址",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_mail_box": {
+          "description": "电子邮箱",
+          "type": "string",
+          "maxLength": 64
+        },
+        "subject_association_articles": {
+          "description": "公司章程",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/Document"
+          }
+        },
+        "subject_regulator": {
+          "description": "主管单位",
+          "type": "string",
+          "maxLength": 128
+        },
+        "subject_shareholders_number": {
+          "description": "股东总数（个）",
+          "type": "integer"
+        },
+        "subject_taxpayer_id_number": {
+          "description": "纳税人识别号",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_invoice_bank": {
+          "description": "发票开户行",
+          "type": "string",
+          "maxLength": 128
+        },
+        "subject_invoice_account_number": {
+          "description": "发票账号",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_invoice_address": {
+          "description": "发票地址",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_invoice_telephone_number": {
+          "description": "发票地址",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_approval_time": {
+          "description": "核准时间",
+          "type": "string",
+          "format": "date-time"
+        },
+        "subject_insured_number": {
+          "description": "参保人数",
+          "type": "integer"
+        },
+        "subject_company_status": {
+          "description": "企业状态",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            255
+          ]
+        },
+        "subject_company_status_deregistration": {
+          "description": "注销原因",
+          "type": "string",
+          "maxLength": 1024
+        },
+        "subject_company_status_deregistration_date": {
+          "description": "注销日期",
+          "type": "string",
+          "format": "date"
+        },
+        "subject_company_status_windingup": {
+          "description": "吊销原因",
+          "type": "string",
+          "maxLength": 1024
+        },
+        "subject_company_status_windingup_date": {
+          "description": "吊销日期",
+          "type": "string",
+          "format": "date"
+        },
+        "subject_name_used_before": {
+          "description": "企业曾用名",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 512
+          }
+        },
+        "subject_personnel_size": {
+          "description": "人员规模",
+          "type": "string",
+          "maxLength": 512
+        }
+      }
+    },
+    "LeadingMemberInformation": {
+      "description": "主要人员信息",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "subject_keypersonnel_name": {
+            "description": "姓名",
+            "type": "string",
+            "maxLength": 128
+          },
+          "subject_keypersonnel_type": {
+            "description": "人员类型",
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              255
+            ]
+          },
+          "subject_keypersonnel_position": {
+            "description": "职务",
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              255
+            ]
+          },
+          "subject_keypersonnel_appointment_start": {
+            "description": "任职开始日期",
+            "type": "string",
+            "format": "date"
+          },
+          "subject_keypersonnel_appointment_end": {
+            "description": "任职结束日期",
+            "type": "string",
+            "format": "date"
+          },
+          "subject_keypersonnel_nationality": {
+            "description": "国籍",
+            "type": "string",
+            "maxLength": 128
+          },
+          "subject_document_type": {
+            "description": "证件类型",
+            "type": "integer",
+            "enum": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              255
+            ]
+          },
+          "subject_keypersonnel_id": {
+            "description": "证件号码",
+            "type": "string",
+            "maxLength": 128
+          },
+          "subject_keypersonnel_address": {
+            "description": "证件地址",
+            "type": "string",
+            "maxLength": 128
+          },
+          "subject_keypersonnel_shareholding_ratio": {
+            "description": "持股比例",
+            "type": "number"
+          },
+          "subject_keypersonnel_shareholding": {
+            "description": "持股数量",
+            "type": "number"
+          },
+          "subject_keypersonnel_contact": {
+            "description": "联系方式",
+            "type": "string",
+            "maxLength": 32
+          }
+        }
+      }
+    },
+    "BasicInformationIndividualSubject": {
+      "description": "个人主体基本信息",
+      "type": "object",
+      "properties": {
+        "subject_investor_name": {
+          "description": "个人姓名",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_id_type": {
+          "description": "个人身份证类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            255
+          ]
+        },
+        "subject_id_number": {
+          "description": "个人身份证件号",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_id_address": {
+          "description": "个人证件地址",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_contact_address": {
+          "description": "个人联系地址",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_investor_contact_number": {
+          "description": "个人联系电话",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_cellphone_number": {
+          "description": "个人手机号",
+          "type": "string",
+          "maxLength": 18
+        },
+        "subject_personal_fax": {
+          "description": "个人传真",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_postalcode_number": {
+          "description": "邮政编码",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_id_doc_mailbox": {
+          "description": "电子邮箱",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_education": {
+          "description": "学历",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            255
+          ]
+        },
+        "subject_occupation": {
+          "description": "职业",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            255
+          ]
+        },
+        "subject_industry": {
+          "description": "个人所属行业",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            255
+          ]
+        },
+        "subject_birthday": {
+          "description": "出生日期",
+          "type": "string",
+          "format": "date"
+        },
+        "subject_gender": {
+          "description": "性别",
+          "type": "integer",
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "subject_work_unit": {
+          "description": "工作单位",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_investment_period": {
+          "description": "投资年限",
+          "type": "string",
+          "maxLength": 8
+        },
+        "subject_investment_experience": {
+          "description": "投资经历",
+          "type": "string",
+          "maxLength": 256
+        },
+        "subject_native_place": {
+          "description": "籍贯",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_province": {
+          "description": "省份",
+          "type": "string",
+          "maxLength": 32
+        },
+        "subject_city": {
+          "description": "城市",
+          "type": "string",
+          "maxLength": 32
+        }
+      },
+      "required": [
+        "subject_investor_name",
+        "subject_id_type",
+        "subject_id_number"
+      ]
+    },
+    "Product": {
+      "type": "object",
+      "properties": {
+        "product_information": {
+          "type": "object",
+          "description": "产品信息",
+          "properties": {
+            "essential_information": {
+              "type": "object",
+              "description": "基本信息",
+              "properties": {
+                "basic_product_information": {
+                  "type": "object",
+                  "properties": {
+                    "product_trading_market_category": {
+                      "type": "integer",
+                      "description": "产品交易场所类别",
+                      "enum": [
+                        0,
+                        1,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  区域股权市场\n255  其他"
+                    },
+                    "product_market_subject": {
+                      "type": "string",
+                      "maxLength": 64,
+                      "description": "交易场所主体引用"
+                    },
+                    "product_market_subject_name": {
+                      "type": "string",
+                      "description": "交易场所主体名称",
+                      "maxLength": 128
+                    },
+                    "product_plate_trading_name": {
+                      "type": "string",
+                      "description": "交易场所板块名称,新三板、科创板，股交中心自己的业务板块",
+                      "maxLength": 32
+                    },
+                    "product_issuer_subject_ref": {
+                      "type": "string",
+                      "maxLength": 64,
+                      "description": "发行主体引用"
+                    },
+                    "product_issuer_name": {
+                      "type": "string",
+                      "description": "发行主体名称",
+                      "maxLength": 128
+                    },
+                    "product_code": {
+                      "type": "string",
+                      "description": "产品代码",
+                      "maxLength": 128
+                    },
+                    "product_name": {
+                      "type": "string",
+                      "description": "产品全称",
+                      "maxLength": 128
+                    },
+                    "product_name_abbreviation": {
+                      "type": "string",
+                      "maxLength": 64,
+                      "description": "产品简称"
+                    },
+                    "product_type_function": {
+                      "type": "integer",
+                      "description": "产品功能,其他：包含企业展示、纯托管",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  发行融资\n2  挂牌\n3  托管\n255  其他"
+                    },
+                    "product_type": {
+                      "type": "integer",
+                      "description": "产品类型",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  私募股权\n2  私募股份\n3  私募可转债\n4  私募债\n5  私募基金\n255  其他"
+                    },
+                    "product_account_number_max": {
+                      "type": "integer",
+                      "description": "最大账户数量"
+                    },
+                    "product_info_disclosure_way": {
+                      "type": "integer",
+                      "description": "信息披露方式",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  非公开披露\n2  定向披露\n3  公开披露\n255  其他"
+                    },
+                    "product_scale_unit": {
+                      "type": "integer",
+                      "description": "产品规模单位,有限责任公司股权挂牌转让，为货币价值,单位：\n股数：股\n货币价值：元\n债权：张",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  货币价值（元）\n2  基金份额（份）\n3  债权（张）\n4  股数（股）\n5 理财产品份额（份）\n255  其他"
+                    },
+                    "product_scale_currency": {
+                      "type": "string",
+                      "description": "产品规模币种,以国标GB/T 12406-2008为准",
+                      "maximum": 100000000,
+                      "minimum": 0,
+                      "maxLength": 8,
+                      "enumDesc": "156  人民币\n840  美元\n036  澳元\n978  欧元\n276  德国马克\n344  港币",
+                      "enum": [
+                        "156",
+                        "840",
+                        "036",
+                        "978",
+                        "276",
+                        "344"
+                      ]
+                    },
+                    "product_scale": {
+                      "type": "number",
+                      "description": "产品规模总额"
+                    },
+                    "product_customer_browsing_right": {
+                      "type": "integer",
+                      "description": "浏览范围",
+                      "enumDesc": "0 空值\n1  普通\n2  定向\n255  其他",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        255
+                      ]
+                    },
+                    "product_issuer_contact_person": {
+                      "type": "string",
+                      "description": "联系人,个人/机构",
+                      "maxLength": 16
+                    },
+                    "product_issuer_contact_info": {
+                      "type": "string",
+                      "description": "联系信息,电话/邮箱/地址",
+                      "maxLength": 18
+                    },
+                    "product_create_time": {
+                      "description": "产品信息维护时间",
+                      "type": "string",
+                      "format": "date-time"
+                    }
+                  },
+                  "description": "产品基本信息",
+                  "required": [
+                    "product_issuer_subject_ref",
+                    "product_issuer_name",
+                    "product_trading_market_category",
+                    "product_use",
+                    "product_type",
+                    "product_code",
+                    "product_info_disclosure_way",
+                    "product_scale_unit",
+                    "product_scale_currency",
+                    "product_scale",
+                    "product_customer_browsing_right",
+                    "product_create_time"
+                  ]
+                },
+                "service_provider_information": {
+                  "type": "object",
+                  "description": "服务方信息",
+                  "properties": {
+                    "product_registry_subject_ref": {
+                      "type": "string",
+                      "maxLength": 64,
+                      "description": "登记机构主体引用,产品登记机构的主体对象标识【subject_object_id】"
+                    },
+                    "product_name_registration_body": {
+                      "description": "登记机构名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_fsagency_subject_ref": {
+                      "type": "string",
+                      "maxLength": 64,
+                      "description": "持续服务机构主体引用"
+                    },
+                    "product_fsagency_name": {
+                      "description": "持续服务机构名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_recommender_subject_ref": {
+                      "type": "string",
+                      "maxLength": 64,
+                      "description": "推荐商主体引用"
+                    },
+                    "product_recommender_name": {
+                      "description": "推荐商名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_information_disclosure_obligor_subject_ref": {
+                      "type": "string",
+                      "maxLength": 64,
+                      "description": "信披义务人主体引用"
+                    },
+                    "product_information_disclosure_obligor_name": {
+                      "description": "持续服务机构名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_custodian_subject_ref": {
+                      "type": "string",
+                      "maxLength": 64,
+                      "description": "托管机构主体,产品托管机构的主体对象标识【subject_object_id】"
+                    },
+                    "product_name_custodian": {
+                      "description": "托管机构名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_underwriter_subject_ref": {
+                      "description": "承销机构主体引用,产品承销构的主体对象标识【subject_object_id】",
+                      "type": "string",
+                      "maxLength": 64
+                    },
+                    "product_underwriter_name": {
+                      "description": "承销机构名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_sponsor_subject": {
+                      "type": "string",
+                      "maxLength": 64,
+                      "description": "保荐机构主体引用,该产品托管机构的主体对象标识【subject_object_id】"
+                    },
+                    "product_sponsor_subject_name": {
+                      "description": "保荐机构名称,产品保荐机构的主体对象标识【subject_object_id】",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_fund_administrator_account": {
+                      "description": "管理人账户引用,管理人的主体对象标识【subject_object_id】",
+                      "type": "string",
+                      "maxLength": 64
+                    },
+                    "product_fund_administrator_name": {
+                      "description": "管理人名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_fund_manager_account": {
+                      "description": "受托管理人账户引用,受托管理人的主体对象标识【subject_object_id】",
+                      "type": "string",
+                      "maxLength": 64
+                    },
+                    "product_fund_manager_name": {
+                      "description": "受托管理人名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_guarantor_subject_ref": {
+                      "description": "担保机构主体引用，产品担保机构的主体对象标识【subject_object_id】",
+                      "type": "string",
+                      "maxLength": 64
+                    },
+                    "product_guarantor_name": {
+                      "description": "担保机构名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_subject_reference_appraisal_institution": {
+                      "type": "string",
+                      "maxLength": 64,
+                      "description": "资产评估机构主体引用"
+                    },
+                    "product_asset_appraisal_institution": {
+                      "description": "资产评估机构名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_law_firm_subject_ref": {
+                      "description": "律师事务所主体引用,产品发行时的律所主体对象标识【subject_object_id】",
+                      "type": "string",
+                      "maxLength": 64
+                    },
+                    "product_law_firm_name": {
+                      "description": "律师事务所名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_accounting_firm_subject_ref": {
+                      "description": "会计事务所主体引用,产品发行时会计师事务所的主体对象标识【subject_object_id】",
+                      "type": "string",
+                      "maxLength": 64
+                    },
+                    "product_accounting_firm_name": {
+                      "description": "会计事务所名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_credit_enhancement_agency_subject_ref": {
+                      "description": "增信机构主体引用,产品发行时增信机构的主体对象标识【subject_object_id】",
+                      "type": "string",
+                      "maxLength": 64
+                    },
+                    "product_credit_enhancement_agency_name": {
+                      "description": "增信机构名称",
+                      "type": "string",
+                      "maxLength": 128
+                    },
+                    "product_credit_rating_agency_subject_ref": {
+                      "description": "信用评级机构主体引用,产品发行时对产品所属主体进行信用评级的评级机构的主体对象标识【subject_object_id】",
+                      "type": "string",
+                      "maxLength": 64
+                    },
+                    "product_credit_rating_agency_name": {
+                      "description": "信用评级机构名称",
+                      "type": "string",
+                      "maxLength": 128
+                    }
+                  },
+                  "required": [
+                    "product_registry_subject_ref",
+                    "product_name_registration_body",
+                    "product_trustee_subject_ref",
+                    "product_name_trustee"
+                  ]
+                },
+                "product_file_information": {
+                  "description": "产品文件信息",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "product_issue_doc_num": {
+                        "type": "string",
+                        "description": "产品文件编号",
+                        "maxLength": 32
+                      },
+                      "product_file_name": {
+                        "type": "string",
+                        "description": "产品文件名称",
+                        "maxLength": 18
+                      },
+                      "product_issue_doc": {
+                        "type": "array",
+                        "description": "产品文件",
+                        "items": {
+                          "type": "object",
+                          "$ref": "#/definitions/Document"
+                        }
+                      }
+                    },
+                    "required": [
+                      "product_issue_doc_num",
+                      "product_file_name"
+                    ]
+                  }
+                }
+              }
+            },
+            "product_subject_information": {
+              "type": "object",
+              "description": "产品标的信息",
+              "properties": {
+                "fund_use_information": {
+                  "type": "object",
+                  "description": "资金用途信息",
+                  "properties": {
+                    "product_fund_use_type": {
+                      "type": "integer",
+                      "description": "资金用途类型",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  经营类\n2  投资类\n3  其他\n255 其他"
+                    },
+                    "product_description _fund_use": {
+                      "description": "资金用途描述",
+                      "type": "string",
+                      "maxLength": 512
+                    },
+                    "product_document_describing_funds": {
+                      "type": "array",
+                      "description": "资金用途说明文件清单",
+                      "items": {
+                        "$ref": "#/definitions/Document"
+                      }
+                    }
+                  },
+                  "required": [
+                    "product_fund_use_type",
+                    "product_description _fund_use",
+                    "product_document_describing_funds"
+                  ]
+                },
+                "business_information": {
+                  "type": "object",
+                  "description": "经营用途信息",
+                  "properties": {
+                    "product_business_purpose_name": {
+                      "type": "string",
+                      "description": "经营用途名称",
+                      "maxLength": 32
+                    },
+                    "product_business_purpose_details": {
+                      "type": "string",
+                      "description": "经营用途详情",
+                      "maxLength": 512
+                    },
+                    "product_business_purpose_documents": {
+                      "type": "array",
+                      "description": "经营用途说明文件清单",
+                      "items": {
+                        "$ref": "#/definitions/Document"
+                      }
+                    }
+                  },
+                  "required": [
+                    "product_business_purpose_name",
+                    "product_business_purpose_details",
+                    "product_business_purpose_documents"
+                  ]
+                },
+                "portfolio_information": {
+                  "description": "投资组合信息",
+                  "type": "object",
+                  "properties": {
+                    "product_investment_products_type": {
+                      "type": "integer",
+                      "description": "投资产品类型",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  权益类产品\n2  商品及金融衍生品类产品\n3  混合类产品\n4  固定收益类产品\n255  其他"
+                    },
+                    "product_investment_proportion_range": {
+                      "type": "number",
+                      "description": "投资比例范围"
+                    },
+                    "product_Investment_product_details": {
+                      "type": "string",
+                      "description": "投资产品详情",
+                      "maxLength": 512
+                    },
+                    "product_detailed_description_document": {
+                      "type": "array",
+                      "description": "投资产品详情说明文件清单",
+                      "items": {
+                        "$ref": "#/definitions/Document"
+                      }
+                    }
+                  },
+                  "required": [
+                    "product_investment_products_type",
+                    "product_investment_proportion_range",
+                    "product_Investment_product_details",
+                    "product_detailed_description_document"
+                  ]
+                }
+              }
+            },
+            "release_information": {
+              "type": "object",
+              "description": "发行信息",
+              "properties": {
+                "filing_information": {
+                  "description": "备案信息",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "description": "备案信息对象",
+                    "properties": {
+                      "product_license_type": {
+                        "type": "integer",
+                        "description": "备案许可类型",
+                        "enum": [
+                          0,
+                          1,
+                          2,
+                          3,
+                          255
+                        ],
+                        "enumDesc": "0  空值\n1  产品注册\n2  产品备案\n3   产品审核\n255  其他"
+                      },
+                      "product_filing_date": {
+                        "description": "备案日期",
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "product_filing_doc": {
+                        "type": "array",
+                        "description": "备案文件",
+                        "items": {
+                          "$ref": "#/definitions/Document"
+                        }
+                      },
+                      "product_filing_examine_doc": {
+                        "type": "array",
+                        "description": "备案审核通知文件",
+                        "items": {
+                          "$ref": "#/definitions/Document"
+                        }
+                      },
+                      "product_filing_documentation": {
+                        "description": "备案说明信息",
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "equity_issue_information": {
+                  "type": "object",
+                  "description": "私募股权",
+                  "properties": {
+                    "product_issue_scope": {
+                      "type": "integer",
+                      "description": "发行范围",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  普通\n2  定向\n255 其他"
+                    },
+                    "product_issue_type": {
+                      "type": "integer",
+                      "description": "发行类型",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  首次\n2  增发\n255  其他"
+                    },
+                    "product_shares_issued_class": {
+                      "type": "array",
+                      "description": "发行股份类别",
+                      "items": {
+                        "type": "integer",
+                        "enum": [
+                          0,
+                          1,
+                          2,
+                          255
+                        ],
+                        "enumDesc": "0空值1普通2定向255其他"
+                      }
+                    },
+                    "release_note_information": {
+                      "description": "发行说明信息",
+                      "type": "string"
+                    },
+                    "product_issue_price": {
+                      "type": "number",
+                      "description": "发行价格"
+                    },
+                    "product_issue_price_method": {
+                      "type": "string",
+                      "description": "发行价格定价标准"
+                    },
+                    "product_before_authorized_shares": {
+                      "type": "integer",
+                      "description": "发行前股数"
+                    },
+                    "product_after_authorized_shares": {
+                      "type": "integer",
+                      "description": "发行后股数"
+                    },
+                    "product_after_issue_market_value": {
+                      "type": "number",
+                      "description": "发行后总市值"
+                    },
+                    "product_net_profit": {
+                      "type": "number",
+                      "description": "半年净利润"
+                    },
+                    "product_annual_net_profit": {
+                      "type": "number",
+                      "description": "全年净利润"
+                    },
+                    "product_actual_raising_scale": {
+                      "type": "number",
+                      "description": "实际募集规模"
+                    },
+                    "product_raising_start_time": {
+                      "type": "string",
+                      "description": "募集开始日期",
+                      "format": "date"
+                    },
+                    "product_raising_end_time": {
+                      "type": "string",
+                      "description": "募集结束日期",
+                      "format": "date"
+                    },
+                    "product_registered_capital_before_issuance": {
+                      "type": "number",
+                      "title": "发行前注册资本"
+                    },
+                    "product_registered_capital_": {
+                      "type": "number",
+                      "title": "发行后注册资本"
+                    },
+                    "product_paid_shares": {
+                      "type": "integer",
+                      "title": "实缴股数"
+                    },
+                    "product_shares_subscribed_number": {
+                      "type": "integer",
+                      "title": "认缴股数"
+                    },
+                    "product_unlimited_sales_number_shares": {
+                      "type": "integer",
+                      "description": "无限售股数"
+                    },
+                    "product_restricted_shares_number": {
+                      "type": "integer",
+                      "description": "限售股数"
+                    }
+                  },
+                  "required": [
+                    "product_issue_scope",
+                    "product_issue_type",
+                    "product_shares_issued_class",
+                    "product_issue_price",
+                    "product_before_authorized_shares",
+                    "product_after_authorized_shares",
+                    "product_issue_start_date",
+                    "product_issue_end_date",
+                    "product_registration_date"
+                  ]
+                },
+                "private_convertible_bonds": {
+                  "type": "object",
+                  "description": "私募债(含可转债)",
+                  "properties": {
+                    "product_scope_issue": {
+                      "type": "integer",
+                      "description": "发行范围",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  普通\n2  定向\n255 其他"
+                    },
+                    "product_bond_duration_unit": {
+                      "type": "integer",
+                      "description": "债权期限单位",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  年\n2  月\n3  日\n255 其他"
+                    },
+                    "product_bond_duration": {
+                      "type": "integer",
+                      "title": "债券期限"
+                    },
+                    "product_filing_amount": {
+                      "type": "number",
+                      "description": "备案金额"
+                    },
+                    "product_by_stages": {
+                      "type": "boolean",
+                      "description": "是否分期发行"
+                    },
+                    "product_bond_interest_rate_floor": {
+                      "type": "number",
+                      "description": "票面利率下限"
+                    },
+                    "product_bond_interest_rate_cap": {
+                      "type": "number",
+                      "description": "票面利率上限"
+                    },
+                    "product_staging_frequency": {
+                      "type": "integer",
+                      "title": "分期期数"
+                    },
+                    "product_initial_issue_amount": {
+                      "type": "number",
+                      "description": "首期发行金额"
+                    },
+                    "product_initial_ratio": {
+                      "type": "number",
+                      "description": "首期比例"
+                    },
+                    "product_initial_interest_rate": {
+                      "type": "number",
+                      "description": "首期利率"
+                    },
+                    "product_interest_calculation_method": {
+                      "type": "integer",
+                      "description": "计息方式",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  act/365\n2   act/360\n3  act/180\n4  按月计息\n255 其他"
+                    },
+                    "product_interest_calculation_method_remarks": {
+                      "description": "计息方式备注,计息方式为其他时手动填写",
+                      "type": "string",
+                      "maxLength": 64
+                    },
+                    "product_payment_method": {
+                      "type": "integer",
+                      "description": "兑付方式",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  按月付息，到期还本\n2   按季付息，到期还本\n3  按半年付息，到期还本\n4  按年付息，到期还本\n5  到期还本付息\n6 等额本金\n7 等额本息\n255 其他"
+                    },
+                    "product_payment_method_remarks": {
+                      "description": "兑付方式备注,兑付方式为其他时手动填写",
+                      "type": "string",
+                      "maxLength": 64
+                    },
+                    "product_is_appoint_repayment_date": {
+                      "type": "boolean",
+                      "description": "是否指定还款日"
+                    },
+                    "product_appoint_repayment_date": {
+                      "description": "指定还款日",
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "product_guarantee_measure": {
+                      "description": "担保措施及方式",
+                      "type": "string"
+                    },
+                    "product_converting_shares_condition": {
+                      "description": "转股条件",
+                      "type": "string"
+                    },
+                    "product_converting_shares_price_mode": {
+                      "description": "转股价格的确定方式",
+                      "type": "string"
+                    },
+                    "product_converting_shares_term": {
+                      "description": "转股期限",
+                      "type": "string"
+                    },
+                    "product_redemption": {
+                      "description": "赎回条款",
+                      "type": "string"
+                    },
+                    "product_issue_price": {
+                      "type": "number",
+                      "description": "发行价格"
+                    },
+                    "product_face_value": {
+                      "type": "number",
+                      "description": "产品面值"
+                    },
+                    "product_subscription_base": {
+                      "type": "integer",
+                      "title": "认购单位基数"
+                    },
+                    "product_successful_release_proportion": {
+                      "type": "number",
+                      "description": "发行成功比例"
+                    },
+                    "product_fund_raising_conversion_condition": {
+                      "description": "募集资金划转条件",
+                      "type": "string"
+                    },
+                    "product_is_make_over": {
+                      "type": "boolean",
+                      "title": "是否可转让"
+                    },
+                    "product_number_of_holders_max": {
+                      "type": "integer",
+                      "title": "最大持有人数"
+                    },
+                    "product_subscription_upper_limit": {
+                      "type": "integer",
+                      "title": "认购上限份数"
+                    },
+                    "product_subscription_lower_limit": {
+                      "type": "integer",
+                      "title": "认购下限份数"
+                    },
+                    "product_redemption_clause": {
+                      "description": "赎回及回收条款",
+                      "type": "string"
+                    },
+                    "product_termination_conditions": {
+                      "type": "string",
+                      "description": "产品终止条件,500字以内描述文字",
+                      "maxLength": 2048
+                    },
+                    "product_duration": {
+                      "type": "string",
+                      "description": "存续期限",
+                      "maxLength": 128
+                    },
+                    "product_adjustment_change_control": {
+                      "type": "string",
+                      "description": "控制权变更调整,调整后转换价 = 调整前转换/（1+（转股溢价*控制权变更日至到期日日数/交割日到到期日日数）",
+                      "maxLength": 1024
+                    },
+                    "product_conversion_premium": {
+                      "type": "number",
+                      "description": "转换溢价,计算：贴现率到先"
+                    },
+                    "product_conversion_price_ref": {
+                      "type": "number",
+                      "description": "参考股价"
+                    },
+                    "product_actual_issue_size": {
+                      "type": "number",
+                      "description": "实际募集规模"
+                    },
+                    "product_raising_start_date": {
+                      "description": "募集开始日期",
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "product_raising_end_date": {
+                      "description": "募集结束日期",
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "product_start_date": {
+                      "type": "string",
+                      "description": "起息日期",
+                      "format": "date"
+                    },
+                    "product_due_date": {
+                      "type": "string",
+                      "description": "到期日期",
+                      "format": "date"
+                    },
+                    "product_amount_cashed": {
+                      "type": "number",
+                      "title": "兑付金额"
+                    },
+                    "product_first_interest_payment_date": {
+                      "type": "string",
+                      "description": "首次付息日期",
+                      "format": "date"
+                    },
+                    "product_issuer_credit_rating": {
+                      "type": "integer",
+                      "description": "发行方主体信用评级",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  AAA\n2  AA+\n3  AA\n4  AA-\n5  A+\n6  A\n7  A-\n8  BBB+\n9  BBB\n10  BBB-\n11  BB+\n12  BB\n13  BB-\n14  B+\n15  B\n16  B-\n17  CCC\n18   CC\n19 C\n20  00\n255 其他"
+                    },
+                    "product_credit_enhancement_agency_credit_rating": {
+                      "type": "integer",
+                      "description": "增信机构主体评级",
+                      "enum": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        255
+                      ],
+                      "enumDesc": "0  空值\n1  AAA\n2  AA+\n3  AA\n4  AA-\n5  A+\n6  A\n7  A-\n8  BBB+\n9  BBB\n10  BBB-\n11  BB+\n12  BB\n13  BB-\n14  B+\n15  B\n16  B-\n17  CCC\n18   CC\n19 C\n20  00\n255 其他"
+                    },
+                    "product_guarantee_arrangement": {
+                      "type": "string",
+                      "description": "担保安排,500字以内描述文字",
+                      "maxLength": 2048
+                    },
+                    "product_repo_arrangement": {
+                      "type": "string",
+                      "description": "回售安排,500字以内描述文字",
+                      "maxLength": 2048
+                    },
+                    "product_lockup": {
+                      "type": "string",
+                      "description": "股东禁售期限",
+                      "maxLength": 128
+                    }
+                  }
+                },
+                "private_offering_fund": {
+                  "$ref": "#/definitions/PrivateOfferingFund"
+                }
+              }
+            },
+            "transaction_information": {
+              "$ref": "#/definitions/TransactionInformation"
+            },
+            "escrow_information": {
+              "$ref": "#/definitions/EscrowInformation"
+            }
+          }
+        }
+      },
+      "description": "产品"
+    },
+    "ProductInformation": {
+      "type": "object",
+      "description": "产品信息",
+      "properties": {
+        "release_information": {
+          "$ref": "#/definitions/ReleaseInformation"
+        },
+        "transaction_information": {
+          "$ref": "#/definitions/TransactionInformation"
+        },
+        "escrow_information": {
+          "$ref": "#/definitions/EscrowInformation"
+        }
+      }
+    },
+    "ReleaseInformation": {
+      "description": "发行信息",
+      "title": "ReleaseInformation",
+      "type": "object",
+      "properties": {
+        "private_offering_fund": {
+          "$ref": "#/definitions/PrivateOfferingFund"
+        }
+      }
+    },
+    "PrivateOfferingFund": {
+      "description": "私募基金",
+      "title": "PrivateOfferingFund",
+      "type": "object",
+      "properties": {
+        "fund_basic_information": {
+          "$ref": "#/definitions/FundBasicInformation"
+        },
+        "fund_sales_agency": {
+          "$ref": "#/definitions/FundSalesAgency"
+        },
+        "fund_manager_information": {
+          "$ref": "#/definitions/FundManagerInformation"
+        }
+      }
+    },
+    "FundBasicInformation": {
+      "description": "基金基本信息",
+      "title": "FundBasicInformation",
+      "type": "object",
+      "properties": {
+        "product_raising_information_identification": {
+          "description": "募集信息标识",
+          "type": "string",
+          "maxLength": 64
+        },
+        "product_scope_fund_raising": {
+          "description": "募集范围",
+          "type": "string"
+        },
+        "product_record_number": {
+          "description": "备案编号",
+          "type": "string",
+          "maxLength": 512
+        },
+        "product_fund_filing_date": {
+          "description": "基金备案日期",
+          "type": "string",
+          "format": "date"
+        },
+        "product_fund_type": {
+          "description": "基金类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            255
+          ]
+        },
+        "product_foundation_date": {
+          "description": "基金成立日期",
+          "type": "string",
+          "format": "date"
+        },
+        "product_escrow_bank": {
+          "description": "托管行",
+          "type": "string",
+          "maxLength": 32
+        },
+        "product_total_fund_share": {
+          "description": "基金总份额",
+          "type": "number"
+        },
+        "product_fund_unit_holders_number": {
+          "description": "基金份额持有人数",
+          "type": "string",
+          "maxLength": 512
+        },
+        "product_fund_nav": {
+          "description": "基金净值",
+          "type": "number"
+        },
+        "product_fund_fairvalue": {
+          "description": "基金公允价值（净资产）",
+          "type": "number"
+        },
+        "product_raise_start_date": {
+          "description": "募集开始日期",
+          "type": "string",
+          "format": "date"
+        },
+        "product_raise_end_date": {
+          "description": "募集结束日期",
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "FundSalesAgency": {
+      "description": "基金销售机构",
+      "title": "FundSalesAgency",
+      "type": "object",
+      "properties": {
+        "sales_organization_name": {
+          "description": "销售机构名称",
+          "type": "string",
+          "maxLength": 256
+        },
+        "product_unified_social_credit_code": {
+          "description": "统一社会信用代码",
+          "type": "string",
+          "maxLength": 64
+        },
+        "product_sales_organization_member_code": {
+          "description": "销售机构会员编码,股交中心有分配可填写",
+          "type": "string",
+          "maxLength": 128
+        }
+      }
+    },
+    "FundManagerInformation": {
+      "description": "基金管理人信息",
+      "title": "FundManagerInformation",
+      "type": "object",
+      "properties": {
+        "product_fund_manager_name": {
+          "description": "基金管理人名称",
+          "type": "string",
+          "maxLength": 256
+        },
+        "product_fund_manager_certificate_number": {
+          "description": "基金管理人证件号码",
+          "type": "string",
+          "maxLength": 128
+        },
+        "product_management_style": {
+          "description": "管理方式",
+          "type": "string",
+          "maxLength": 128
+        },
+        "product_funds_under_management_number": {
+          "description": "基金管理数量",
+          "type": "integer"
+        },
+        "product_fund_management_scale": {
+          "description": "基金管理规模",
+          "type": "number"
+        }
+      }
+    },
+    "TransactionInformation": {
+      "description": "交易信息",
+      "title": "TransactionInformation",
+      "type": "object",
+      "properties": {
+        "transaction_status": {
+          "description": "交易状态",
+          "type": "integer",
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "listing_information": {
+          "$ref": "#/definitions/ListingInformation"
+        },
+        "delisting_information": {
+          "$ref": "#/definitions/DelistingInformation"
+        }
+      }
+    },
+    "ListingInformation": {
+      "description": "挂牌信息",
+      "title": "ListingInformation",
+      "type": "object",
+      "properties": {
+        "product_transaction_scope": {
+          "description": "交易范围",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "enumDesc": "0  其他\n1  普通\n2  定向"
+        },
+        "product_transfer_permission_institution_to_individual": {
+          "description": "机构持有人允许转让给个人",
+          "type": "boolean"
+        },
+        "product_transfer_lockup_days": {
+          "description": "转让锁定天数",
+          "type": "number"
+        },
+        "product_trasfer_validity": {
+          "description": "转让发布有效天数",
+          "type": "number"
+        },
+        "product_risk_level": {
+          "description": "产品风险级别",
+          "type": "string",
+          "maxLength": 512
+        },
+        "product_transaction_unit": {
+          "description": "交易单位基数",
+          "type": "number"
+        },
+        "product_listing_code": {
+          "description": "挂牌代码",
+          "type": "string",
+          "maxLength": 64
+        },
+        "product_listing_time": {
+          "description": "挂牌日期",
+          "type": "string",
+          "format": "date"
+        },
+        "product_listing_remarks": {
+          "description": "挂牌备注信息,500字以内描述文字",
+          "type": "string",
+          "maxLength": 2048
+        }
+      }
+    },
+    "DelistingInformation": {
+      "description": "摘牌信息",
+      "title": "DelistingInformation",
+      "type": "object",
+      "properties": {
+        "product_delisting_date": {
+          "description": "摘牌日期",
+          "type": "string",
+          "format": "date"
+        },
+        "product_delisting_type": {
+          "description": "摘牌类型",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            255
+          ]
+        },
+        "product_delisting_reason": {
+          "description": "摘牌原因",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            255
+          ]
+        },
+        "product_transfer_board_mrket": {
+          "description": "转板市场",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            255
+          ]
+        },
+        "product_acquisition_company_market": {
+          "description": "收购公司所在市场",
+          "type": "integer",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            255
+          ]
+        },
+        "product_delisting_remarks": {
+          "description": "摘牌备注信息",
+          "type": "string"
+        }
+      }
+    },
+    "EscrowInformation": {
+      "description": "托管信息",
+      "title": "EscrowInformation",
+      "type": "object",
+      "properties": {
+        "product_custodian_registration_date": {
+          "description": "托管登记日期",
+          "type": "string",
+          "format": "date"
+        },
+        "product_escrow_documents": {
+          "description": "托管文件",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Document"
+          }
+        },
+        "product_custodian_notes": {
+          "description": "托管备注信息",
+          "type": "string"
+        },
+        "product_escrow_deregistration_date": {
+          "description": "解除托管登记日期",
+          "type": "string",
+          "format": "date"
+        },
+        "product_escrow_deregistration_document": {
+          "description": "解除托管文件",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Document"
+          }
+        },
+        "product_escrow_deregistration_remarks": {
+          "description": "解除托管备注信息",
+          "type": "string"
+        }
+      }
+    },
+    "Document": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "hash": {
+          "type": "string"
+        },
+        "file_name": {
+          "type": "string"
+        },
+        "file_number": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "term_of_validity_type": {
+          "type": "string"
+        },
+        "term_of_validity": {
+          "type": "string",
+          "format": "yyyy/MM/dd"
+        }
+      }
+    }
+  }
+}

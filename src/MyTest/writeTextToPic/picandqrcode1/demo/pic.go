@@ -131,7 +131,7 @@ func newPic() {
 }`
 	paramMap, _ := JsonToMap(storeInfoStr, 1594137931634)
 	// fmt.Printf("paramMap：：：：===》 %+v\n", paramMap)
-	// func GenerateCert(tmplFilePath string, params map[string]interfacetest{}, w io.Writer) error {
+	// func GenerateCert(tmplFilePath string, params maptest[string]interfacetest{}, w io.Writer) error {
 	var templatePath = "E:\\20.06.16Project\\GoTest\\src\\MyTest\\writeTextToPic\\picandqrcode1\\demo\\delivery88.jpg"
 	GenerateCert(templatePath, paramMap)
 }

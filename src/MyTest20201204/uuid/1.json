@@ -1,0 +1,1333 @@
+{
+  "oldEquityCode": "fondTestf05R1lh9fJHa",
+  "newProductInfo": {
+    "product_document_describing_funds": [
+      {
+        "file_number": "2",
+        "summary": "简述1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "简述2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_after_authorized_shares": 10000,
+    "product_net_profit": 30000000,
+    "product_transaction_scope": 1,
+    "product_issuer_subject_ref": "gdCmpyId014D74S3",
+    "product_before_authorized_shares": 6000,
+    "service_provider_information": [
+      {
+        "service_provider_subject_ref": "SPSR012",
+        "service_provider_type": 1,
+        "service_provider_name": "服务方主体名称"
+      },
+      {
+        "service_provider_subject_ref": "SPSR012",
+        "service_provider_type": 1,
+        "service_provider_name": "服务方主体名称"
+      }
+    ],
+    "product_business_purpose_name": "经营用途名称CHARACTER",
+    "product_paid_shares": 6000000,
+    "product_raising_end_time": "2018-10-23",
+    "product_business_purpose_documents": [
+      {
+        "file_number": "2",
+        "summary": "简述1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "简述2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_actual_raising_scale": 300000,
+    "product_file_information": [
+      {
+        "product_issue_doc": [
+          {
+            "file_number": "2",
+            "summary": "简述1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "简述2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ]
+      }
+    ],
+    "product_info_disclosure_way": 0,
+    "product_shares_issued_class": [
+      1,
+      2
+    ],
+    "product_annual_net_profit": 60000000,
+    "product_business_purpose_details": "经营用途详情CHARACTER",
+    "product_delisting_date": "2025-12-16",
+    "product_restricted_shares_number": 500000,
+    "product_market_subject_name": "交易场所主体名称CHARACTER",
+    "product_fund_use_type": 2,
+    "product_registered_capital_issuance": 5000000,
+    "product_custodian_notes": "托管备注信息TEXT",
+    "product_investment_proportion_range": 50,
+    "release_note_information": "发行说明信息TEXT",
+    "product_delisting_type": 1,
+    "product_scale_unit": 5,
+    "product_issue_price": 20,
+    "product_name": "产品全称CHARACTER",
+    "product_transfer_lockup_days": 20,
+    "product_detailed_description_document": [
+      {
+        "file_number": "2",
+        "summary": "简述1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "简述2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_issue_price_method": "发行价格定价标准TEXT",
+    "product_after_issue_market_value": 60000000,
+    "product_transfer_validity": 30,
+    "product_market_subject_ref": "PMSR012",
+    "product_account_number_max": 2000,
+    "product_registered_capital_before_issuance": 3000000,
+    "product_issuer_name": "发行主体名称CHARACTER",
+    "product_customer_browsing_right": 1,
+    "product_raising_start_time": "2018-10-23",
+    "product_listing_code": "挂牌代码CHARACTER",
+    "filing_information": [
+      {
+        "product_license_type": 1,
+        "product_filing_doc": [
+          {
+            "file_number": "2",
+            "summary": "简述1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "简述2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "product_filing_examine_doc": [
+          {
+            "file_number": "2",
+            "summary": "简述1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "简述2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "product_filing_date": "2018-10-23",
+        "product_filing_documentation": "psf.pdf"
+      }
+    ],
+    "product_investment_products_type": 1,
+    "product_shares_subscribed_number": 6000000,
+    "product_transaction_unit": 1000,
+    "product_scale_currency": "156",
+    "product_code": "产品代码CHARACTER",
+    "product_custodian_documents": [
+      {
+        "file_number": "2",
+        "summary": "简述1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "简述2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_issuer_contact_person": "联系人CHARACTER",
+    "product_type_function": 2,
+    "product_risk_level": "产品风险级别CHARACTER",
+    "product_custodian_registration_date": "2019-12-21",
+    "product_unlimited_sales_number_shares": 100000,
+    "product_escrow_deregistration_document": [
+      {
+        "file_number": "2",
+        "summary": "简述1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "简述2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_transfer_permission_institution_to_individual": true,
+    "product_plate_trading_name": "交易场所板块名称CHARACTER",
+    "product_issuer_contact_info": "联系信息CHARACTER",
+    "product_name_abbreviation": "产品简称CHARACTER",
+    "product_issue_type": 0,
+    "product_transaction_status": 1,
+    "product_delisting_reason": 1,
+    "product_scale": 50000,
+    "product_create_time": "2020-12-16T12:00:25+08:00",
+    "product_escrow_deregistration_remarks": "解除托管备注信息TEXT",
+    "product_object_id": "fondTestf05R1lh9fJHa",
+    "product_type": 0,
+    "product_delisting_remarks": "摘牌备注信息TEXT",
+    "product_acquisition_company_market": 3,
+    "product_description_fund_use": "资金用途描述CHARACTER",
+    "product_listing_date": "2019-12-21",
+    "product_listing_remarks": "挂牌备注信息CHARACTER",
+    "product_Investment_product_details": "投资产品详情CHARACTER",
+    "product_issue_scope": 2,
+    "product_transfer_board_market": 2,
+    "product_trading_market_category": 1,
+    "product_escrow_deregistration_date": "2029-11-10"
+  },
+  "oldProductInfo": {
+    "product_document_describing_funds": [
+      {
+        "file_number": "2",
+        "summary": "简述1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "简述2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_after_authorized_shares": 10000,
+    "product_net_profit": 30000000,
+    "product_transaction_scope": 1,
+    "product_issuer_subject_ref": "gdCmpyId014D74S3",
+    "product_before_authorized_shares": 6000,
+    "service_provider_information": [
+      {
+        "service_provider_subject_ref": "SPSR012",
+        "service_provider_type": 1,
+        "service_provider_name": "服务方主体名称"
+      },
+      {
+        "service_provider_subject_ref": "SPSR012",
+        "service_provider_type": 1,
+        "service_provider_name": "服务方主体名称"
+      }
+    ],
+    "product_business_purpose_name": "经营用途名称CHARACTER",
+    "product_paid_shares": 6000000,
+    "product_raising_end_time": "2018-10-23",
+    "product_business_purpose_documents": [
+      {
+        "file_number": "2",
+        "summary": "简述1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "简述2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_actual_raising_scale": 300000,
+    "product_file_information": [
+      {
+        "product_issue_doc": [
+          {
+            "file_number": "2",
+            "summary": "简述1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "简述2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ]
+      }
+    ],
+    "product_info_disclosure_way": 0,
+    "product_shares_issued_class": [
+      1,
+      2
+    ],
+    "product_annual_net_profit": 60000000,
+    "product_business_purpose_details": "经营用途详情CHARACTER",
+    "product_delisting_date": "2025-12-16",
+    "product_restricted_shares_number": 500000,
+    "product_market_subject_name": "交易场所主体名称CHARACTER",
+    "product_fund_use_type": 2,
+    "product_registered_capital_issuance": 5000000,
+    "product_custodian_notes": "托管备注信息TEXT",
+    "product_investment_proportion_range": 50,
+    "release_note_information": "发行说明信息TEXT",
+    "product_delisting_type": 1,
+    "product_scale_unit": 5,
+    "product_issue_price": 20,
+    "product_name": "产品全称CHARACTER",
+    "product_transfer_lockup_days": 20,
+    "product_detailed_description_document": [
+      {
+        "file_number": "2",
+        "summary": "简述1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "简述2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_issue_price_method": "发行价格定价标准TEXT",
+    "product_after_issue_market_value": 60000000,
+    "product_transfer_validity": 30,
+    "product_market_subject_ref": "PMSR012",
+    "product_account_number_max": 2000,
+    "product_registered_capital_before_issuance": 3000000,
+    "product_issuer_name": "发行主体名称CHARACTER",
+    "product_customer_browsing_right": 1,
+    "product_raising_start_time": "2018-10-23",
+    "product_listing_code": "挂牌代码CHARACTER",
+    "filing_information": [
+      {
+        "product_license_type": 1,
+        "product_filing_doc": [
+          {
+            "file_number": "2",
+            "summary": "简述1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "简述2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "product_filing_examine_doc": [
+          {
+            "file_number": "2",
+            "summary": "简述1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "简述2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "product_filing_date": "2018-10-23",
+        "product_filing_documentation": "psf.pdf"
+      }
+    ],
+    "product_investment_products_type": 1,
+    "product_shares_subscribed_number": 6000000,
+    "product_transaction_unit": 1000,
+    "product_scale_currency": "156",
+    "product_code": "产品代码CHARACTER",
+    "product_custodian_documents": [
+      {
+        "file_number": "2",
+        "summary": "简述1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "简述2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_issuer_contact_person": "联系人CHARACTER",
+    "product_type_function": 2,
+    "product_risk_level": "产品风险级别CHARACTER",
+    "product_custodian_registration_date": "2019-12-21",
+    "product_unlimited_sales_number_shares": 100000,
+    "product_escrow_deregistration_document": [
+      {
+        "file_number": "2",
+        "summary": "简述1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "简述2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_transfer_permission_institution_to_individual": true,
+    "product_plate_trading_name": "交易场所板块名称CHARACTER",
+    "product_issuer_contact_info": "联系信息CHARACTER",
+    "product_name_abbreviation": "产品简称CHARACTER",
+    "product_issue_type": 0,
+    "product_transaction_status": 1,
+    "product_delisting_reason": 1,
+    "product_scale": 50000,
+    "product_create_time": "2020-12-16T12:00:25+08:00",
+    "product_escrow_deregistration_remarks": "解除托管备注信息TEXT",
+    "product_object_id": "fondTestf05R1lh9fJHa",
+    "product_type": 0,
+    "product_delisting_remarks": "摘牌备注信息TEXT",
+    "product_acquisition_company_market": 3,
+    "product_description_fund_use": "资金用途描述CHARACTER",
+    "product_listing_date": "2019-12-21",
+    "product_listing_remarks": "挂牌备注信息CHARACTER",
+    "product_Investment_product_details": "投资产品详情CHARACTER",
+    "product_issue_scope": 2,
+    "product_transfer_board_market": 2,
+    "product_trading_market_category": 1,
+    "product_escrow_deregistration_date": "2029-11-10"
+  },
+  "platformKeyId": "bv2q02l2uehbsbgg70vg",
+  "newEquityCode": "fondTestf05R1lh9fJHanew33",
+  "registerInfoCreateTime": 1513374000,
+  "registerInformationList": [
+    {
+      "register_asset_type": 1,
+      "register_thaw_description": "冻结/解冻说明信息TEXT",
+      "register_registration_object_id": "No200O6u1lGLnP43",
+      "register_pledge_balance_change": 1000,
+      "register_shareholders": [
+        {
+          "register_equity_subject_type": 1,
+          "register_equity_capital": 200,
+          "register_equity_number": 20,
+          "register_equity_subject_ref": "RESR012",
+          "register_equity_shareholding": 10,
+          "register_equity_type": 1,
+          "register_equity_capital_paidin": 30000
+        }
+      ],
+      "register_subject_account_ref": "RSAR012",
+      "register_product_description": "产品描述",
+      "register_right_recognition_subject_name": "确权方主体名称CHARACTER",
+      "register_nature_of_shares": "0",
+      "register_subject_ref": "RSR012",
+      "register_source_type": 0,
+      "register_frozen_balance": 1000,
+      "register_right_recognition_description": "确权描述信息CHARACTER",
+      "register_asset_currency": "156",
+      "register_asset_holding_status": 1,
+      "register_authentic_right_recognition_status": 1,
+      "register_creditors": [
+        {
+          "register_debt_holder_subscription_quantity": 1000,
+          "register_debt_holder_ref": "RDHR012",
+          "register_debt_holder_contact_number": "债权人联系方式CHARACTER",
+          "register_debt_holder_subscription_price": 10000,
+          "register_debt_holder_type": 1
+        }
+      ],
+      "register_subject_type": 1,
+      "register_pledge_balance_after": 5000,
+      "register_asset_note": "登记说明TEXT",
+      "register_frozen_balance_change": 500,
+      "register_transaction_ref": "RTR012",
+      "register_right_recognition_agent_subject_name": "确权代理方主体名称CHARACTER",
+      "register_asset_unit": 1,
+      "register_right_recognition_subject_ref": "RRRSR012",
+      "register_serial_number": "登记流水号CHARACTER",
+      "register_time": "2020-12-16T12:00:25+08:00",
+      "register_right_recognition_mode": 1,
+      "register_list_date": "2025-12-16",
+      "register_thaw_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_pledge_balance_before": 1000,
+      "register_asset_holding_status_description": "持有状态说明TEXT",
+      "register_event_type": 2,
+      "register_product_ref": "RPR012",
+      "register_right_recognition_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_authentic_right_recognition_date": "2025-12-16",
+      "register_right_recognition_agent_subject_ref": "RRRASR012",
+      "register_asset_balance_after": 3000,
+      "register_asset_equity_type": 1,
+      "register_product_name": "产品名称",
+      "register_object_type": 1,
+      "register_create_time": "2020-12-16T12:00:25+08:00",
+      "fund_investors": [
+        {
+          "register_subscription_amount": 1000,
+          "register_subscription_number": 2000,
+          "register_investor_subject_ref": "RISR012",
+          "register_fund_investors_classification": 1,
+          "register_investor_name": "投资人主体名称CHARACTER"
+        }
+      ],
+      "register_asset_verification_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_asset_holding_nature": 1,
+      "register_asset_balance_change": 1000,
+      "register_list_asset_type": 1,
+      "register_frozen_balance_after": 5000,
+      "register_description": "登记描述信息CHARACTER",
+      "register_asset_balance_before": 2000
+    },
+    {
+      "register_asset_type": 1,
+      "register_thaw_description": "冻结/解冻说明信息TEXT",
+      "register_registration_object_id": "No300O7LQN6JmrJA",
+      "register_pledge_balance_change": 1000,
+      "register_shareholders": [
+        {
+          "register_equity_subject_type": 1,
+          "register_equity_capital": 200,
+          "register_equity_number": 20,
+          "register_equity_subject_ref": "RESR012",
+          "register_equity_shareholding": 10,
+          "register_equity_type": 1,
+          "register_equity_capital_paidin": 30000
+        }
+      ],
+      "register_subject_account_ref": "RSAR012",
+      "register_product_description": "产品描述",
+      "register_right_recognition_subject_name": "确权方主体名称CHARACTER",
+      "register_nature_of_shares": "0",
+      "register_subject_ref": "RSR012",
+      "register_source_type": 0,
+      "register_frozen_balance": 1000,
+      "register_right_recognition_description": "确权描述信息CHARACTER",
+      "register_asset_currency": "156",
+      "register_asset_holding_status": 1,
+      "register_authentic_right_recognition_status": 1,
+      "register_creditors": [
+        {
+          "register_debt_holder_subscription_quantity": 1000,
+          "register_debt_holder_ref": "RDHR012",
+          "register_debt_holder_contact_number": "债权人联系方式CHARACTER",
+          "register_debt_holder_subscription_price": 10000,
+          "register_debt_holder_type": 1
+        }
+      ],
+      "register_subject_type": 1,
+      "register_pledge_balance_after": 5000,
+      "register_asset_note": "登记说明TEXT",
+      "register_frozen_balance_change": 500,
+      "register_transaction_ref": "RTR012",
+      "register_right_recognition_agent_subject_name": "确权代理方主体名称CHARACTER",
+      "register_asset_unit": 1,
+      "register_right_recognition_subject_ref": "RRRSR012",
+      "register_serial_number": "登记流水号CHARACTER",
+      "register_time": "2020-12-16T12:00:25+08:00",
+      "register_right_recognition_mode": 1,
+      "register_list_date": "2025-12-16",
+      "register_thaw_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_pledge_balance_before": 1000,
+      "register_asset_holding_status_description": "持有状态说明TEXT",
+      "register_event_type": 2,
+      "register_product_ref": "RPR012",
+      "register_right_recognition_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_authentic_right_recognition_date": "2025-12-16",
+      "register_right_recognition_agent_subject_ref": "RRRASR012",
+      "register_asset_balance_after": 3000,
+      "register_asset_equity_type": 1,
+      "register_product_name": "产品名称",
+      "register_object_type": 1,
+      "register_create_time": "2020-12-16T12:00:25+08:00",
+      "fund_investors": [
+        {
+          "register_subscription_amount": 1000,
+          "register_subscription_number": 2000,
+          "register_investor_subject_ref": "RISR012",
+          "register_fund_investors_classification": 1,
+          "register_investor_name": "投资人主体名称CHARACTER"
+        }
+      ],
+      "register_asset_verification_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_asset_holding_nature": 1,
+      "register_asset_balance_change": 1000,
+      "register_list_asset_type": 1,
+      "register_frozen_balance_after": 5000,
+      "register_description": "登记描述信息CHARACTER",
+      "register_asset_balance_before": 2000
+    },
+    {
+      "register_asset_type": 1,
+      "register_thaw_description": "冻结/解冻说明信息TEXT",
+      "register_registration_object_id": "No400MG6H7pax5CV",
+      "register_pledge_balance_change": 1000,
+      "register_shareholders": [
+        {
+          "register_equity_subject_type": 1,
+          "register_equity_capital": 200,
+          "register_equity_number": 20,
+          "register_equity_subject_ref": "RESR012",
+          "register_equity_shareholding": 10,
+          "register_equity_type": 1,
+          "register_equity_capital_paidin": 30000
+        }
+      ],
+      "register_subject_account_ref": "RSAR012",
+      "register_product_description": "产品描述",
+      "register_right_recognition_subject_name": "确权方主体名称CHARACTER",
+      "register_nature_of_shares": "0",
+      "register_subject_ref": "RSR012",
+      "register_source_type": 0,
+      "register_frozen_balance": 1000,
+      "register_right_recognition_description": "确权描述信息CHARACTER",
+      "register_asset_currency": "156",
+      "register_asset_holding_status": 1,
+      "register_authentic_right_recognition_status": 1,
+      "register_creditors": [
+        {
+          "register_debt_holder_subscription_quantity": 1000,
+          "register_debt_holder_ref": "RDHR012",
+          "register_debt_holder_contact_number": "债权人联系方式CHARACTER",
+          "register_debt_holder_subscription_price": 10000,
+          "register_debt_holder_type": 1
+        }
+      ],
+      "register_subject_type": 1,
+      "register_pledge_balance_after": 5000,
+      "register_asset_note": "登记说明TEXT",
+      "register_frozen_balance_change": 500,
+      "register_transaction_ref": "RTR012",
+      "register_right_recognition_agent_subject_name": "确权代理方主体名称CHARACTER",
+      "register_asset_unit": 1,
+      "register_right_recognition_subject_ref": "RRRSR012",
+      "register_serial_number": "登记流水号CHARACTER",
+      "register_time": "2020-12-16T12:00:25+08:00",
+      "register_right_recognition_mode": 1,
+      "register_list_date": "2025-12-16",
+      "register_thaw_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_pledge_balance_before": 1000,
+      "register_asset_holding_status_description": "持有状态说明TEXT",
+      "register_event_type": 2,
+      "register_product_ref": "RPR012",
+      "register_right_recognition_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_authentic_right_recognition_date": "2025-12-16",
+      "register_right_recognition_agent_subject_ref": "RRRASR012",
+      "register_asset_balance_after": 3000,
+      "register_asset_equity_type": 1,
+      "register_product_name": "产品名称",
+      "register_object_type": 1,
+      "register_create_time": "2020-12-16T12:00:25+08:00",
+      "fund_investors": [
+        {
+          "register_subscription_amount": 1000,
+          "register_subscription_number": 2000,
+          "register_investor_subject_ref": "RISR012",
+          "register_fund_investors_classification": 1,
+          "register_investor_name": "投资人主体名称CHARACTER"
+        }
+      ],
+      "register_asset_verification_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_asset_holding_nature": 1,
+      "register_asset_balance_change": 1000,
+      "register_list_asset_type": 1,
+      "register_frozen_balance_after": 5000,
+      "register_description": "登记描述信息CHARACTER",
+      "register_asset_balance_before": 2000
+    },
+    {
+      "register_asset_type": 1,
+      "register_thaw_description": "冻结/解冻说明信息TEXT",
+      "register_registration_object_id": "No000qNX1Appp98x",
+      "register_pledge_balance_change": 1000,
+      "register_shareholders": [
+        {
+          "register_equity_subject_type": 1,
+          "register_equity_capital": 200,
+          "register_equity_number": 20,
+          "register_equity_subject_ref": "RESR012",
+          "register_equity_shareholding": 10,
+          "register_equity_type": 1,
+          "register_equity_capital_paidin": 30000
+        }
+      ],
+      "register_subject_account_ref": "RSAR012",
+      "register_product_description": "产品描述",
+      "register_right_recognition_subject_name": "确权方主体名称CHARACTER",
+      "register_nature_of_shares": "1",
+      "register_subject_ref": "RSR012",
+      "register_source_type": 0,
+      "register_frozen_balance": 1000,
+      "register_right_recognition_description": "确权描述信息CHARACTER",
+      "register_asset_currency": "156",
+      "register_asset_holding_status": 1,
+      "register_authentic_right_recognition_status": 1,
+      "register_creditors": [
+        {
+          "register_debt_holder_subscription_quantity": 1000,
+          "register_debt_holder_ref": "RDHR012",
+          "register_debt_holder_contact_number": "债权人联系方式CHARACTER",
+          "register_debt_holder_subscription_price": 10000,
+          "register_debt_holder_type": 1
+        }
+      ],
+      "register_subject_type": 1,
+      "register_pledge_balance_after": 5000,
+      "register_asset_note": "登记说明TEXT",
+      "register_frozen_balance_change": 500,
+      "register_transaction_ref": "RTR012",
+      "register_right_recognition_agent_subject_name": "确权代理方主体名称CHARACTER",
+      "register_asset_unit": 1,
+      "register_right_recognition_subject_ref": "RRRSR012",
+      "register_serial_number": "登记流水号CHARACTER",
+      "register_time": "2020-12-16T12:00:25+08:00",
+      "register_right_recognition_mode": 1,
+      "register_list_date": "2025-12-16",
+      "register_thaw_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_pledge_balance_before": 1000,
+      "register_asset_holding_status_description": "持有状态说明TEXT",
+      "register_event_type": 2,
+      "register_product_ref": "RPR012",
+      "register_right_recognition_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_authentic_right_recognition_date": "2025-12-16",
+      "register_right_recognition_agent_subject_ref": "RRRASR012",
+      "register_asset_balance_after": 3000,
+      "register_asset_equity_type": 1,
+      "register_product_name": "产品名称",
+      "register_object_type": 1,
+      "register_create_time": "2020-12-16T12:00:25+08:00",
+      "fund_investors": [
+        {
+          "register_subscription_amount": 1000,
+          "register_subscription_number": 2000,
+          "register_investor_subject_ref": "RISR012",
+          "register_fund_investors_classification": 1,
+          "register_investor_name": "投资人主体名称CHARACTER"
+        }
+      ],
+      "register_asset_verification_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_asset_holding_nature": 1,
+      "register_asset_balance_change": 1000,
+      "register_list_asset_type": 1,
+      "register_frozen_balance_after": 5000,
+      "register_description": "登记描述信息CHARACTER",
+      "register_asset_balance_before": 2000
+    },
+    {
+      "register_asset_type": 1,
+      "register_thaw_description": "冻结/解冻说明信息TEXT",
+      "register_registration_object_id": "No000qNX1A0kGt7d",
+      "register_pledge_balance_change": 1000,
+      "register_shareholders": [
+        {
+          "register_equity_subject_type": 1,
+          "register_equity_capital": 200,
+          "register_equity_number": 20,
+          "register_equity_subject_ref": "RESR012",
+          "register_equity_shareholding": 10,
+          "register_equity_type": 1,
+          "register_equity_capital_paidin": 30000
+        }
+      ],
+      "register_subject_account_ref": "RSAR012",
+      "register_product_description": "产品描述",
+      "register_right_recognition_subject_name": "确权方主体名称CHARACTER",
+      "register_nature_of_shares": "0",
+      "register_subject_ref": "RSR012",
+      "register_source_type": 0,
+      "register_frozen_balance": 1000,
+      "register_right_recognition_description": "确权描述信息CHARACTER",
+      "register_asset_currency": "156",
+      "register_asset_holding_status": 1,
+      "register_authentic_right_recognition_status": 1,
+      "register_creditors": [
+        {
+          "register_debt_holder_subscription_quantity": 1000,
+          "register_debt_holder_ref": "RDHR012",
+          "register_debt_holder_contact_number": "债权人联系方式CHARACTER",
+          "register_debt_holder_subscription_price": 10000,
+          "register_debt_holder_type": 1
+        }
+      ],
+      "register_subject_type": 1,
+      "register_pledge_balance_after": 5000,
+      "register_asset_note": "登记说明TEXT",
+      "register_frozen_balance_change": 500,
+      "register_transaction_ref": "RTR012",
+      "register_right_recognition_agent_subject_name": "确权代理方主体名称CHARACTER",
+      "register_asset_unit": 1,
+      "register_right_recognition_subject_ref": "RRRSR012",
+      "register_serial_number": "登记流水号CHARACTER",
+      "register_time": "2020-12-16T12:00:25+08:00",
+      "register_right_recognition_mode": 1,
+      "register_list_date": "2025-12-16",
+      "register_thaw_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_pledge_balance_before": 1000,
+      "register_asset_holding_status_description": "持有状态说明TEXT",
+      "register_event_type": 2,
+      "register_product_ref": "RPR012",
+      "register_right_recognition_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_authentic_right_recognition_date": "2025-12-16",
+      "register_right_recognition_agent_subject_ref": "RRRASR012",
+      "register_asset_balance_after": 3000,
+      "register_asset_equity_type": 1,
+      "register_product_name": "产品名称",
+      "register_object_type": 1,
+      "register_create_time": "2020-12-16T12:00:25+08:00",
+      "fund_investors": [
+        {
+          "register_subscription_amount": 1000,
+          "register_subscription_number": 2000,
+          "register_investor_subject_ref": "RISR012",
+          "register_fund_investors_classification": 1,
+          "register_investor_name": "投资人主体名称CHARACTER"
+        }
+      ],
+      "register_asset_verification_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_asset_holding_nature": 1,
+      "register_asset_balance_change": 1000,
+      "register_list_asset_type": 1,
+      "register_frozen_balance_after": 5000,
+      "register_description": "登记描述信息CHARACTER",
+      "register_asset_balance_before": 2000
+    },
+    {
+      "register_asset_type": 1,
+      "register_thaw_description": "冻结/解冻说明信息TEXT",
+      "register_registration_object_id": "No100F82mf9w355K",
+      "register_pledge_balance_change": 1000,
+      "register_shareholders": [
+        {
+          "register_equity_subject_type": 1,
+          "register_equity_capital": 200,
+          "register_equity_number": 20,
+          "register_equity_subject_ref": "RESR012",
+          "register_equity_shareholding": 10,
+          "register_equity_type": 1,
+          "register_equity_capital_paidin": 30000
+        }
+      ],
+      "register_subject_account_ref": "RSAR012",
+      "register_product_description": "产品描述",
+      "register_right_recognition_subject_name": "确权方主体名称CHARACTER",
+      "register_nature_of_shares": "0",
+      "register_subject_ref": "RSR012",
+      "register_source_type": 0,
+      "register_frozen_balance": 1000,
+      "register_right_recognition_description": "确权描述信息CHARACTER",
+      "register_asset_currency": "156",
+      "register_asset_holding_status": 1,
+      "register_authentic_right_recognition_status": 1,
+      "register_creditors": [
+        {
+          "register_debt_holder_subscription_quantity": 1000,
+          "register_debt_holder_ref": "RDHR012",
+          "register_debt_holder_contact_number": "债权人联系方式CHARACTER",
+          "register_debt_holder_subscription_price": 10000,
+          "register_debt_holder_type": 1
+        }
+      ],
+      "register_subject_type": 1,
+      "register_pledge_balance_after": 5000,
+      "register_asset_note": "登记说明TEXT",
+      "register_frozen_balance_change": 500,
+      "register_transaction_ref": "RTR012",
+      "register_right_recognition_agent_subject_name": "确权代理方主体名称CHARACTER",
+      "register_asset_unit": 1,
+      "register_right_recognition_subject_ref": "RRRSR012",
+      "register_serial_number": "登记流水号CHARACTER",
+      "register_time": "2020-12-16T12:00:25+08:00",
+      "register_right_recognition_mode": 1,
+      "register_list_date": "2025-12-16",
+      "register_thaw_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_pledge_balance_before": 1000,
+      "register_asset_holding_status_description": "持有状态说明TEXT",
+      "register_event_type": 2,
+      "register_product_ref": "RPR012",
+      "register_right_recognition_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_authentic_right_recognition_date": "2025-12-16",
+      "register_right_recognition_agent_subject_ref": "RRRASR012",
+      "register_asset_balance_after": 3000,
+      "register_asset_equity_type": 1,
+      "register_product_name": "产品名称",
+      "register_object_type": 1,
+      "register_create_time": "2020-12-16T12:00:25+08:00",
+      "fund_investors": [
+        {
+          "register_subscription_amount": 1000,
+          "register_subscription_number": 2000,
+          "register_investor_subject_ref": "RISR012",
+          "register_fund_investors_classification": 1,
+          "register_investor_name": "投资人主体名称CHARACTER"
+        }
+      ],
+      "register_asset_verification_doc": [
+        {
+          "file_number": "2",
+          "summary": "简述1",
+          "file_name": "1file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52221",
+          "url": "http://test.com/file/201/1file1.pdf",
+          "term_of_validity_type": "0"
+        },
+        {
+          "file_number": "2",
+          "summary": "简述2",
+          "file_name": "2file1.pdf",
+          "term_of_validity": "2018-10-23",
+          "hash": "da1234filehash52222",
+          "url": "http://test.com/file/201/2file1.pdf",
+          "term_of_validity_type": "0"
+        }
+      ],
+      "register_asset_holding_nature": 1,
+      "register_asset_balance_change": 1000,
+      "register_list_asset_type": 1,
+      "register_frozen_balance_after": 5000,
+      "register_description": "登记描述信息CHARACTER",
+      "register_asset_balance_before": 2000
+    }
+  ],
+  "oldProductDeleteTime": 1888934400,
+  "newProductCreateTime": 1734299400
+}
+

@@ -1,0 +1,926 @@
+{
+  "reason": "ډ؝ؖ۬",
+  "equityProductInfo": {
+    "product_document_describing_funds": [
+      {
+        "file_number": "2",
+        "summary": "ݲ˶1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "ݲ˶2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_after_authorized_shares": 10000,
+    "product_net_profit": 30000000,
+    "product_transaction_scope": 1,
+    "product_issuer_subject_ref": "gdCmpyId01obB1F8",
+    "product_before_authorized_shares": 6000,
+    "service_provider_information": [
+      {
+        "service_provider_subject_ref": "SPSR514",
+        "service_provider_type": 1,
+        "service_provider_name": "ؾϱ׽׷ͥĻԆ"
+      },
+      {
+        "service_provider_subject_ref": "SPSR514",
+        "service_provider_type": 1,
+        "service_provider_name": "ؾϱ׽׷ͥĻԆ"
+      }
+    ],
+    "product_business_purpose_name": "ޭӪԃ;ĻԆCHARACTER",
+    "product_paid_shares": 6000000,
+    "product_raising_end_time": "2018-10-23",
+    "product_business_purpose_documents": [
+      {
+        "file_number": "2",
+        "summary": "ݲ˶1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "ݲ˶2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_actual_raising_scale": 300000,
+    "product_file_information": [
+      {
+        "product_issue_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ]
+      }
+    ],
+    "product_info_disclosure_way": 0,
+    "product_shares_issued_class": [
+      1,
+      2
+    ],
+    "product_annual_net_profit": 60000000,
+    "product_business_purpose_details": "ޭӪԃ;ЪȩCHARACTER",
+    "product_delisting_date": "2025-12-16",
+    "product_restricted_shares_number": 500000,
+    "product_market_subject_name": "ݻӗӡ̹׷ͥĻԆCHARACTER",
+    "product_fund_use_type": 2,
+    "product_registered_capital_issuance": 5000000,
+    "product_custodian_notes": "ΐڜѸעхϢTEXT",
+    "product_investment_proportion_range": 50,
+    "release_note_information": "עѐ˵ķхϢTEXT",
+    "product_delisting_type": 1,
+    "product_scale_unit": 5,
+    "product_issue_price": 20,
+    "product_name": "ӺƷȫԆCHARACTER",
+    "product_transfer_lockup_days": 20,
+    "product_detailed_description_document": [
+      {
+        "file_number": "2",
+        "summary": "ݲ˶1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "ݲ˶2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_issue_price_method": "עѐݛٱ֨ݛҪ׼TEXT",
+    "product_after_issue_market_value": 60000000,
+    "product_transfer_validity": 30,
+    "product_market_subject_ref": "PMSR514",
+    "product_account_number_max": 2000,
+    "product_registered_capital_before_issuance": 3000000,
+    "product_issuer_name": "עѐ׷ͥĻԆCHARACTER",
+    "product_customer_browsing_right": 1,
+    "product_raising_start_time": "2018-10-23",
+    "product_listing_code": "ڒƆպëCHARACTER",
+    "filing_information": [
+      {
+        "product_license_type": 1,
+        "product_filing_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "product_filing_examine_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "product_filing_date": "2018-10-23",
+        "product_filing_documentation": "psf.pdf"
+      }
+    ],
+    "product_investment_products_type": 1,
+    "product_shares_subscribed_number": 6000000,
+    "product_transaction_unit": 1000,
+    "product_scale_currency": "156",
+    "product_code": "ӺƷպëCHARACTER",
+    "product_custodian_documents": [
+      {
+        "file_number": "2",
+        "summary": "ݲ˶1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "ݲ˶2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_issuer_contact_person": "jϵɋCHARACTER",
+    "product_type_function": 2,
+    "product_risk_level": "ӺƷاЕܶҰCHARACTER",
+    "product_custodian_registration_date": "2019-12-21",
+    "product_unlimited_sales_number_shares": 100000,
+    "product_escrow_deregistration_document": [
+      {
+        "file_number": "2",
+        "summary": "ݲ˶1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "ݲ˶2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "product_transfer_permission_institution_to_individual": true,
+    "product_plate_trading_name": "ݻӗӡ̹ѥࠩĻԆCHARACTER",
+    "product_issuer_contact_info": "jϵхϢCHARACTER",
+    "product_name_abbreviation": "ӺƷݲԆCHARACTER",
+    "product_issue_type": 0,
+    "product_transaction_status": 1,
+    "product_delisting_reason": 1,
+    "product_scale": 50000,
+    "product_create_time": "2020-12-16T12:00:25+08:00",
+    "product_escrow_deregistration_remarks": "ޢԽΐڜѸעхϢTEXT",
+    "product_object_id": "prodEqZAygddivzizZ",
+    "product_type": 0,
+    "product_delisting_remarks": "ժƆѸעхϢTEXT",
+    "product_acquisition_company_market": 3,
+    "product_description_fund_use": "؊ްԃ;Ĩ˶CHARACTER",
+    "product_listing_date": "2019-12-21",
+    "product_listing_remarks": "ڒƆѸעхϢCHARACTER",
+    "product_Investment_product_details": "Ͷ؊ӺƷЪȩCHARACTER",
+    "product_issue_scope": 2,
+    "product_transfer_board_market": 2,
+    "product_trading_market_category": 1,
+    "product_escrow_deregistration_date": "2029-11-10"
+  },
+  "transactionReport": {
+    "transaction_series_number": "ݻӗԉݻ·ˮۅCHARACTER",
+    "transaction_settlement_currency": "156",
+    "transaction_method": 1,
+    "transaction_product_issuer_name": "ݻӗ؊Ӻעѐ׷ͥĻԆCHARACTER",
+    "transaction_orderplacing_verification_doc": [
+      {
+        "file_number": "2",
+        "summary": "ݲ˶1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "ݲ˶2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "transaction_product_asset_unit": 1,
+    "transaction_settlement_price": 20,
+    "transaction_product_custody_status": 0,
+    "transaction_investor_name": "Ͷ؊׽ĻԆ",
+    "transaction_create_time": "2028-11-10T10:50:10+08:00",
+    "transaction_product_asset_doc": [
+      {
+        "file_number": "2",
+        "summary": "ݲ˶1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "ݲ˶2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "transaction_settlement_time": "2024-12-16T13:50:00+08:00",
+    "transaction_investor_original_name": "ԭԖԐ׽ĻԆ",
+    "transaction_custody_product_ref": "prodEqZAygddivzizZ",
+    "transaction_product_description": "ݻӗ؊ӺĨ˶хϢCHARACTER",
+    "transaction_product_asset_currency": "156",
+    "transaction_investor_ref": "TIR514",
+    "transaction_verification_doc": [
+      {
+        "file_number": "2",
+        "summary": "ݲ˶1",
+        "file_name": "1file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52221",
+        "url": "http://test.com/file/201/1file1.pdf",
+        "term_of_validity_type": "0"
+      },
+      {
+        "file_number": "2",
+        "summary": "ݲ˶2",
+        "file_name": "2file1.pdf",
+        "term_of_validity": "2018-10-23",
+        "hash": "da1234filehash52222",
+        "url": "http://test.com/file/201/2file1.pdf",
+        "term_of_validity_type": "0"
+      }
+    ],
+    "transaction_product_asset_type": 0,
+    "transaction_settlement_quantity": 1000,
+    "transaction_type": 1,
+    "transaction_description": "ݻӗĨ˶хϢ300ؖӔŚĨ˶",
+    "transaction_investor_counterparty_ref": "TICR514",
+    "transaction_issuer_ref": "TIssR514",
+    "transaction_issuer_name": "עѐ׽ĻԆ",
+    "transaction_investor_original_ref": "TIOR514",
+    "transaction_product_name": "ݻӗ؊ӺĻԆCHARACTER",
+    "transaction_settlement_description": "ݻӗԉݻĨ˶хϢCHARACTER",
+    "transaction_intermediary_information": [
+      {
+        "transaction_intermediary_subject_ref": "TISR514",
+        "transaction_intermediary_name": "אީܺٹĻԆ",
+        "transaction_intermediary_description": "אީܺٹؾϱĨ˶200ؖӔŚĨ˶",
+        "transaction_intermediary_type": 0
+      }
+    ],
+    "transaction_object_id": "4increaseObjmRqRF6",
+    "transaction_product_issuer_ref": "TPIR514",
+    "transaction_market_type": 0,
+    "transaction_product_asset_value": 10000,
+    "transaction_investor_counterparty_name": "ה˖׽ĻԆ"
+  },
+  "equityCode": "prodEqZAygddivzizZ",
+  "subjectUpdateTime": 1513374000,
+  "platformKeyId": "bvlhmrt2uehcsqulge7g",
+  "productUpdateTime": 1734299400,
+  "txCreateTime": 1857408610,
+  "shareList": [
+    {
+      "amount": 1000,
+      "address": "SnwaFqyDgANfo2BtnTEjyJLXoBzEnJUSvb2kKvvprCz7Ee6FJvg",
+      "createTime": 1513374000,
+      "registerInformation": {
+        "register_asset_type": 1,
+        "register_thaw_description": "ֳޡ/ޢֳ˵ķхϢTEXT",
+        "register_registration_object_id": "5No000B80p8DlyapJ",
+        "register_pledge_balance_change": 1000,
+        "register_shareholders": [
+          {
+            "register_equity_subject_type": 1,
+            "register_equity_capital": 200,
+            "register_equity_number": 20,
+            "register_equity_subject_ref": "RESR514",
+            "register_equity_shareholding": 10,
+            "register_equity_type": 1,
+            "register_equity_capital_paidin": 30000
+          }
+        ],
+        "register_subject_account_ref": "SHNo000B80p8",
+        "register_product_description": "ӺƷĨ˶",
+        "register_right_recognition_subject_name": "ȷȨ׽׷ͥĻԆCHARACTER",
+        "register_subject_ref": "RSR514",
+        "register_source_type": 0,
+        "register_frozen_balance": 1000,
+        "register_right_recognition_description": "ȷȨĨ˶хϢCHARACTER",
+        "register_asset_currency": "156",
+        "register_asset_holding_status": 1,
+        "register_authentic_right_recognition_status": 1,
+        "register_creditors": [
+          {
+            "register_debt_holder_subscription_quantity": 1000,
+            "register_debt_holder_ref": "RDHR514",
+            "register_debt_holder_contact_number": "ծȨɋjϵ׽ʽCHARACTER",
+            "register_debt_holder_subscription_price": 10000,
+            "register_debt_holder_type": 1
+          }
+        ],
+        "register_subject_type": 1,
+        "register_pledge_balance_after": 5000,
+        "register_asset_note": "և݇˵ķTEXT",
+        "register_frozen_balance_change": 500,
+        "register_transaction_ref": "4increaseObjmRqRF6",
+        "register_right_recognition_agent_subject_name": "ȷȨպm׽׷ͥĻԆCHARACTER",
+        "register_asset_unit": 1,
+        "register_right_recognition_subject_ref": "RRRSR514",
+        "register_serial_number": "և݇·ˮۅCHARACTER",
+        "register_time": "2020-12-16T12:00:25+08:00",
+        "register_right_recognition_mode": 1,
+        "register_list_date": "2025-12-16",
+        "register_thaw_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "register_pledge_balance_before": 1000,
+        "register_asset_holding_status_description": "ԖԐ״̬˵ķTEXT",
+        "register_event_type": "2",
+        "register_product_ref": "prodEqZAygddivzizZ",
+        "register_right_recognition_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "register_authentic_right_recognition_date": "2025-12-16",
+        "register_right_recognition_agent_subject_ref": "RRRASR514",
+        "register_asset_balance_after": 3000,
+        "register_asset_equity_type": 1,
+        "register_product_name": "ӺƷĻԆ",
+        "register_object_type": 1,
+        "register_create_time": "2020-12-16T12:00:25+08:00",
+        "fund_investors": [
+          {
+            "register_subscription_amount": 1000,
+            "register_subscription_number": 2000,
+            "register_investor_subject_ref": "RISR514",
+            "register_fund_investors_classification": 1,
+            "register_investor_name": "Ͷ؊ɋ׷ͥĻԆCHARACTER"
+          }
+        ],
+        "register_asset_verification_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "register_asset_holding_nature": 1,
+        "register_asset_balance_change": 1000,
+        "register_list_asset_type": 1,
+        "register_frozen_balance_after": 5000,
+        "register_description": "և݇Ĩ˶хϢCHARACTER",
+        "register_asset_balance_before": 2000
+      },
+      "shareProperty": 0
+    },
+    {
+      "amount": 1000,
+      "address": "SoCuZjQRbMiNdtZN3riXP4Ey86HLgnnH8RYitw4qhUdKH9WcmWE",
+      "createTime": 1513374000,
+      "registerInformation": {
+        "register_asset_type": 1,
+        "register_thaw_description": "ֳޡ/ޢֳ˵ķхϢTEXT",
+        "register_registration_object_id": "5No100dMzlyE37n0e",
+        "register_pledge_balance_change": 1000,
+        "register_shareholders": [
+          {
+            "register_equity_subject_type": 1,
+            "register_equity_capital": 200,
+            "register_equity_number": 20,
+            "register_equity_subject_ref": "RESR514",
+            "register_equity_shareholding": 10,
+            "register_equity_type": 1,
+            "register_equity_capital_paidin": 30000
+          }
+        ],
+        "register_subject_account_ref": "SHNo100dMzly",
+        "register_product_description": "ӺƷĨ˶",
+        "register_right_recognition_subject_name": "ȷȨ׽׷ͥĻԆCHARACTER",
+        "register_subject_ref": "RSR514",
+        "register_source_type": 0,
+        "register_frozen_balance": 1000,
+        "register_right_recognition_description": "ȷȨĨ˶хϢCHARACTER",
+        "register_asset_currency": "156",
+        "register_asset_holding_status": 1,
+        "register_authentic_right_recognition_status": 1,
+        "register_creditors": [
+          {
+            "register_debt_holder_subscription_quantity": 1000,
+            "register_debt_holder_ref": "RDHR514",
+            "register_debt_holder_contact_number": "ծȨɋjϵ׽ʽCHARACTER",
+            "register_debt_holder_subscription_price": 10000,
+            "register_debt_holder_type": 1
+          }
+        ],
+        "register_subject_type": 1,
+        "register_pledge_balance_after": 5000,
+        "register_asset_note": "և݇˵ķTEXT",
+        "register_frozen_balance_change": 500,
+        "register_transaction_ref": "4increaseObjmRqRF6",
+        "register_right_recognition_agent_subject_name": "ȷȨպm׽׷ͥĻԆCHARACTER",
+        "register_asset_unit": 1,
+        "register_right_recognition_subject_ref": "RRRSR514",
+        "register_serial_number": "և݇·ˮۅCHARACTER",
+        "register_time": "2020-12-16T12:00:25+08:00",
+        "register_right_recognition_mode": 1,
+        "register_list_date": "2025-12-16",
+        "register_thaw_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "register_pledge_balance_before": 1000,
+        "register_asset_holding_status_description": "ԖԐ״̬˵ķTEXT",
+        "register_event_type": "2",
+        "register_product_ref": "prodEqZAygddivzizZ",
+        "register_right_recognition_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "register_authentic_right_recognition_date": "2025-12-16",
+        "register_right_recognition_agent_subject_ref": "RRRASR514",
+        "register_asset_balance_after": 3000,
+        "register_asset_equity_type": 1,
+        "register_product_name": "ӺƷĻԆ",
+        "register_object_type": 1,
+        "register_create_time": "2020-12-16T12:00:25+08:00",
+        "fund_investors": [
+          {
+            "register_subscription_amount": 1000,
+            "register_subscription_number": 2000,
+            "register_investor_subject_ref": "RISR514",
+            "register_fund_investors_classification": 1,
+            "register_investor_name": "Ͷ؊ɋ׷ͥĻԆCHARACTER"
+          }
+        ],
+        "register_asset_verification_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "register_asset_holding_nature": 1,
+        "register_asset_balance_change": 1000,
+        "register_list_asset_type": 1,
+        "register_frozen_balance_after": 5000,
+        "register_description": "և݇Ĩ˶хϢCHARACTER",
+        "register_asset_balance_before": 2000
+      },
+      "shareProperty": 0
+    },
+    {
+      "amount": 1000,
+      "address": "SomKeZLPHpSGXWrrBjWD7RiDvypAdq77PGAzrtFZ48Df1J4K3VZ",
+      "createTime": 1513374000,
+      "registerInformation": {
+        "register_asset_type": 1,
+        "register_thaw_description": "ֳޡ/ޢֳ˵ķхϢTEXT",
+        "register_registration_object_id": "5No200EC4tjYy6LNm",
+        "register_pledge_balance_change": 1000,
+        "register_shareholders": [
+          {
+            "register_equity_subject_type": 1,
+            "register_equity_capital": 200,
+            "register_equity_number": 20,
+            "register_equity_subject_ref": "RESR514",
+            "register_equity_shareholding": 10,
+            "register_equity_type": 1,
+            "register_equity_capital_paidin": 30000
+          }
+        ],
+        "register_subject_account_ref": "SHNo200EC4tj",
+        "register_product_description": "ӺƷĨ˶",
+        "register_right_recognition_subject_name": "ȷȨ׽׷ͥĻԆCHARACTER",
+        "register_subject_ref": "RSR514",
+        "register_source_type": 0,
+        "register_frozen_balance": 1000,
+        "register_right_recognition_description": "ȷȨĨ˶хϢCHARACTER",
+        "register_asset_currency": "156",
+        "register_asset_holding_status": 1,
+        "register_authentic_right_recognition_status": 1,
+        "register_creditors": [
+          {
+            "register_debt_holder_subscription_quantity": 1000,
+            "register_debt_holder_ref": "RDHR514",
+            "register_debt_holder_contact_number": "ծȨɋjϵ׽ʽCHARACTER",
+            "register_debt_holder_subscription_price": 10000,
+            "register_debt_holder_type": 1
+          }
+        ],
+        "register_subject_type": 1,
+        "register_pledge_balance_after": 5000,
+        "register_asset_note": "և݇˵ķTEXT",
+        "register_frozen_balance_change": 500,
+        "register_transaction_ref": "4increaseObjmRqRF6",
+        "register_right_recognition_agent_subject_name": "ȷȨպm׽׷ͥĻԆCHARACTER",
+        "register_asset_unit": 1,
+        "register_right_recognition_subject_ref": "RRRSR514",
+        "register_serial_number": "և݇·ˮۅCHARACTER",
+        "register_time": "2020-12-16T12:00:25+08:00",
+        "register_right_recognition_mode": 1,
+        "register_list_date": "2025-12-16",
+        "register_thaw_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "register_pledge_balance_before": 1000,
+        "register_asset_holding_status_description": "ԖԐ״̬˵ķTEXT",
+        "register_event_type": "2",
+        "register_product_ref": "prodEqZAygddivzizZ",
+        "register_right_recognition_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "register_authentic_right_recognition_date": "2025-12-16",
+        "register_right_recognition_agent_subject_ref": "RRRASR514",
+        "register_asset_balance_after": 3000,
+        "register_asset_equity_type": 1,
+        "register_product_name": "ӺƷĻԆ",
+        "register_object_type": 1,
+        "register_create_time": "2020-12-16T12:00:25+08:00",
+        "fund_investors": [
+          {
+            "register_subscription_amount": 1000,
+            "register_subscription_number": 2000,
+            "register_investor_subject_ref": "RISR514",
+            "register_fund_investors_classification": 1,
+            "register_investor_name": "Ͷ؊ɋ׷ͥĻԆCHARACTER"
+          }
+        ],
+        "register_asset_verification_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "register_asset_holding_nature": 1,
+        "register_asset_balance_change": 1000,
+        "register_list_asset_type": 1,
+        "register_frozen_balance_after": 5000,
+        "register_description": "և݇Ĩ˶хϢCHARACTER",
+        "register_asset_balance_before": 2000
+      },
+      "shareProperty": 0
+    },
+    {
+      "amount": 1000,
+      "address": "SoemLUSBkxZnw2Q6UJKAwBgGkPJfxybXah7MkUgyayuDNd6sjj6",
+      "createTime": 1513374000,
+      "registerInformation": {
+        "register_asset_type": 1,
+        "register_thaw_description": "ֳޡ/ޢֳ˵ķхϢTEXT",
+        "register_registration_object_id": "5No3008NvXz1CD6jW",
+        "register_pledge_balance_change": 1000,
+        "register_shareholders": [
+          {
+            "register_equity_subject_type": 1,
+            "register_equity_capital": 200,
+            "register_equity_number": 20,
+            "register_equity_subject_ref": "RESR514",
+            "register_equity_shareholding": 10,
+            "register_equity_type": 1,
+            "register_equity_capital_paidin": 30000
+          }
+        ],
+        "register_subject_account_ref": "SHNo3008NvXz",
+        "register_product_description": "ӺƷĨ˶",
+        "register_right_recognition_subject_name": "ȷȨ׽׷ͥĻԆCHARACTER",
+        "register_subject_ref": "RSR514",
+        "register_source_type": 0,
+        "register_frozen_balance": 1000,
+        "register_right_recognition_description": "ȷȨĨ˶хϢCHARACTER",
+        "register_asset_currency": "156",
+        "register_asset_holding_status": 1,
+        "register_authentic_right_recognition_status": 1,
+        "register_creditors": [
+          {
+            "register_debt_holder_subscription_quantity": 1000,
+            "register_debt_holder_ref": "RDHR514",
+            "register_debt_holder_contact_number": "ծȨɋjϵ׽ʽCHARACTER",
+            "register_debt_holder_subscription_price": 10000,
+            "register_debt_holder_type": 1
+          }
+        ],
+        "register_subject_type": 1,
+        "register_pledge_balance_after": 5000,
+        "register_asset_note": "և݇˵ķTEXT",
+        "register_frozen_balance_change": 500,
+        "register_transaction_ref": "4increaseObjmRqRF6",
+        "register_right_recognition_agent_subject_name": "ȷȨպm׽׷ͥĻԆCHARACTER",
+        "register_asset_unit": 1,
+        "register_right_recognition_subject_ref": "RRRSR514",
+        "register_serial_number": "և݇·ˮۅCHARACTER",
+        "register_time": "2020-12-16T12:00:25+08:00",
+        "register_right_recognition_mode": 1,
+        "register_list_date": "2025-12-16",
+        "register_thaw_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "register_pledge_balance_before": 1000,
+        "register_asset_holding_status_description": "ԖԐ״̬˵ķTEXT",
+        "register_event_type": "2",
+        "register_product_ref": "prodEqZAygddivzizZ",
+        "register_right_recognition_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "register_authentic_right_recognition_date": "2025-12-16",
+        "register_right_recognition_agent_subject_ref": "RRRASR514",
+        "register_asset_balance_after": 3000,
+        "register_asset_equity_type": 1,
+        "register_product_name": "ӺƷĻԆ",
+        "register_object_type": 1,
+        "register_create_time": "2020-12-16T12:00:25+08:00",
+        "fund_investors": [
+          {
+            "register_subscription_amount": 1000,
+            "register_subscription_number": 2000,
+            "register_investor_subject_ref": "RISR514",
+            "register_fund_investors_classification": 1,
+            "register_investor_name": "Ͷ؊ɋ׷ͥĻԆCHARACTER"
+          }
+        ],
+        "register_asset_verification_doc": [
+          {
+            "file_number": "2",
+            "summary": "ݲ˶1",
+            "file_name": "1file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52221",
+            "url": "http://test.com/file/201/1file1.pdf",
+            "term_of_validity_type": "0"
+          },
+          {
+            "file_number": "2",
+            "summary": "ݲ˶2",
+            "file_name": "2file1.pdf",
+            "term_of_validity": "2018-10-23",
+            "hash": "da1234filehash52222",
+            "url": "http://test.com/file/201/2file1.pdf",
+            "term_of_validity_type": "0"
+          }
+        ],
+        "register_asset_holding_nature": 1,
+        "register_asset_balance_change": 1000,
+        "register_list_asset_type": 1,
+        "register_frozen_balance_after": 5000,
+        "register_description": "և݇Ĩ˶хϢCHARACTER",
+        "register_asset_balance_before": 2000
+      },
+      "shareProperty": 0
+    }
+  ]
+}

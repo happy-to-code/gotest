@@ -26,3 +26,8 @@ tj-export/tj-export
 httpservice/wtsdk
 httpservice/handler/wtsdk
 go.sum
+!/src/MyTest20201119/map/test.go
+!/src/MyTest20201204/MinIO3/
+!/src/MyTest20201204/MinIO2/
+!/src/MyTest20201204/MinIO/
+/src/modulses/node_modules/

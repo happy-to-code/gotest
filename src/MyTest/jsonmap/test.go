@@ -1,4 +1,4 @@
-// Test for json and map converting
+// Test for json and maptest converting
 package main
 
 import (
@@ -33,25 +33,25 @@ func main() {
     }
 }`
 
-	// test json string to map
+	// test json string to maptest
 	m, err := JsonToMap(jsonStr)
 	if err != nil {
-		fmt.Printf("Convert json to map failed with error: %+v\n", err)
+		fmt.Printf("Convert json to maptest failed with error: %+v\n", err)
 	}
 
-	fmt.Printf("Converted to map result: %+v\n", m)
+	fmt.Printf("Converted to maptest result: %+v\n", m)
 
-	// test map to json string
+	// test maptest to json string
 	//jsonRes, err := MapToJson(m)
 	//if err != nil {
-	//	fmt.Printf("Convert json to map failed with error: %+v\n", err)
+	//	fmt.Printf("Convert json to maptest failed with error: %+v\n", err)
 	//}
 	//
 	//fmt.Printf("Convert to json string result: %+v\n", jsonRes)
 
 }
 
-// Convert json string to map
+// Convert json string to maptest
 func JsonToMap(jsonStr string) (map[string]interface{}, error) {
 	m := make(map[string]interface{})
 	err := json.Unmarshal([]byte(jsonStr), &m)
@@ -67,7 +67,7 @@ func JsonToMap(jsonStr string) (map[string]interface{}, error) {
 	return m, nil
 }
 
-// Convert map json string
+// Convert maptest json string
 func MapToJson(m map[string]string) (string, error) {
 	jsonByte, err := json.Marshal(m)
 	if err != nil {
