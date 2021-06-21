@@ -3,20 +3,19 @@ package main
 import (
 	"fmt"
 	"github.com/satori/go.uuid"
-	"os"
 )
 
 func main() {
 	// 创建
-	u1, _ := uuid.NewV4()
+	u1 := uuid.NewV4()
 	fmt.Printf("UUIDv4: %s\n", u1)
 	fmt.Println("UUIDStr:", u1.String())
 
-	v1, _ := uuid.NewV1()
+	v1 := uuid.NewV1()
 	fmt.Println("UUIDV1Str:", v1.String())
 	picName := v1.String() + ".png"
 	fmt.Println("=====:", picName)
-	os.Remove("E:\\20.06.16Project\\GoTest\\90daeacd-bb6d-11ea-a501-40b034477939.png")
+	// os.Remove("E:\\20.06.16Project\\GoTest\\90daeacd-bb6d-11ea-a501-40b034477939.png")
 
 	// // 解析
 	// u2, err := uuid.FromString("f5394eef-e576-4709-9e4b-a7c231bd34a4")
